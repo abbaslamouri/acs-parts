@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^5.3.0",
+    "@tailwindcss/forms": "^0.5.2",
+    "nuxt": "3.0.0-rc.4",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.121.0",
+    "@headlessui/vue": "^0.0.0-insiders.6ecd448",
+    "@heroicons/vue": "^1.0.6",
+    "@nuxtjs/algolia": "^1.1.0",
+    "@nuxtjs/color-mode": "^3.1.4",
+    "@sendgrid/mail": "^7.7.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/formidable": "^2.0.5",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/lodash.clonedeep": "^4.5.7",
+    "@types/lodash.debounce": "^4.0.7",
+    "@vueuse/core": "^9.1.0",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "csv-parse": "^5.2.2",
+    "formidable": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.debounce": "^4.0.8",
+    "mongodb": "^4.7.0",
+    "slugify": "^1.6.5",
+    "stripe": "^10.2.0"
+  }
+}

@@ -1,0 +1,112 @@
+<script setup>
+import debounce from 'lodash.debounce'
+
+import { XIcon } from '@heroicons/vue/outline'
+
+defineProps({
+  product: {
+    type: Object,
+    required: true,
+  },
+  sectionId: {
+    type: String,
+  },
+})
+
+const emit = defineEmits(['addNextHigherAssembly', 'removeNextHigherAssembly'])
+const { fetchAll, saveDoc } = useHttp()
+const { fetchAttributesByName } = useProduct()
+const keyword = ref('')
+const nextHigherAssemblies = ref([])
+const nextHigherAssemblyInputRef = ref('')
+let response
+
+const addNextHigherAssembly = async (nextHigherAssembly) => {
+  // const response = await saveDoc('nextHigherAssemblies', keyword.value)
+  emit('addNextHigherAssembly', nextHigherAssembly)
+  // nextHigherAssemblyInputRef.value.focus()
+  keyword.value = ''
+  nextHigherAssemblies.value = []
+}
+
+watch(
+  () => keyword.value,
+  debounce(async (newVal) => {
+    console.log(newVal)
+    const response = await fetchAttributesByName('nexthigherassemblies', newVal)
+    console.log('RES', response)
+    if (response) nextHigherAssemblies.value = response
+    // await fetchMedia()
+    // emit('updateUser', newVal)
+  }, 500)
+  // { deep: true }
+)
+
+watch(
+  () => nextHigherAssemblyInputRef.value,
+  debounce(async (newVal) => {
+    console.log(newVal)
+    // const response = await fetchAttributesByName(newVal)
+    // console.log('RES', response)
+    // if (response) eligibilities.value = response
+    // await fetchMedia()
+    // emit('updateUser', newVal)
+  }, 500)
+  // { deep: true }
+)
+</script>
+
+<template>
+  <AdminSection sectionId="eligibilities">
+    <template #title>Next Higher Assemblies</template>
+    <template #default>
+      <div v-if="product._id">
+        <div class="relative w-64 bg-white">
+          <div class="w-64">
+            <input
+              class="border border-gray-300 p-1 placeholder:text-xs placeholder:text-slate-400"
+              type="text"
+              ref="nextHigherAssemblyInputRef"
+              v-model="keyword"
+              placeholder="Add New Next Higher Assembly"
+              @focus="nextHigherAssemblyInputRef.placeholder = 'Start Typing'"
+            />
+          </div>
+          <!-- <BaseInput label="Add nextHigherAssembly" v-model="keyword" /> -->
+          <ul
+            class="absolute z-10 max-h-40 w-full overflow-auto border border-gray-300 bg-white text-xs shadow-md"
+            v-if="nextHigherAssemblies.length"
+          >
+            <li
+              class="cursor-pointer px-3 py-2 hover:bg-slate-100"
+              v-for="nextHigherAssembly in nextHigherAssemblies"
+              :key="nextHigherAssembly._id"
+              @click="addNextHigherAssembly(nextHigherAssembly)"
+            >
+              {{ nextHigherAssembly.name }}
+            </li>
+          </ul>
+        </div>
+        <div class="mt-4 flex flex-wrap items-center gap-2">
+          <div v-for="nextHigherAssembly in product.nextHigherAssemblies" :key="nextHigherAssembly._id">
+            <div class="flex items-center text-xs text-slate-50">
+              <span
+                class="flex h-6 items-center whitespace-nowrap rounded-tl-full rounded-bl-full border border-slate-400 bg-slate-600 pl-3 pr-2"
+              >
+                {{ nextHigherAssembly.name }}</span
+              >
+              <button
+                class="border-gay-500 flex h-6 cursor-pointer items-center rounded-tr-full rounded-br-full border bg-slate-200 pl-1 pr-2"
+              >
+                <XIcon class="h-4 w-4 text-gray-500" @click="$emit('removeNextHigherAssembly', nextHigherAssembly)" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-else>You must save product before adding Next Higher Assemblies</div>
+    </template>
+  </AdminSection>
+</template>
+
+<style lang="" scoped></style>

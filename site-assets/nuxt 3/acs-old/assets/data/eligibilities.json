@@ -1,0 +1,2587 @@
+[{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0aa"
+  },
+  "name": "A300 MODEL B2-1A",
+  "slug": "a300-model-b2-1a"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0ab"
+  },
+  "name": "A300 MODEL B2-1C",
+  "slug": "a300-model-b2-1c"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0ac"
+  },
+  "name": "A300 MODEL B4-2C",
+  "slug": "a300-model-b4-2c"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0ad"
+  },
+  "name": "A300 MODEL B2K-3C",
+  "slug": "a300-model-b2k-3c"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0ae"
+  },
+  "name": "A300 MODEL B4-103",
+  "slug": "a300-model-b4-103"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0af"
+  },
+  "name": "A300 MODEL B2-203",
+  "slug": "a300-model-b2-203"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b0"
+  },
+  "name": "A300 MODEL B4-203",
+  "slug": "a300-model-b4-203"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b1"
+  },
+  "name": "A310 MODEL 204",
+  "slug": "a310-model-204"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b2"
+  },
+  "name": "A310 MODEL 221",
+  "slug": "a310-model-221"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b3"
+  },
+  "name": "A310 MODEL 222",
+  "slug": "a310-model-222"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b4"
+  },
+  "name": "A310 MODEL 203",
+  "slug": "a310-model-203"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b5"
+  },
+  "name": "A310 MODEL 322",
+  "slug": "a310-model-322"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b6"
+  },
+  "name": "A310 MODEL 324",
+  "slug": "a310-model-324"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b7"
+  },
+  "name": "A310 MODEL 304",
+  "slug": "a310-model-304"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b8"
+  },
+  "name": "A310 MODEL 325",
+  "slug": "a310-model-325"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0b9"
+  },
+  "name": "A300 MODEL B4-601",
+  "slug": "a300-model-b4-601"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0ba"
+  },
+  "name": "A300 MODEL B4-603",
+  "slug": "a300-model-b4-603"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0bb"
+  },
+  "name": "A300 MODEL B4-620",
+  "slug": "a300-model-b4-620"
+},{
+  "_id": {
+    "$oid": "62e5717f82d2f2c80c49f0bc"
+  },
+  "name": "A300 MODEL B4-605R",
+  "slug": "a300-model-b4-605r"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0bd"
+  },
+  "name": "A300 MODEL B4-622",
+  "slug": "a300-model-b4-622"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0be"
+  },
+  "name": "A300 MODEL F4-605R",
+  "slug": "a300-model-f4-605r"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0bf"
+  },
+  "name": "A300 MODEL F4-622R",
+  "slug": "a300-model-f4-622r"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c0"
+  },
+  "name": "A300 MODEL C4-605R VARIANT F",
+  "slug": "a300-model-c4-605r-variant-f"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c1"
+  },
+  "name": "A300 MODEL B4-622R",
+  "slug": "a300-model-b4-622r"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c2"
+  },
+  "name": "747-100",
+  "slug": "747-100"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c3"
+  },
+  "name": "747-200B",
+  "slug": "747-200b"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c4"
+  },
+  "name": "747-200F",
+  "slug": "747-200f"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c5"
+  },
+  "name": "747-200C",
+  "slug": "747-200c"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c6"
+  },
+  "name": "747-300",
+  "slug": "747-300"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c7"
+  },
+  "name": "DC-10-10",
+  "slug": "dc-10-10"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c8"
+  },
+  "name": "DC-10-40",
+  "slug": "dc-10-40"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0c9"
+  },
+  "name": "DC-10-30",
+  "slug": "dc-10-30"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0ca"
+  },
+  "name": "DC-10-30F (KC-10A",
+  "slug": "dc-10-30f-(kc-10a"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0cb"
+  },
+  "name": "KDC-10)",
+  "slug": "kdc-10)"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0cc"
+  },
+  "name": "DC-10-15",
+  "slug": "dc-10-15"
+},{
+  "_id": {
+    "$oid": "62e5718082d2f2c80c49f0cd"
+  },
+  "name": "MD-10-10F",
+  "slug": "md-10-10f"
+},{
+  "_id": {
+    "$oid": "62e5718382d2f2c80c49f0d9"
+  },
+  "name": "DC-9-81 (MD-81)",
+  "slug": "dc-9-81-(md-81)"
+},{
+  "_id": {
+    "$oid": "62e5718382d2f2c80c49f0da"
+  },
+  "name": "DC-9-82 (MD-82)",
+  "slug": "dc-9-82-(md-82)"
+},{
+  "_id": {
+    "$oid": "62e5718382d2f2c80c49f0db"
+  },
+  "name": "DC-9-83 (MD-83)",
+  "slug": "dc-9-83-(md-83)"
+},{
+  "_id": {
+    "$oid": "62e5718382d2f2c80c49f0dc"
+  },
+  "name": "MD-88",
+  "slug": "md-88"
+},{
+  "_id": {
+    "$oid": "62e5718382d2f2c80c49f0dd"
+  },
+  "name": "727-100 SERIES",
+  "slug": "727-100-series"
+},{
+  "_id": {
+    "$oid": "62e5718382d2f2c80c49f0de"
+  },
+  "name": "737-200",
+  "slug": "737-200"
+},{
+  "_id": {
+    "$oid": "62e5718382d2f2c80c49f0df"
+  },
+  "name": "737-300",
+  "slug": "737-300"
+},{
+  "_id": {
+    "$oid": "62e5718382d2f2c80c49f0e0"
+  },
+  "name": "737-400",
+  "slug": "737-400"
+},{
+  "_id": {
+    "$oid": "62e5718382d2f2c80c49f0e1"
+  },
+  "name": "737-500",
+  "slug": "737-500"
+},{
+  "_id": {
+    "$oid": "62e5718482d2f2c80c49f0e8"
+  },
+  "name": "747-400",
+  "slug": "747-400"
+},{
+  "_id": {
+    "$oid": "62e5718482d2f2c80c49f0e9"
+  },
+  "name": "767-200",
+  "slug": "767-200"
+},{
+  "_id": {
+    "$oid": "62e5718482d2f2c80c49f0ea"
+  },
+  "name": "767-300",
+  "slug": "767-300"
+},{
+  "_id": {
+    "$oid": "62e5718482d2f2c80c49f0eb"
+  },
+  "name": "767-300F",
+  "slug": "767-300f"
+},{
+  "_id": {
+    "$oid": "62e5718482d2f2c80c49f0ec"
+  },
+  "name": "767-400ER",
+  "slug": "767-400er"
+},{
+  "_id": {
+    "$oid": "62e5718482d2f2c80c49f0f2"
+  },
+  "name": "727 SERIES",
+  "slug": "727-series"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0f6"
+  },
+  "name": "A318-111",
+  "slug": "a318-111"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0f7"
+  },
+  "name": "A318-112",
+  "slug": "a318-112"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0f8"
+  },
+  "name": "A318-121",
+  "slug": "a318-121"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0f9"
+  },
+  "name": "A319-111",
+  "slug": "a319-111"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0fa"
+  },
+  "name": "A319-112",
+  "slug": "a319-112"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0fb"
+  },
+  "name": "A319-113",
+  "slug": "a319-113"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0fc"
+  },
+  "name": "A319-114",
+  "slug": "a319-114"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0fd"
+  },
+  "name": "A319-115",
+  "slug": "a319-115"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0fe"
+  },
+  "name": "A319-131",
+  "slug": "a319-131"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f0ff"
+  },
+  "name": "A319-132",
+  "slug": "a319-132"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f100"
+  },
+  "name": "A319-133",
+  "slug": "a319-133"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f101"
+  },
+  "name": "A320-111",
+  "slug": "a320-111"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f102"
+  },
+  "name": "A320-211",
+  "slug": "a320-211"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f103"
+  },
+  "name": "A320-212",
+  "slug": "a320-212"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f104"
+  },
+  "name": "A320-214",
+  "slug": "a320-214"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f105"
+  },
+  "name": "A320-231",
+  "slug": "a320-231"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f106"
+  },
+  "name": "A320-232",
+  "slug": "a320-232"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f107"
+  },
+  "name": "A320-233",
+  "slug": "a320-233"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f108"
+  },
+  "name": "A330-301",
+  "slug": "a330-301"
+},{
+  "_id": {
+    "$oid": "62e5718582d2f2c80c49f109"
+  },
+  "name": "A330-343",
+  "slug": "a330-343"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f10a"
+  },
+  "name": "A340-211",
+  "slug": "a340-211"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f10b"
+  },
+  "name": "A340-212",
+  "slug": "a340-212"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f10c"
+  },
+  "name": "A340-213",
+  "slug": "a340-213"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f10d"
+  },
+  "name": "A340-311",
+  "slug": "a340-311"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f10e"
+  },
+  "name": "A340-312",
+  "slug": "a340-312"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f10f"
+  },
+  "name": "A340-313",
+  "slug": "a340-313"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f110"
+  },
+  "name": "737-700",
+  "slug": "737-700"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f111"
+  },
+  "name": "737-800",
+  "slug": "737-800"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f112"
+  },
+  "name": "737-600",
+  "slug": "737-600"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f113"
+  },
+  "name": "747SR",
+  "slug": "747sr"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f114"
+  },
+  "name": "747SP",
+  "slug": "747sp"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f115"
+  },
+  "name": "747-100B",
+  "slug": "747-100b"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f116"
+  },
+  "name": "747-100B SUD",
+  "slug": "747-100b-sud"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f117"
+  },
+  "name": "747-400D",
+  "slug": "747-400d"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f118"
+  },
+  "name": "747-400F",
+  "slug": "747-400f"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f119"
+  },
+  "name": "757-200",
+  "slug": "757-200"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f11a"
+  },
+  "name": "757-200PF",
+  "slug": "757-200pf"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f11b"
+  },
+  "name": "757-300",
+  "slug": "757-300"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f11c"
+  },
+  "name": "CF6-80A",
+  "slug": "cf6-80a"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f11d"
+  },
+  "name": "CF6-80A1",
+  "slug": "cf6-80a1"
+},{
+  "_id": {
+    "$oid": "62e5718682d2f2c80c49f11e"
+  },
+  "name": "CF6-80A2",
+  "slug": "cf6-80a2"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f11f"
+  },
+  "name": "CF6-80A3",
+  "slug": "cf6-80a3"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f120"
+  },
+  "name": "CF6-80C2A1",
+  "slug": "cf6-80c2a1"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f121"
+  },
+  "name": "CF6-80C2A2",
+  "slug": "cf6-80c2a2"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f122"
+  },
+  "name": "CF6-80C2A3",
+  "slug": "cf6-80c2a3"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f123"
+  },
+  "name": "CF6-80C2A5",
+  "slug": "cf6-80c2a5"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f124"
+  },
+  "name": "CF6-80C2A8",
+  "slug": "cf6-80c2a8"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f125"
+  },
+  "name": "CF6-80C2B1",
+  "slug": "cf6-80c2b1"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f126"
+  },
+  "name": "CF6-80C2B2",
+  "slug": "cf6-80c2b2"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f127"
+  },
+  "name": "CF6-80C2B4",
+  "slug": "cf6-80c2b4"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f128"
+  },
+  "name": "CF6-80C2B6",
+  "slug": "cf6-80c2b6"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f129"
+  },
+  "name": "CF6-80C2B1F",
+  "slug": "cf6-80c2b1f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f12a"
+  },
+  "name": "CF6-80C2B2F",
+  "slug": "cf6-80c2b2f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f12b"
+  },
+  "name": "CF6-80C2B4F",
+  "slug": "cf6-80c2b4f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f12c"
+  },
+  "name": "CF6-80C2B6F",
+  "slug": "cf6-80c2b6f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f12d"
+  },
+  "name": "CF6-80C2D1F",
+  "slug": "cf6-80c2d1f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f12e"
+  },
+  "name": "CF6-80C2A5F",
+  "slug": "cf6-80c2a5f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f12f"
+  },
+  "name": "CF6-80C2B7F",
+  "slug": "cf6-80c2b7f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f130"
+  },
+  "name": "CF6-80C2B6FA",
+  "slug": "cf6-80c2b6fa"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f131"
+  },
+  "name": "CF6-80C2B5F",
+  "slug": "cf6-80c2b5f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f132"
+  },
+  "name": "CF6-80C2B8F",
+  "slug": "cf6-80c2b8f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f133"
+  },
+  "name": "DC-10-10F",
+  "slug": "dc-10-10f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f134"
+  },
+  "name": "MD-11",
+  "slug": "md-11"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f135"
+  },
+  "name": "MD-11F",
+  "slug": "md-11f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f136"
+  },
+  "name": "MD-10-30F",
+  "slug": "md-10-30f"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f137"
+  },
+  "name": "L-1011-385-1",
+  "slug": "l-1011-385-1"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f138"
+  },
+  "name": "L-1011-385-1-14",
+  "slug": "l-1011-385-1-14"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f139"
+  },
+  "name": "L-1011-385-1-15",
+  "slug": "l-1011-385-1-15"
+},{
+  "_id": {
+    "$oid": "62e5718782d2f2c80c49f13a"
+  },
+  "name": "L-1011-385-3",
+  "slug": "l-1011-385-3"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f14a"
+  },
+  "name": "A318-122",
+  "slug": "a318-122"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f14b"
+  },
+  "name": "A321-111",
+  "slug": "a321-111"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f14c"
+  },
+  "name": "A321-112",
+  "slug": "a321-112"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f14d"
+  },
+  "name": "A321-131",
+  "slug": "a321-131"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f14e"
+  },
+  "name": "A321-211",
+  "slug": "a321-211"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f14f"
+  },
+  "name": "A321-231",
+  "slug": "a321-231"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f150"
+  },
+  "name": "A321-212",
+  "slug": "a321-212"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f151"
+  },
+  "name": "A321-213",
+  "slug": "a321-213"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f152"
+  },
+  "name": "A321-232",
+  "slug": "a321-232"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f153"
+  },
+  "name": "A330-201",
+  "slug": "a330-201"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f154"
+  },
+  "name": "A330-202",
+  "slug": "a330-202"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f155"
+  },
+  "name": "A330-203",
+  "slug": "a330-203"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f156"
+  },
+  "name": "A330-223",
+  "slug": "a330-223"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f157"
+  },
+  "name": "A330-243",
+  "slug": "a330-243"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f158"
+  },
+  "name": "A330-223F",
+  "slug": "a330-223f"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f159"
+  },
+  "name": "A330-243F",
+  "slug": "a330-243f"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f15a"
+  },
+  "name": "A330-302",
+  "slug": "a330-302"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f15b"
+  },
+  "name": "A330-303",
+  "slug": "a330-303"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f15c"
+  },
+  "name": "A330-321",
+  "slug": "a330-321"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f15d"
+  },
+  "name": "A330-322",
+  "slug": "a330-322"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f15e"
+  },
+  "name": "A330-323",
+  "slug": "a330-323"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f15f"
+  },
+  "name": "A330-341",
+  "slug": "a330-341"
+},{
+  "_id": {
+    "$oid": "62e5718882d2f2c80c49f160"
+  },
+  "name": "A330-342",
+  "slug": "a330-342"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f161"
+  },
+  "name": "A340-541",
+  "slug": "a340-541"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f162"
+  },
+  "name": "A340-642",
+  "slug": "a340-642"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f163"
+  },
+  "name": "DC-9-11",
+  "slug": "dc-9-11"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f164"
+  },
+  "name": "DC-9-12",
+  "slug": "dc-9-12"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f165"
+  },
+  "name": "DC-9-13",
+  "slug": "dc-9-13"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f166"
+  },
+  "name": "DC-9-14",
+  "slug": "dc-9-14"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f167"
+  },
+  "name": "DC-9-15",
+  "slug": "dc-9-15"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f168"
+  },
+  "name": "DC-9-15F",
+  "slug": "dc-9-15f"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f169"
+  },
+  "name": "DC-9-21",
+  "slug": "dc-9-21"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f16a"
+  },
+  "name": "DC-9-31",
+  "slug": "dc-9-31"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f16b"
+  },
+  "name": "DC-9-32",
+  "slug": "dc-9-32"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f16c"
+  },
+  "name": "DC-9-32 (VC-9C)",
+  "slug": "dc-9-32-(vc-9c)"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f16d"
+  },
+  "name": "DC-9-32F",
+  "slug": "dc-9-32f"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f16e"
+  },
+  "name": "DC-9-32F (C-9A",
+  "slug": "dc-9-32f-(c-9a"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f16f"
+  },
+  "name": "C-9B)",
+  "slug": "c-9b)"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f170"
+  },
+  "name": "DC-9-33F",
+  "slug": "dc-9-33f"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f171"
+  },
+  "name": "DC-9-34",
+  "slug": "dc-9-34"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f172"
+  },
+  "name": "DC-9-34F",
+  "slug": "dc-9-34f"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f173"
+  },
+  "name": "DC-9-41",
+  "slug": "dc-9-41"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f174"
+  },
+  "name": "DC-9-51",
+  "slug": "dc-9-51"
+},{
+  "_id": {
+    "$oid": "62e5718982d2f2c80c49f175"
+  },
+  "name": "717-200",
+  "slug": "717-200"
+},{
+  "_id": {
+    "$oid": "62e5718d82d2f2c80c49f18e"
+  },
+  "name": "727-200 SERIES",
+  "slug": "727-200-series"
+},{
+  "_id": {
+    "$oid": "62e5718d82d2f2c80c49f18f"
+  },
+  "name": "737-100",
+  "slug": "737-100"
+},{
+  "_id": {
+    "$oid": "62e5718d82d2f2c80c49f197"
+  },
+  "name": "757-200CB",
+  "slug": "757-200cb"
+},{
+  "_id": {
+    "$oid": "62e5718d82d2f2c80c49f198"
+  },
+  "name": "777-200",
+  "slug": "777-200"
+},{
+  "_id": {
+    "$oid": "62e5718d82d2f2c80c49f199"
+  },
+  "name": "777-300",
+  "slug": "777-300"
+},{
+  "_id": {
+    "$oid": "62e5718d82d2f2c80c49f19a"
+  },
+  "name": "777-300ER",
+  "slug": "777-300er"
+},{
+  "_id": {
+    "$oid": "62e5718d82d2f2c80c49f19b"
+  },
+  "name": "777-200LR",
+  "slug": "777-200lr"
+},{
+  "_id": {
+    "$oid": "62e5718d82d2f2c80c49f19c"
+  },
+  "name": "777F",
+  "slug": "777f"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1c1"
+  },
+  "name": "CF6-45A",
+  "slug": "cf6-45a"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1c2"
+  },
+  "name": "CF6-45A2",
+  "slug": "cf6-45a2"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1c3"
+  },
+  "name": "CF6-50C",
+  "slug": "cf6-50c"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1c4"
+  },
+  "name": "CF6-50CA",
+  "slug": "cf6-50ca"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1c5"
+  },
+  "name": "CF6-50C1",
+  "slug": "cf6-50c1"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1c6"
+  },
+  "name": "CF6-50C2",
+  "slug": "cf6-50c2"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1c7"
+  },
+  "name": "CF6-50C2B",
+  "slug": "cf6-50c2b"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1c8"
+  },
+  "name": "CF6-50C2D",
+  "slug": "cf6-50c2d"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1c9"
+  },
+  "name": "CF6-50E",
+  "slug": "cf6-50e"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1ca"
+  },
+  "name": "CF6-50E1",
+  "slug": "cf6-50e1"
+},{
+  "_id": {
+    "$oid": "62e5719082d2f2c80c49f1cb"
+  },
+  "name": "CF6-50E2",
+  "slug": "cf6-50e2"
+},{
+  "_id": {
+    "$oid": "62e5719182d2f2c80c49f1d6"
+  },
+  "name": "CF6-50A",
+  "slug": "cf6-50a"
+},{
+  "_id": {
+    "$oid": "62e5719182d2f2c80c49f1d7"
+  },
+  "name": "CF6-50E2B",
+  "slug": "cf6-50e2b"
+},{
+  "_id": {
+    "$oid": "62e5719182d2f2c80c49f1dc"
+  },
+  "name": "CFM56-3",
+  "slug": "cfm56-3"
+},{
+  "_id": {
+    "$oid": "62e5719182d2f2c80c49f1dd"
+  },
+  "name": "CFM56-3B",
+  "slug": "cfm56-3b"
+},{
+  "_id": {
+    "$oid": "62e5719182d2f2c80c49f1de"
+  },
+  "name": "CFM56-3C",
+  "slug": "cfm56-3c"
+},{
+  "_id": {
+    "$oid": "62e5719282d2f2c80c49f1e8"
+  },
+  "name": "737-200C",
+  "slug": "737-200c"
+},{
+  "_id": {
+    "$oid": "62e5719582d2f2c80c49f232"
+  },
+  "name": "727-100C SERIES",
+  "slug": "727-100c-series"
+},{
+  "_id": {
+    "$oid": "62e5719582d2f2c80c49f233"
+  },
+  "name": "727-200F SERIES",
+  "slug": "727-200f-series"
+},{
+  "_id": {
+    "$oid": "62e5719582d2f2c80c49f234"
+  },
+  "name": "737-700C",
+  "slug": "737-700c"
+},{
+  "_id": {
+    "$oid": "62e5719582d2f2c80c49f235"
+  },
+  "name": "737-900",
+  "slug": "737-900"
+},{
+  "_id": {
+    "$oid": "62e5719582d2f2c80c49f236"
+  },
+  "name": "737-900ER",
+  "slug": "737-900er"
+},{
+  "_id": {
+    "$oid": "62e5719582d2f2c80c49f237"
+  },
+  "name": "77-8F",
+  "slug": "77-8f"
+},{
+  "_id": {
+    "$oid": "62e5719582d2f2c80c49f238"
+  },
+  "name": "747-8",
+  "slug": "747-8"
+},{
+  "_id": {
+    "$oid": "62e5719a82d2f2c80c49f271"
+  },
+  "name": "F.28 MARK 0100",
+  "slug": "f.28-mark-0100"
+},{
+  "_id": {
+    "$oid": "62e5719a82d2f2c80c49f272"
+  },
+  "name": "F.28 MARK 0070",
+  "slug": "f.28-mark-0070"
+},{
+  "_id": {
+    "$oid": "62e5719c82d2f2c80c49f27e"
+  },
+  "name": "DC-10-40F",
+  "slug": "dc-10-40f"
+},{
+  "_id": {
+    "$oid": "62e5719e82d2f2c80c49f2af"
+  },
+  "name": "CL-600-2B19 (REGIONAL JET SERIES 100 & 440)",
+  "slug": "cl-600-2b19-(regional-jet-series-100-and-440)"
+},{
+  "_id": {
+    "$oid": "62e571a182d2f2c80c49f2d8"
+  },
+  "name": "PW4152",
+  "slug": "pw4152"
+},{
+  "_id": {
+    "$oid": "62e571a182d2f2c80c49f2d9"
+  },
+  "name": "PW4156A",
+  "slug": "pw4156a"
+},{
+  "_id": {
+    "$oid": "62e571a182d2f2c80c49f2da"
+  },
+  "name": "PW4158",
+  "slug": "pw4158"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f359"
+  },
+  "name": "340A (SAAB/SF340A)",
+  "slug": "340a-(saabsf340a)"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f35a"
+  },
+  "name": "SAAB 340B",
+  "slug": "saab-340b"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f362"
+  },
+  "name": "CFM56-5B1",
+  "slug": "cfm56-5b1"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f363"
+  },
+  "name": "CFM56-5B2/P",
+  "slug": "cfm56-5b2p"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f364"
+  },
+  "name": "CFM56-5B3/2P",
+  "slug": "cfm56-5b32p"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f365"
+  },
+  "name": "CFM56-5B4/P",
+  "slug": "cfm56-5b4p"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f366"
+  },
+  "name": "CFM56-5B5/P",
+  "slug": "cfm56-5b5p"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f367"
+  },
+  "name": "CFM56-5B7",
+  "slug": "cfm56-5b7"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f368"
+  },
+  "name": "CFM56-5B1/P",
+  "slug": "cfm56-5b1p"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f369"
+  },
+  "name": "CFM56-5B2/2P",
+  "slug": "cfm56-5b22p"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f36a"
+  },
+  "name": "CFM56-5B6",
+  "slug": "cfm56-5b6"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f36b"
+  },
+  "name": "CFM56-5B1/2P",
+  "slug": "cfm56-5b12p"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f36c"
+  },
+  "name": "CFM56-5B3/P",
+  "slug": "cfm56-5b3p"
+},{
+  "_id": {
+    "$oid": "62e571a982d2f2c80c49f36d"
+  },
+  "name": "CFM56-5B4",
+  "slug": "cfm56-5b4"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f36e"
+  },
+  "name": "CFM56-5B4/2P1",
+  "slug": "cfm56-5b42p1"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f36f"
+  },
+  "name": "CFM56-5B6/P",
+  "slug": "cfm56-5b6p"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f370"
+  },
+  "name": "CFM56-5B2",
+  "slug": "cfm56-5b2"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f371"
+  },
+  "name": "CFM56-5B5",
+  "slug": "cfm56-5b5"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f372"
+  },
+  "name": "CFM56-5B6/2P",
+  "slug": "cfm56-5b62p"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f373"
+  },
+  "name": "CFM56-5C2",
+  "slug": "cfm56-5c2"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f374"
+  },
+  "name": "CFM56-5C2/G",
+  "slug": "cfm56-5c2g"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f375"
+  },
+  "name": "CFM56-5C3/F",
+  "slug": "cfm56-5c3f"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f376"
+  },
+  "name": "CFM56-5C4",
+  "slug": "cfm56-5c4"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f377"
+  },
+  "name": "CFM56-5C2/4",
+  "slug": "cfm56-5c24"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f378"
+  },
+  "name": "CFM56-5C2/G4",
+  "slug": "cfm56-5c2g4"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f379"
+  },
+  "name": "CFM56-5C3/G",
+  "slug": "cfm56-5c3g"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f37a"
+  },
+  "name": "CFM56-5C2/F",
+  "slug": "cfm56-5c2f"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f37b"
+  },
+  "name": "CFM56-5C3/G4",
+  "slug": "cfm56-5c3g4"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f37c"
+  },
+  "name": "CFM56-5C4/1",
+  "slug": "cfm56-5c41"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f37d"
+  },
+  "name": "CFM56-5C2/F4",
+  "slug": "cfm56-5c2f4"
+},{
+  "_id": {
+    "$oid": "62e571aa82d2f2c80c49f37e"
+  },
+  "name": "CFM56-5C3/F4",
+  "slug": "cfm56-5c3f4"
+},{
+  "_id": {
+    "$oid": "62e571ad82d2f2c80c49f3b6"
+  },
+  "name": "CF6-80C2L1F",
+  "slug": "cf6-80c2l1f"
+},{
+  "_id": {
+    "$oid": "62e571ae82d2f2c80c49f3b7"
+  },
+  "name": "CF6-80C2B3F",
+  "slug": "cf6-80c2b3f"
+},{
+  "_id": {
+    "$oid": "62e571ae82d2f2c80c49f3b8"
+  },
+  "name": "CF6-80C2K1F",
+  "slug": "cf6-80c2k1f"
+},{
+  "_id": {
+    "$oid": "62e571ae82d2f2c80c49f3b9"
+  },
+  "name": "CF6-80C2B1F1",
+  "slug": "cf6-80c2b1f1"
+},{
+  "_id": {
+    "$oid": "62e571ae82d2f2c80c49f3ba"
+  },
+  "name": "CF6-80C2B1F2",
+  "slug": "cf6-80c2b1f2"
+},{
+  "_id": {
+    "$oid": "62e571b882d2f2c80c49f42a"
+  },
+  "name": "ATR72-101",
+  "slug": "atr72-101"
+},{
+  "_id": {
+    "$oid": "62e571b882d2f2c80c49f42b"
+  },
+  "name": "ATR72-201",
+  "slug": "atr72-201"
+},{
+  "_id": {
+    "$oid": "62e571b882d2f2c80c49f42c"
+  },
+  "name": "ATR72-102",
+  "slug": "atr72-102"
+},{
+  "_id": {
+    "$oid": "62e571b882d2f2c80c49f42d"
+  },
+  "name": "ATR72-202",
+  "slug": "atr72-202"
+},{
+  "_id": {
+    "$oid": "62e571b882d2f2c80c49f42e"
+  },
+  "name": "ATR72-211",
+  "slug": "atr72-211"
+},{
+  "_id": {
+    "$oid": "62e571b882d2f2c80c49f42f"
+  },
+  "name": "ATR72-212",
+  "slug": "atr72-212"
+},{
+  "_id": {
+    "$oid": "62e571b882d2f2c80c49f430"
+  },
+  "name": "ATR72-212A",
+  "slug": "atr72-212a"
+},{
+  "_id": {
+    "$oid": "62e571bc82d2f2c80c49f474"
+  },
+  "name": "CFM56-5B7/P",
+  "slug": "cfm56-5b7p"
+},{
+  "_id": {
+    "$oid": "62e571be82d2f2c80c49f48f"
+  },
+  "name": "DC-9-87 (MD-87)",
+  "slug": "dc-9-87-(md-87)"
+},{
+  "_id": {
+    "$oid": "62e571be82d2f2c80c49f490"
+  },
+  "name": "EMB-145ER",
+  "slug": "emb-145er"
+},{
+  "_id": {
+    "$oid": "62e571be82d2f2c80c49f491"
+  },
+  "name": "EMB-145LR",
+  "slug": "emb-145lr"
+},{
+  "_id": {
+    "$oid": "62e571be82d2f2c80c49f492"
+  },
+  "name": "EMB-135ER",
+  "slug": "emb-135er"
+},{
+  "_id": {
+    "$oid": "62e571be82d2f2c80c49f493"
+  },
+  "name": "EMB-135LR",
+  "slug": "emb-135lr"
+},{
+  "_id": {
+    "$oid": "62e571be82d2f2c80c49f494"
+  },
+  "name": "EMB-145EP",
+  "slug": "emb-145ep"
+},{
+  "_id": {
+    "$oid": "62e571cb82d2f2c80c49f533"
+  },
+  "name": "CL-600-2C10 (REGIONAL JET SERIES 700",
+  "slug": "cl-600-2c10-(regional-jet-series-700"
+},{
+  "_id": {
+    "$oid": "62e571cb82d2f2c80c49f534"
+  },
+  "name": "701 &702)",
+  "slug": "701-and702)"
+},{
+  "_id": {
+    "$oid": "62e571cb82d2f2c80c49f535"
+  },
+  "name": "CL-600-2D15 (REGIONAL JET SERIES 705)",
+  "slug": "cl-600-2d15-(regional-jet-series-705)"
+},{
+  "_id": {
+    "$oid": "62e571d882d2f2c80c49f62f"
+  },
+  "name": "AVRO 146-RJ-70",
+  "slug": "avro-146-rj-70"
+},{
+  "_id": {
+    "$oid": "62e571d882d2f2c80c49f630"
+  },
+  "name": "AVRO 146-RJ-85",
+  "slug": "avro-146-rj-85"
+},{
+  "_id": {
+    "$oid": "62e571d882d2f2c80c49f631"
+  },
+  "name": "AVRO 146-RJ-100",
+  "slug": "avro-146-rj-100"
+},{
+  "_id": {
+    "$oid": "62e571d882d2f2c80c49f632"
+  },
+  "name": "CL-600-2D24 (REGIONAL JET SERIES 900)",
+  "slug": "cl-600-2d24-(regional-jet-series-900)"
+},{
+  "_id": {
+    "$oid": "62e571d882d2f2c80c49f633"
+  },
+  "name": "ERJ 170-100 LR",
+  "slug": "erj-170-100-lr"
+},{
+  "_id": {
+    "$oid": "62e571d882d2f2c80c49f634"
+  },
+  "name": "ERJ 170-100 SE",
+  "slug": "erj-170-100-se"
+},{
+  "_id": {
+    "$oid": "62e571d882d2f2c80c49f635"
+  },
+  "name": "ERJ 170-200 LR",
+  "slug": "erj-170-200-lr"
+},{
+  "_id": {
+    "$oid": "62e571d882d2f2c80c49f636"
+  },
+  "name": "ERJ 190-100 IGW",
+  "slug": "erj-190-100-igw"
+},{
+  "_id": {
+    "$oid": "62e571d982d2f2c80c49f63f"
+  },
+  "name": "CFM56-5-A1/F",
+  "slug": "cfm56-5-a1f"
+},{
+  "_id": {
+    "$oid": "62e571d982d2f2c80c49f640"
+  },
+  "name": "CFM56-5A4/F",
+  "slug": "cfm56-5a4f"
+},{
+  "_id": {
+    "$oid": "62e571d982d2f2c80c49f641"
+  },
+  "name": "CFM56-5A5",
+  "slug": "cfm56-5a5"
+},{
+  "_id": {
+    "$oid": "62e571d982d2f2c80c49f642"
+  },
+  "name": "CFM56-5A5/F",
+  "slug": "cfm56-5a5f"
+},{
+  "_id": {
+    "$oid": "62e571da82d2f2c80c49f657"
+  },
+  "name": "CFM56-5B3/2P1",
+  "slug": "cfm56-5b32p1"
+},{
+  "_id": {
+    "$oid": "62e571de82d2f2c80c49f680"
+  },
+  "name": "CF6-80E1A3",
+  "slug": "cf6-80e1a3"
+},{
+  "_id": {
+    "$oid": "62e571de82d2f2c80c49f681"
+  },
+  "name": "DC-8-71",
+  "slug": "dc-8-71"
+},{
+  "_id": {
+    "$oid": "62e571de82d2f2c80c49f682"
+  },
+  "name": "DC-8-71F",
+  "slug": "dc-8-71f"
+},{
+  "_id": {
+    "$oid": "62e571de82d2f2c80c49f683"
+  },
+  "name": "DC-8-72",
+  "slug": "dc-8-72"
+},{
+  "_id": {
+    "$oid": "62e571de82d2f2c80c49f684"
+  },
+  "name": "DC-8-72F",
+  "slug": "dc-8-72f"
+},{
+  "_id": {
+    "$oid": "62e571de82d2f2c80c49f685"
+  },
+  "name": "DC-8-73",
+  "slug": "dc-8-73"
+},{
+  "_id": {
+    "$oid": "62e571de82d2f2c80c49f686"
+  },
+  "name": "DC-8-73F",
+  "slug": "dc-8-73f"
+},{
+  "_id": {
+    "$oid": "62e571e382d2f2c80c49f6be"
+  },
+  "name": "DHC-8-300",
+  "slug": "dhc-8-300"
+},{
+  "_id": {
+    "$oid": "62e571e382d2f2c80c49f6bf"
+  },
+  "name": "EMB-135KL",
+  "slug": "emb-135kl"
+},{
+  "_id": {
+    "$oid": "62e571f082d2f2c80c49f72c"
+  },
+  "name": "ATR42-300",
+  "slug": "atr42-300"
+},{
+  "_id": {
+    "$oid": "62e571f082d2f2c80c49f72d"
+  },
+  "name": "ATR42-500",
+  "slug": "atr42-500"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f816"
+  },
+  "name": "707-300",
+  "slug": "707-300"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f817"
+  },
+  "name": "707-400",
+  "slug": "707-400"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f818"
+  },
+  "name": "707-300B",
+  "slug": "707-300b"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f819"
+  },
+  "name": "707-300C",
+  "slug": "707-300c"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f81a"
+  },
+  "name": "707-100 LONG BODY",
+  "slug": "707-100-long-body"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f81b"
+  },
+  "name": "707-200",
+  "slug": "707-200"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f81c"
+  },
+  "name": "707-100B LONG BODY",
+  "slug": "707-100b-long-body"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f81d"
+  },
+  "name": "707-100B SHORT BODY",
+  "slug": "707-100b-short-body"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f81e"
+  },
+  "name": "MD-90-30",
+  "slug": "md-90-30"
+},{
+  "_id": {
+    "$oid": "62e571fc82d2f2c80c49f81f"
+  },
+  "name": "727C SERIES",
+  "slug": "727c-series"
+},{
+  "_id": {
+    "$oid": "62e5720382d2f2c80c49f876"
+  },
+  "name": "CFM56-5A4",
+  "slug": "cfm56-5a4"
+},{
+  "_id": {
+    "$oid": "62e5720482d2f2c80c49f877"
+  },
+  "name": "CFM56-5B4/P1",
+  "slug": "cfm56-5b4p1"
+},{
+  "_id": {
+    "$oid": "62e5720482d2f2c80c49f878"
+  },
+  "name": "CFM56-5C4/P",
+  "slug": "cfm56-5c4p"
+},{
+  "_id": {
+    "$oid": "62e5720482d2f2c80c49f879"
+  },
+  "name": "CFM56-5C2/P",
+  "slug": "cfm56-5c2p"
+},{
+  "_id": {
+    "$oid": "62e5720482d2f2c80c49f87a"
+  },
+  "name": "CFM56-5C3/P",
+  "slug": "cfm56-5c3p"
+},{
+  "_id": {
+    "$oid": "62e5720482d2f2c80c49f87b"
+  },
+  "name": "CFM56-5C4/1P",
+  "slug": "cfm56-5c41p"
+},{
+  "_id": {
+    "$oid": "62e5720582d2f2c80c49f888"
+  },
+  "name": "CL-601-2A21",
+  "slug": "cl-601-2a21"
+},{
+  "_id": {
+    "$oid": "62e5720582d2f2c80c49f889"
+  },
+  "name": "CL-600-2B16 (CL-601-3A VARIANT)",
+  "slug": "cl-600-2b16-(cl-601-3a-variant)"
+},{
+  "_id": {
+    "$oid": "62e5720882d2f2c80c49f8a6"
+  },
+  "name": "CFM56-5A3",
+  "slug": "cfm56-5a3"
+},{
+  "_id": {
+    "$oid": "62e5720f82d2f2c80c49f8f0"
+  },
+  "name": "ERJ 170-200 SU",
+  "slug": "erj-170-200-su"
+},{
+  "_id": {
+    "$oid": "62e5720f82d2f2c80c49f8f1"
+  },
+  "name": "ERJ 190-100 STD",
+  "slug": "erj-190-100-std"
+},{
+  "_id": {
+    "$oid": "62e5720f82d2f2c80c49f8f2"
+  },
+  "name": "ERJ 190-200 STD",
+  "slug": "erj-190-200-std"
+},{
+  "_id": {
+    "$oid": "62e5721082d2f2c80c49f903"
+  },
+  "name": "CL-600-1A11",
+  "slug": "cl-600-1a11"
+},{
+  "_id": {
+    "$oid": "62e5721082d2f2c80c49f904"
+  },
+  "name": "CL-600-2B16 (CL-601-3R VARIANT)",
+  "slug": "cl-600-2b16-(cl-601-3r-variant)"
+},{
+  "_id": {
+    "$oid": "62e5721182d2f2c80c49f905"
+  },
+  "name": "CL-600-2B16 (CL-604 VARIANT)",
+  "slug": "cl-600-2b16-(cl-604-variant)"
+},{
+  "_id": {
+    "$oid": "62e5721882d2f2c80c49f960"
+  },
+  "name": "ATR42-200",
+  "slug": "atr42-200"
+},{
+  "_id": {
+    "$oid": "62e5721882d2f2c80c49f961"
+  },
+  "name": "ATR42-320",
+  "slug": "atr42-320"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f998"
+  },
+  "name": "CFM56-5B1/3",
+  "slug": "cfm56-5b13"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f999"
+  },
+  "name": "CFM56-5B4/3",
+  "slug": "cfm56-5b43"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f99a"
+  },
+  "name": "CFM56-5B7/3",
+  "slug": "cfm56-5b73"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f99b"
+  },
+  "name": "CFM56-5B2/3",
+  "slug": "cfm56-5b23"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f99c"
+  },
+  "name": "CFM56-5B4/3B1",
+  "slug": "cfm56-5b43b1"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f99d"
+  },
+  "name": "CFM56-5B8/3",
+  "slug": "cfm56-5b83"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f99e"
+  },
+  "name": "CFM56-5B3/3",
+  "slug": "cfm56-5b33"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f99f"
+  },
+  "name": "CFM56-5B5/3",
+  "slug": "cfm56-5b53"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f9a0"
+  },
+  "name": "CFM56-5B8/P",
+  "slug": "cfm56-5b8p"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f9a1"
+  },
+  "name": "CFM56-5B9/3",
+  "slug": "cfm56-5b93"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f9a2"
+  },
+  "name": "CFM56-5B3/3B1",
+  "slug": "cfm56-5b33b1"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f9a3"
+  },
+  "name": "CFM56-5B3/P1",
+  "slug": "cfm56-5b3p1"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f9a4"
+  },
+  "name": "CFM56-5B6/3",
+  "slug": "cfm56-5b63"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f9a5"
+  },
+  "name": "CFM56-5B9/P",
+  "slug": "cfm56-5b9p"
+},{
+  "_id": {
+    "$oid": "62e5722082d2f2c80c49f9a6"
+  },
+  "name": "CFM56-5B9/2P",
+  "slug": "cfm56-5b92p"
+},{
+  "_id": {
+    "$oid": "62e5722982d2f2c80c49f9fe"
+  },
+  "name": "PW2037",
+  "slug": "pw2037"
+},{
+  "_id": {
+    "$oid": "62e5722982d2f2c80c49f9ff"
+  },
+  "name": "PW2040",
+  "slug": "pw2040"
+},{
+  "_id": {
+    "$oid": "62e5722982d2f2c80c49fa06"
+  },
+  "name": "PW4052",
+  "slug": "pw4052"
+},{
+  "_id": {
+    "$oid": "62e5722982d2f2c80c49fa07"
+  },
+  "name": "PW4056",
+  "slug": "pw4056"
+},{
+  "_id": {
+    "$oid": "62e5722982d2f2c80c49fa08"
+  },
+  "name": "PW4060",
+  "slug": "pw4060"
+},{
+  "_id": {
+    "$oid": "62e5722982d2f2c80c49fa09"
+  },
+  "name": "PW4060A",
+  "slug": "pw4060a"
+},{
+  "_id": {
+    "$oid": "62e5722982d2f2c80c49fa0a"
+  },
+  "name": "PW4460",
+  "slug": "pw4460"
+},{
+  "_id": {
+    "$oid": "62e5722a82d2f2c80c49fa0b"
+  },
+  "name": "PW4462",
+  "slug": "pw4462"
+},{
+  "_id": {
+    "$oid": "62e5722d82d2f2c80c49fa2f"
+  },
+  "name": "PW4050",
+  "slug": "pw4050"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa30"
+  },
+  "name": "PW4060C",
+  "slug": "pw4060c"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa31"
+  },
+  "name": "PW4062",
+  "slug": "pw4062"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa32"
+  },
+  "name": "PW4156",
+  "slug": "pw4156"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa33"
+  },
+  "name": "PW4074",
+  "slug": "pw4074"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa34"
+  },
+  "name": "PW4077",
+  "slug": "pw4077"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa38"
+  },
+  "name": "PW4164",
+  "slug": "pw4164"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa39"
+  },
+  "name": "PW4168",
+  "slug": "pw4168"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa3a"
+  },
+  "name": "PW4168A",
+  "slug": "pw4168a"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa3b"
+  },
+  "name": "PW4077D",
+  "slug": "pw4077d"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa3c"
+  },
+  "name": "PW4084D",
+  "slug": "pw4084d"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa3d"
+  },
+  "name": "PW4090",
+  "slug": "pw4090"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa3e"
+  },
+  "name": "PW4074D",
+  "slug": "pw4074d"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa3f"
+  },
+  "name": "PW4090D",
+  "slug": "pw4090d"
+},{
+  "_id": {
+    "$oid": "62e5722e82d2f2c80c49fa40"
+  },
+  "name": "PW098",
+  "slug": "pw098"
+},{
+  "_id": {
+    "$oid": "62e5723282d2f2c80c49fa79"
+  },
+  "name": "EMB-145XR",
+  "slug": "emb-145xr"
+},{
+  "_id": {
+    "$oid": "62e5723882d2f2c80c49fac5"
+  },
+  "name": "ERJ 170-100 STD",
+  "slug": "erj-170-100-std"
+},{
+  "_id": {
+    "$oid": "62e5723882d2f2c80c49fac6"
+  },
+  "name": "ERJ 170-100 SU",
+  "slug": "erj-170-100-su"
+},{
+  "_id": {
+    "$oid": "62e5723882d2f2c80c49fac7"
+  },
+  "name": "ERJ 170-200 STD",
+  "slug": "erj-170-200-std"
+},{
+  "_id": {
+    "$oid": "62e5723982d2f2c80c49fac8"
+  },
+  "name": "ERJ 190-100 LR",
+  "slug": "erj-190-100-lr"
+},{
+  "_id": {
+    "$oid": "62e5723982d2f2c80c49fac9"
+  },
+  "name": "ERJ 190-100 EJC",
+  "slug": "erj-190-100-ejc"
+},{
+  "_id": {
+    "$oid": "62e5723982d2f2c80c49faca"
+  },
+  "name": "ERJ 190-200 LR",
+  "slug": "erj-190-200-lr"
+},{
+  "_id": {
+    "$oid": "62e5723982d2f2c80c49facb"
+  },
+  "name": "ERJ 190-200 IGW",
+  "slug": "erj-190-200-igw"
+},{
+  "_id": {
+    "$oid": "62e5724682d2f2c80c49fb8e"
+  },
+  "name": "PW4062A",
+  "slug": "pw4062a"
+},{
+  "_id": {
+    "$oid": "62e5724682d2f2c80c49fb8f"
+  },
+  "name": "PW4160",
+  "slug": "pw4160"
+},{
+  "_id": {
+    "$oid": "62e5724682d2f2c80c49fb90"
+  },
+  "name": "PW4650",
+  "slug": "pw4650"
+},{
+  "_id": {
+    "$oid": "62e5724a82d2f2c80c49fbaf"
+  },
+  "name": "CF34-8C1",
+  "slug": "cf34-8c1"
+},{
+  "_id": {
+    "$oid": "62e5724a82d2f2c80c49fbb0"
+  },
+  "name": "CF34-8C5",
+  "slug": "cf34-8c5"
+},{
+  "_id": {
+    "$oid": "62e5724a82d2f2c80c49fbb1"
+  },
+  "name": "CF34-8C5A1",
+  "slug": "cf34-8c5a1"
+},{
+  "_id": {
+    "$oid": "62e5724a82d2f2c80c49fbb2"
+  },
+  "name": "CF34-8C5A2",
+  "slug": "cf34-8c5a2"
+},{
+  "_id": {
+    "$oid": "62e5724a82d2f2c80c49fbb5"
+  },
+  "name": "CFM56-2",
+  "slug": "cfm56-2"
+},{
+  "_id": {
+    "$oid": "62e5724a82d2f2c80c49fbb6"
+  },
+  "name": "CFM56-2A",
+  "slug": "cfm56-2a"
+},{
+  "_id": {
+    "$oid": "62e5724a82d2f2c80c49fbb7"
+  },
+  "name": "CFM56-2B",
+  "slug": "cfm56-2b"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbb8"
+  },
+  "name": "CFM56-7B20",
+  "slug": "cfm56-7b20"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbb9"
+  },
+  "name": "CFM56-7B20E",
+  "slug": "cfm56-7b20e"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbba"
+  },
+  "name": "CFM56-7B22/B1",
+  "slug": "cfm56-7b22b1"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbbb"
+  },
+  "name": "CFM56-7B22E",
+  "slug": "cfm56-7b22e"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbbc"
+  },
+  "name": "CFM56-7B24/2",
+  "slug": "cfm56-7b242"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbbd"
+  },
+  "name": "CFM56-7B24/3B1",
+  "slug": "cfm56-7b243b1"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbbe"
+  },
+  "name": "CFM56-7B26/3",
+  "slug": "cfm56-7b263"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbbf"
+  },
+  "name": "CFM56-7B26/B1",
+  "slug": "cfm56-7b26b1"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc0"
+  },
+  "name": "CFM56-7B26/3F",
+  "slug": "cfm56-7b263f"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc1"
+  },
+  "name": "CFM56-7B26E/B1",
+  "slug": "cfm56-7b26eb1"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc2"
+  },
+  "name": "CFM56-7B26E/F",
+  "slug": "cfm56-7b26ef"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc3"
+  },
+  "name": "CFM56-7B27AE",
+  "slug": "cfm56-7b27ae"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc4"
+  },
+  "name": "CFM56-7B26/3B2",
+  "slug": "cfm56-7b263b2"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc5"
+  },
+  "name": "CFM56-7B27/2",
+  "slug": "cfm56-7b272"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc6"
+  },
+  "name": "CFM56-7B27A/3",
+  "slug": "cfm56-7b27a3"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc7"
+  },
+  "name": "CFM56-7B27E/B3",
+  "slug": "cfm56-7b27eb3"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc8"
+  },
+  "name": "CFM56-7B27E/B1F",
+  "slug": "cfm56-7b27eb1f"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbc9"
+  },
+  "name": "CFM56-7B20/2",
+  "slug": "cfm56-7b202"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbca"
+  },
+  "name": "CFM56-7B22",
+  "slug": "cfm56-7b22"
+},{
+  "_id": {
+    "$oid": "62e5724b82d2f2c80c49fbcb"
+  },
+  "name": "CFM56-7B22/3",
+  "slug": "cfm56-7b223"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbcc"
+  },
+  "name": "CFM56-7B22E/B1",
+  "slug": "cfm56-7b22eb1"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbcd"
+  },
+  "name": "CFM56-7B24/B1",
+  "slug": "cfm56-7b24b1"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbce"
+  },
+  "name": "CFM56-7B24E",
+  "slug": "cfm56-7b24e"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbcf"
+  },
+  "name": "CFM56-7B26",
+  "slug": "cfm56-7b26"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd0"
+  },
+  "name": "CFM56-7B26/3B1",
+  "slug": "cfm56-7b263b1"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd1"
+  },
+  "name": "CFM56-7B26/B2",
+  "slug": "cfm56-7b26b2"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd2"
+  },
+  "name": "CFM56-7B26E/B2",
+  "slug": "cfm56-7b26eb2"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd3"
+  },
+  "name": "CFM56-7B27",
+  "slug": "cfm56-7b27"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd4"
+  },
+  "name": "CFM56-7B27/3",
+  "slug": "cfm56-7b273"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd5"
+  },
+  "name": "CFM56-7B27/B1",
+  "slug": "cfm56-7b27b1"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd6"
+  },
+  "name": "CFM56-7B27/3B1",
+  "slug": "cfm56-7b273b1"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd7"
+  },
+  "name": "CFM56-7B27E",
+  "slug": "cfm56-7b27e"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd8"
+  },
+  "name": "CFM56-7B20/3",
+  "slug": "cfm56-7b203"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbd9"
+  },
+  "name": "CFM56-7B22/2",
+  "slug": "cfm56-7b222"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbda"
+  },
+  "name": "CFM56-7B22/3B1",
+  "slug": "cfm56-7b223b1"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbdb"
+  },
+  "name": "CFM56-7B24",
+  "slug": "cfm56-7b24"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbdc"
+  },
+  "name": "CFM56-7B24E/B1",
+  "slug": "cfm56-7b24eb1"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbdd"
+  },
+  "name": "CFM56-7B26/2",
+  "slug": "cfm56-7b262"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbde"
+  },
+  "name": "CFM56-7B26/3B2F",
+  "slug": "cfm56-7b263b2f"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbdf"
+  },
+  "name": "CFM56-7B26E",
+  "slug": "cfm56-7b26e"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbe0"
+  },
+  "name": "CFM56-7B26E/B2F",
+  "slug": "cfm56-7b26eb2f"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbe1"
+  },
+  "name": "CFM56-7B27A",
+  "slug": "cfm56-7b27a"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbe2"
+  },
+  "name": "CFM56-7B27/3F",
+  "slug": "cfm56-7b273f"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbe3"
+  },
+  "name": "CFM56-7B27/B3",
+  "slug": "cfm56-7b27b3"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbe4"
+  },
+  "name": "CFM56-7B27/3B3",
+  "slug": "cfm56-7b273b3"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbe5"
+  },
+  "name": "CFM56-7B27/3B1F",
+  "slug": "cfm56-7b273b1f"
+},{
+  "_id": {
+    "$oid": "62e5724c82d2f2c80c49fbe6"
+  },
+  "name": "CFM56-7B27E/F",
+  "slug": "cfm56-7b27ef"
+},{
+  "_id": {
+    "$oid": "62e5727c82d2f2c80c49fc95"
+  },
+  "name": "SA-365N",
+  "slug": "sa-365n"
+},{
+  "_id": {
+    "$oid": "62e5727c82d2f2c80c49fc96"
+  },
+  "name": "SA-365N1",
+  "slug": "sa-365n1"
+},{
+  "_id": {
+    "$oid": "62e5727c82d2f2c80c49fc97"
+  },
+  "name": "AS-365N2",
+  "slug": "as-365n2"
+},{
+  "_id": {
+    "$oid": "62e5727c82d2f2c80c49fc98"
+  },
+  "name": "AS 365 N3",
+  "slug": "as-365-n3"
+},{
+  "_id": {
+    "$oid": "62e5727d82d2f2c80c49fc9d"
+  },
+  "name": "SA-366G1",
+  "slug": "sa-366g1"
+},{
+  "_id": {
+    "$oid": "62e5727d82d2f2c80c49fcae"
+  },
+  "name": "AS350C",
+  "slug": "as350c"
+},{
+  "_id": {
+    "$oid": "62e5727d82d2f2c80c49fcaf"
+  },
+  "name": "AS350D",
+  "slug": "as350d"
+},{
+  "_id": {
+    "$oid": "62e5727d82d2f2c80c49fcb0"
+  },
+  "name": "AS350B",
+  "slug": "as350b"
+},{
+  "_id": {
+    "$oid": "62e5727d82d2f2c80c49fcb1"
+  },
+  "name": "AS350B1",
+  "slug": "as350b1"
+},{
+  "_id": {
+    "$oid": "62e5727d82d2f2c80c49fcb2"
+  },
+  "name": "AS350B2",
+  "slug": "as350b2"
+},{
+  "_id": {
+    "$oid": "62e572a382d2f2c80c49fe27"
+  },
+  "name": "CF6-80E1A1",
+  "slug": "cf6-80e1a1"
+},{
+  "_id": {
+    "$oid": "62e572a382d2f2c80c49fe28"
+  },
+  "name": "CF6-80E1A2",
+  "slug": "cf6-80e1a2"
+},{
+  "_id": {
+    "$oid": "62e572a382d2f2c80c49fe29"
+  },
+  "name": "CF6-80E1A4",
+  "slug": "cf6-80e1a4"
+},{
+  "_id": {
+    "$oid": "62e572a382d2f2c80c49fe2a"
+  },
+  "name": "CF6-80E1A4/B",
+  "slug": "cf6-80e1a4b"
+},{
+  "_id": {
+    "$oid": "62e572aa82d2f2c80c49fe86"
+  },
+  "name": "V2522-A5",
+  "slug": "v2522-a5"
+},{
+  "_id": {
+    "$oid": "62e572aa82d2f2c80c49fe87"
+  },
+  "name": "V2524-A5",
+  "slug": "v2524-a5"
+},{
+  "_id": {
+    "$oid": "62e572aa82d2f2c80c49fe88"
+  },
+  "name": "V2527-A5",
+  "slug": "v2527-a5"
+},{
+  "_id": {
+    "$oid": "62e572aa82d2f2c80c49fe89"
+  },
+  "name": "V2530-A5",
+  "slug": "v2530-a5"
+},{
+  "_id": {
+    "$oid": "62e572aa82d2f2c80c49fe8a"
+  },
+  "name": "V2525-D5",
+  "slug": "v2525-d5"
+},{
+  "_id": {
+    "$oid": "62e572aa82d2f2c80c49fe8b"
+  },
+  "name": "V2528-D5",
+  "slug": "v2528-d5"
+},{
+  "_id": {
+    "$oid": "62e572aa82d2f2c80c49fe8c"
+  },
+  "name": "V2533-A5",
+  "slug": "v2533-a5"
+}]
