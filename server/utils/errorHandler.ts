@@ -1,4 +1,4 @@
-import { sendError, createError } from 'h3'
+// import { sendError, createError } from 'h3'
 import colors from 'colors'
 
 // interface IAppErrorErrors {
@@ -15,7 +15,7 @@ import colors from 'colors'
 //   err: Error
 // }
 
-const errorHandler = (event: CompatibilityEvent, err: any) => {
+const errorHandler = (event: any, err: any) => {
   console.log(colors.red.bold(`ERR ${err}`), err)
   console.log('INFO', err.errorInfo)
 
@@ -80,14 +80,10 @@ const errorHandler = (event: CompatibilityEvent, err: any) => {
   }
   // console.log('JJJJJJJJJJ', message)
 
-  return sendError(
-    event,
-    createError({
-      statusCode: statusCode,
-      statusMessage: message,
-      data: err,
-    })
-  )
+  return {
+    statusCode: statusCode,
+    statusMessage: message,
+  }
 }
 
 export default errorHandler

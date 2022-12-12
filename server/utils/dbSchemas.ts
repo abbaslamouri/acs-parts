@@ -354,6 +354,10 @@ const productSchema = {
           bsonType: 'number',
           description: 'Product sale price',
         },
+        sku: {
+          bsonType: 'string',
+          description: 'sku',
+        },
         sortOrder: {
           bsonType: 'int',
           description: 'Used to sort products',
@@ -371,8 +375,9 @@ const productSchema = {
           description: 'Quantity sold',
         },
         status: {
-          enum: ['Draft', 'Archived', 'Published'],
-          description: 'tatus and is required',
+          enum: ['Draft', 'Archived', 'Published', 'Private'],
+          description:
+            'Status is required and can only be one of the following: Draft, Archived, Published or Private.',
         },
       },
     },
