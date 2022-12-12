@@ -9,7 +9,7 @@
       Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
       of Lorem Ipsum.
     </div>
-    <img src="/home-page-hero-2500X800.jpg" alt="Home Page Hero" />
+    <img src="home-page-hero-2500X800.jpg" alt="Home Page Hero" />
 
     <p>This is a narrow column of text, with a very long word: antidisestablishmentarianism.</p>
     <p>The same problem happens with URLs: https://www.somewebsite.com/articles/a1b2c3</p>
