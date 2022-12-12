@@ -7,7 +7,7 @@
         <!-- <div v-if="uploadedProducts.length > n - 1"> -->
         {{ product.name }}
         <div class="image">
-          <img :src="`https://acs-space.nyc3.digitaloceanspaces.com/uploads/${product.image}.jpg`" alt="" />
+          <img :src="`/products/${product.image}.jpg`" alt="" />
         </div>
         <!-- </div> -->
         <!-- <div v-else>Loading...</div> -->
