@@ -1,6 +1,9 @@
 <template>
   <div class="main-div">
     <h1>Leader in PMA Design🤣</h1>
+
+    <button @click="signinUser">Login</button>
+    <!-- <button @click="signupUser">Register</button> -->
     <div>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
       standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
@@ -17,7 +20,14 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { status, data, signIn, signOut } = useSession()
+// status.value // Session status: `unauthenticated`, `loading`, `authenticated`
+// data.value // Session data, e.g., expiration, user.email, ...
+const signinUser = async () => {
+  await signIn()
+} // Sign in the user
+</script>
 
 <style scoped>
 .main-div p {
