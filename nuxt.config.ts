@@ -1,5 +1,29 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      // charset: 'utf-16',
+      // viewport: 'width=device-width, initial-scale=1',
+      title: 'Aviation Component Solutions (ACS) - A Leading Supplier of PMA Parts',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'ACS seeks not only to provide the best pricing in the industry, but to create value by stocking 100% of our inventory for next day delivery, offering eCommerce solutions for online customers, utilizing the latest data management technology, and offering the latest manufacturing / design solutions <a href="https://acs-parts.com">Browse ACS Catalog</a>.',
+        },
+        // {
+        //   name: 'robots',
+        //   content: 'index, follow',
+        // },
+      ],
+
+      // {
+      //   name: 'canonical',
+      //   content:'href="http://example.com/"'
+      // },
+    },
+  },
+
   // vite: {
   //   css: {
   //     preprocessorOptions: {
