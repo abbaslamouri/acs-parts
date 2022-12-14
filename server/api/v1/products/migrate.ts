@@ -2,8 +2,8 @@ import errorHandler from '~/server/utils/errorHandler'
 import slugify from 'slugify'
 import { ObjectId } from 'mongodb'
 import { MongoClient } from 'mongodb'
-import { IProduct } from '~/server/utils/IProduct'
-import { productSchema, userSchema, gallerySchema, mediaSchema, countrySchema } from '~/server/utils/dbSchemas'
+// import { IProduct } from '~/server/utils/IProduct'
+// import { productSchema, userSchema, gallerySchema, mediaSchema, countrySchema } from '~~/server/schemas/state'
 
 const mongoClient = new MongoClient(process.env.NUXT_DB_URL as string)
 

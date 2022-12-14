@@ -2,7 +2,9 @@ import slugify from 'slugify'
 import { ObjectId } from 'mongodb'
 
 import { MongoClient } from 'mongodb'
-import { productSchema, nextHigherAssemblySchema, defaultSchema } from '~/server/utils/dbSchemas'
+// import { productSchema, nextHigherAssemblySchema, defaultSchema } from '~/server/utils/dbSchemas'
+import productSchema from '~/server/schemas/product'
+import defaultSchema from '~/server/schemas/default'
 
 const mongoClient = new MongoClient(process.env.NUXT_DB_URL as string)
 

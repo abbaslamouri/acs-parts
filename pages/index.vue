@@ -21,11 +21,11 @@
 </template>
 
 <script setup lang="ts">
-const { status, data, signIn, signOut } = useSession()
+// const { status, data, signIn, signOut } = useSession()
 // status.value // Session status: `unauthenticated`, `loading`, `authenticated`
 // data.value // Session data, e.g., expiration, user.email, ...
 const signinUser = async () => {
-  await signIn()
+  // await signIn()
 } // Sign in the user
 </script>
 
