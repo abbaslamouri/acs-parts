@@ -3,7 +3,7 @@ const useUserData = () => {
   const userData = useState('user', () => {
     return {
       name: useCookie('userName') && useCookie('userName').value ? useCookie('userName').value : '',
-      email: '',
+      email: 'cccc',
       password: '',
       isAuthenticated: useState('isAuthenticated', () =>
         useCookie('authToken') && useCookie('authToken').value ? true : false
