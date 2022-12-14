@@ -1,6 +1,6 @@
 import IUser from '~/types/IUser'
 const useUserData = () => {
-  const userData = useState<IUser>('user', () => {
+  const userData = useState('user', () => {
     return {
       name: useCookie('userName') && useCookie('userName').value ? useCookie('userName').value : '',
       email: '',
@@ -12,7 +12,7 @@ const useUserData = () => {
     }
   })
 
-  const setUserData = (user: IUser) => {
+  const setUserData = (user: any) => {
     userData.value = user
   }
 
