@@ -58,7 +58,7 @@ export default defineNuxtConfig({
 
     // Add module with inline-options
     '@nuxt/content',
-    ['./modules/mongodb', { dbUrl: process.env.NUXT_DB_URL }],
+    ['./modules/mongodb', {}],
 
     // Inline module definition
     // async (inlineOptions, nuxt) => { }
@@ -79,7 +79,7 @@ export default defineNuxtConfig({
   // },
 
   runtimeConfig: {
-    // dbUrl: '',
+    dbUrl: '',
     // jwtSecret: '',
     // jwtMaxAge: '',
     // jwtSignupTokenMaxAge: '',

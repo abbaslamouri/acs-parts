@@ -1,10 +1,9 @@
-import IUser from '~/types/IUser'
+// import ISignupData from '~/types/ISignupData'
 const useUserData = () => {
   const userData = useState('user', () => {
     return {
       name: useCookie('userName') && useCookie('userName').value ? useCookie('userName').value : '',
-      email: 'cccc',
-      password: '',
+      email: '',
       isAuthenticated: useState('isAuthenticated', () =>
         useCookie('authToken') && useCookie('authToken').value ? true : false
       ),

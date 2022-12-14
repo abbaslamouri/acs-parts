@@ -1,4 +1,4 @@
-// import bcrypt from 'bcryptjs'
+import bcrypt from 'bcryptjs'
 // import jwt from 'jsonwebtoken'
 // import { ObjectId } from 'mongodb'
 // import { CompatibilityEvent } from 'h3'
@@ -12,10 +12,10 @@
 //   return jwt.sign({ id }, config.jwtSecret, { expiresIn: maxAge })
 // }
 
-// const hashPassword = async (password: string) => {
-//   const salt = await bcrypt.genSalt(12)
-//   return await bcrypt.hash(password as string, salt)
-// }
+const hashPassword = async (password: string) => {
+  const salt = await bcrypt.genSalt(12)
+  return await bcrypt.hash(password as string, salt)
+}
 
 // const checkPassword = async (password: string, hash: string) => {
 //   return await bcrypt.compare(password, hash)
@@ -100,4 +100,12 @@
 //   }
 // }
 
-// export { fetchUserById, createUser, hashPassword, checkPassword, getSinedJwtToken, setAuthCookie, getAuth }
+export {
+  // fetchUserById,
+  // createUser,
+  hashPassword,
+  // checkPassword,
+  // getSinedJwtToken,
+  // setAuthCookie,
+  // getAuth
+}

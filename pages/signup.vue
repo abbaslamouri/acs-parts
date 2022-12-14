@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const { userData, setUserData } = useUserData()
+const { notification, setNotification } = useNotification()
 // import { LockOpenIcon, ChevronRightIcon } from '@heroicons/vue/outline'
 // import { IUser } from '~/types/IUser'
 
@@ -19,12 +20,24 @@ const user = reactive({
 })
 
 const signup = async () => {
-  // if (user.password !== user.passwordConfirm)
-  //   return (errorMsg.value = "Your password and confirmation password don't match")
-  // if (user.password.length < 8) return (errorMsg.value = 'Password must be at least 8 characters long')
-  // loading.value = true
-  // const response = await signup(user, `${window.location.protocol}//${window.location.host}/auth/verify-email`)
-  // loading.value = false
+  if (user.password !== user.passwordConfirm)
+    return setNotification({ text: "Your password and confirmation password don't match" })
+
+  if (user.password.length < 8) return setNotification({ text: 'Password must be at least 8 characters long' })
+
+  loading.value = true
+
+  const { data, pending, error } = await useFetch('/api/v1/auth/signup', {
+    method: 'POST',
+    body: { ...user, verifyUrl: `${window.location.protocol}${window.location.host}/auth/verify` },
+  })
+
+  loading.value = false
+
+  if (error.value && error.value.data) return setNotification({ text: error.value.data.statusMessage })
+
+  console.log(data.value)
+
   // if (!response) return
   // router.push({ name: 'index' })
   // message.value = 'Thank you for signing up.  Pleaase check your email to verify your account'
@@ -41,7 +54,6 @@ const signup = async () => {
         <div class="" v-html="errorMsg"></div>
         <NuxtLink class="" :to="{ name: 'auth-forgot-password' }">
           <span>Reset Password</span>
-          <ChevronRightIcon class="" />
         </NuxtLink>
       </div>
       <div class="">
@@ -55,9 +67,12 @@ const signup = async () => {
         Service.
       </p>
 
-      <button class="" @click="signup"><LockOpenIcon class="" /><span class="">Continue</span></button>
+      <button class="" @click="signup"><span class="">Continue</span></button>
     </div>
-    <Spinner class="" v-else />
+    <div v-else>
+      ....Loading
+      <!-- <Spinner class="" /> -->
+    </div>
   </div>
 </template>
 

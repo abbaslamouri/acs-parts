@@ -1,6 +1,6 @@
-// import { hashPassword } from '~/server/controllers/v1/auth'
+import { hashPassword } from '~/server/controllers/v1/auth'
 // import { getSinedJwtToken, setAuthCookie } from '~/server/controllers/v1/auth'
-// import AppError from '~/server/utils/AppError'
+import AppError from '~/server/utils/AppError'
 import mongoClient from '~/server/utils/mongoClient'
 import errorHandler from '~/server/utils/errorHandler'
 // import sendEmail from '~/server/utils/Email'
@@ -9,23 +9,22 @@ const config = useRuntimeConfig()
 
 export default defineEventHandler(async (event) => {
   try {
-    // if (event.req.method !== 'POST') throw new AppError('invalid request', 401)
-    // const body = await useBody(event)
-    // const { user, url } = body
-    // const newUser = await mongoClient
-    //   .db()
-    //   .collection('users')
-    //   .insertOne({
-    //     name: user.name,
-    //     email: user.email,
-    //     password: await hashPassword(user.password),
-    //     accountNumber: (await mongoClient.db().collection('users').countDocuments()) + 101013,
-    //     signupDate: new Date(Date.now()),
-    //     role: 'user',
-    //     active: false,
-    //     verified: false,
-    //     passwordChangeDate: new Date(Date.now()),
-    //   })
+    const { name, email, password, verifyUrl } = await readBody(event)
+    const newUser = await mongoClient
+      .db()
+      .collection('users')
+      .insertOne({
+        name,
+        email,
+        password: await hashPassword(password),
+        accountNumber: (await mongoClient.db().collection('users').countDocuments()) + 101013,
+        signupDate: new Date(Date.now()),
+        role: 'user',
+        active: false,
+        verified: false,
+        passwordChangeDate: new Date(Date.now()),
+      })
+    console.log(newUser)
     // if (!newUser || !newUser.insertedId) throw new AppError('Registration failed, please try again later', 404)
     // const token = await getSinedJwtToken(newUser.insertedId, Number(config.jwtSignupTokenMaxAge) * 24 * 60 * 60)
     // // setAuthCookie(event, 'authToken', token, Number(config.jwtMaxAge) * 24 * 60 * 60)
@@ -59,8 +58,11 @@ export default defineEventHandler(async (event) => {
     //   emailText,
     //   emailHtml,
     // }).sendRegisterationEmail()
+
+    // throw new AppError('Registration failed, please try again later', 404)
+    // return body
     return true
   } catch (err) {
-    errorHandler(event, err)
+    return createError(errorHandler(event, err))
   }
 })

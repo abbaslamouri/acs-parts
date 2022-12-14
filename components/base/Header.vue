@@ -1,7 +1,9 @@
 <template>
-  <div>Header</div>
+  <div>Header--{{ notification.text }}</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { notification } = useNotification()
+</script>
 
 <style lang="scss" scoped></style>
