@@ -2,7 +2,7 @@
 const useNotification = () => {
   const notification = useState('notification', () => {
     return {
-      text: '',
+      message: '',
       type: 'error',
       duration: 0,
     }
@@ -10,7 +10,7 @@ const useNotification = () => {
 
   const setNotification = (payload: any) => {
     notification.value = {
-      text: payload.text,
+      message: payload.message,
       type: payload.type ? payload.type : 'error',
       duration: payload.duration ? payload.duration : 0,
     }

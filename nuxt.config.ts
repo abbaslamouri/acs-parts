@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     head: {
       // charset: 'utf-16',
       // viewport: 'width=device-width, initial-scale=1',
-      title: 'Aviation Component Solutions (ACS) - A Leading Supplier of PMA Parts',
+      title: 'ACS - A Leading Supplier of PMA Parts',
       meta: [
         {
           name: 'description',
@@ -80,13 +80,13 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     dbUrl: '',
-    // jwtSecret: '',
-    // jwtMaxAge: '',
-    // jwtSignupTokenMaxAge: '',
-    // pwResetTokenExpiresIn: '',
-    // sendgridApiKey: '',
-    // sendgridSignupTemplateId: '',
-    // sendgridPasswordResetTemplateId: '',
+    jwtSecret: '',
+    jwtMaxAge: '',
+    jwtSignupTokenMaxAge: '',
+    pwResetTokenExpiresIn: '',
+    sendgridApiKey: '',
+    sendgridSignupTemplateId: '',
+    sendgridPasswordResetTemplateId: '',
     // sendgridOrderReceivedTemplateId: '',
     // algoliaAdminApiKey: '',
     // stripeSK: '',
@@ -97,8 +97,8 @@ export default defineNuxtConfig({
       // siteUrl: '',
       // doSpaceEndpoint: '',
       // maxFileUploads: '',
-      // fromEmail: '',
-      // fromName: '',
+      fromEmail: '',
+      fromName: '',
       // algoliaApplicationId: '',
       // stripePK: '',
     },

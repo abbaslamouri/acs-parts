@@ -16,8 +16,8 @@ import colors from 'colors'
 // }
 
 const errorHandler = (event: any, err: any) => {
-  console.log(colors.red.bold(`ERR ${err}`), err)
-  console.log('INFO', err.errorInfo)
+  console.log(colors.red.bold(`ERROR ${err}`), err)
+  console.log('ERROR INFO', err.errorInfo)
 
   let message = ''
   let statusCode = 400
@@ -29,7 +29,7 @@ const errorHandler = (event: any, err: any) => {
   }
 
   if (err.name === 'TokenExpiredError') {
-    message = 'Your token has expired, please contact customer service'
+    message = 'Your token has expired, Click the link below to get a new token'
     statusCode = err.statusCode
   }
 
@@ -39,7 +39,7 @@ const errorHandler = (event: any, err: any) => {
         message = `${Object.values(err.keyValue)[0]} already exists. Please select a different ${
           Object.keys(err.keyValue)[0]
         }`
-        statusCode = 422
+        statusCode = 409
       }
     }
 

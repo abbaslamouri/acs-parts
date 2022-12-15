@@ -1,41 +1,41 @@
 import bcrypt from 'bcryptjs'
-// import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 // import { ObjectId } from 'mongodb'
 // import { CompatibilityEvent } from 'h3'
 // import AppError from '~/server/utils/AppError'
 // import mongoClient from '~/server/utils/mongoClient'
 // import errorHandler from '~/server/utils/errorHandler'
 
-// const config = useRuntimeConfig()
+const config = useRuntimeConfig()
 
-// const getSinedJwtToken = async function (id: any, maxAge: number) {
-//   return jwt.sign({ id }, config.jwtSecret, { expiresIn: maxAge })
-// }
+const getSinedJwtToken = async function (id: any, maxAge: number) {
+  return jwt.sign({ id }, config.jwtSecret, { expiresIn: maxAge })
+}
 
 const hashPassword = async (password: string) => {
   const salt = await bcrypt.genSalt(12)
   return await bcrypt.hash(password as string, salt)
 }
 
-// const checkPassword = async (password: string, hash: string) => {
-//   return await bcrypt.compare(password, hash)
-// }
+const checkPassword = async (password: string, hash: string) => {
+  return await bcrypt.compare(password, hash)
+}
 
-// const hasPasswordChanged = async function (JWTTimestamp: number, user: any) {
-//   if (user.passwordChangeDate) {
-//     return parseInt(user.passwordChangeDate.getTime(), 10) / 1000 > JWTTimestamp
-//   }
-//   return false
-// }
+const hasPasswordChanged = async function (JWTTimestamp: number, user: any) {
+  if (user.passwordChangeDate) {
+    return parseInt(user.passwordChangeDate.getTime(), 10) / 1000 > JWTTimestamp
+  }
+  return false
+}
 
-// const setAuthCookie = (event: CompatibilityEvent, cookieName: string, cookieValue: string, maxAge: number) => {
-//   setCookie(event, cookieName, cookieValue, {
-//     maxAge,
-//     httpOnly: true,
-//     path: '/',
-//     secure: process.env.NODE_ENV === 'production' ? true : false,
-//   })
-// }
+const setAuthCookie = (event: any, cookieName: string, cookieValue: string, maxAge: number) => {
+  setCookie(event, cookieName, cookieValue, {
+    maxAge,
+    httpOnly: true,
+    path: '/',
+    secure: process.env.NODE_ENV === 'production' ? true : false,
+  })
+}
 
 // const fetchUserById = async (event: CompatibilityEvent) => {
 //   try {
@@ -105,7 +105,7 @@ export {
   // createUser,
   hashPassword,
   // checkPassword,
-  // getSinedJwtToken,
-  // setAuthCookie,
+  getSinedJwtToken,
+  setAuthCookie,
   // getAuth
 }
