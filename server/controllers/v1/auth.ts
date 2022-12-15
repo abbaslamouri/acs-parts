@@ -104,7 +104,7 @@ export {
   // fetchUserById,
   // createUser,
   hashPassword,
-  // checkPassword,
+  checkPassword,
   getSinedJwtToken,
   setAuthCookie,
   // getAuth

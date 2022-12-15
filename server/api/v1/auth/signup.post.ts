@@ -9,23 +9,32 @@ const config = useRuntimeConfig()
 
 export default defineEventHandler(async (event) => {
   try {
-    const { name, email, password, verifyUrl } = await readBody(event)
-    const newUser = await mongoClient
-      .db()
-      .collection('users')
-      .insertOne({
-        name,
-        email,
-        password: await hashPassword(password),
-        accountNumber: (await mongoClient.db().collection('users').countDocuments()) + 101013,
-        signupDate: new Date(Date.now()),
-        role: 'customer',
-        active: false,
-        verified: false,
-        passwordChangeDate: new Date(Date.now()),
-      })
-    if (!newUser || !newUser.insertedId) throw new AppError('Registration failed, please try again later', 404)
-    const token = await getSinedJwtToken(newUser.insertedId, Number(config.jwtSignupTokenMaxAge) * 10)
+    const { name, email, password, verifyUrl, refreshToken } = await readBody(event)
+
+    let user
+    let userId
+    if (refreshToken) {
+      user = await mongoClient.db().collection('users').findOne({ email })
+      userId = user?._id
+    } else {
+      user = await mongoClient
+        .db()
+        .collection('users')
+        .insertOne({
+          name,
+          email,
+          password: await hashPassword(password),
+          accountNumber: (await mongoClient.db().collection('users').countDocuments()) + 101013,
+          signupDate: new Date(Date.now()),
+          role: 'customer',
+          active: false,
+          verified: false,
+          passwordChangeDate: new Date(Date.now()),
+        })
+      userId = user.insertedId
+    }
+    if (!user || !userId) throw new AppError('Registration failed, please try again later', 404)
+    const token = await getSinedJwtToken(userId, Number(config.jwtSignupTokenMaxAge) * 600)
     // // setAuthCookie(event, 'authToken', token, Number(config.jwtMaxAge) * 24 * 60 * 60)
     // // setAuthCookie(event, 'userName', user.name, Number(config.jwtMaxAge) * 24 * 60 * 60)
     const emailHtml = `

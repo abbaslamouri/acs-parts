@@ -24,7 +24,7 @@ const signup = async () => {
 
   const { data, error } = await useFetch('/api/v1/auth/signup', {
     method: 'POST',
-    body: { ...user, verifyUrl: `${window.location.protocol}${window.location.host}/auth/verify` },
+    body: { ...user, verifyUrl: `${window.location.protocol}${window.location.host}/auth/verify`, refreshToken: false },
   })
 
   loading.value = false

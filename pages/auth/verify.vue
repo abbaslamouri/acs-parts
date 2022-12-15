@@ -8,7 +8,7 @@ definePageMeta({
 const router = useRouter()
 const route = useRoute()
 // console.log(route)
-
+const { userData, setUserData } = useUserData()
 const { setNotification } = useNotification()
 
 const email = ref('abbaslamouri@yrlus.com')
@@ -28,14 +28,38 @@ const confirmEmail = async () => {
 
   if (error.value && error.value.data) return setNotification({ message: error.value.data.statusMessage })
 
-  // if (!data.value) return setNotification({ message: 'We are not able to verify your account' })
+  setUserData(data.value)
 
   router.push({ name: 'index' })
   setNotification({ message: 'Registration successfull.  You are now logged in.' })
+  // console.log(data.value)
+  // console.log(data.value)
+  // console.log('TOKEN', useCookie('authToken'))
+  // console.log('TONameKEN', useCookie('userName'))
+  // console.log("TOKEN",useCookie("authToken")
 }
 
 const getNewToken = async () => {
-  router.push({ name: 'auth-forgotpassword' })
+  loading.value = true
+  const { data, error } = await useFetch('/api/v1/auth/signup', {
+    method: 'POST',
+    body: {
+      name: '',
+      email: email.value,
+      password: '',
+      verifyUrl: `${window.location.protocol}${window.location.host}/auth/verify`,
+      refreshToken: true,
+    },
+  })
+  loading.value = true
+
+  if (error.value && error.value.data) return setNotification({ message: error.value.data.statusMessage })
+
+  router.push({ name: 'index' })
+  setNotification({
+    message:
+      'We have sent you an email with a new token.  Pleaase check your email and follow the link in the email to verify your account',
+  })
 }
 </script>
 
@@ -46,9 +70,7 @@ const getNewToken = async () => {
       <div>
         <!-- <div class="mt-4 flex flex-col gap-1 rounded bg-red-100 p-6 text-xs" v-if="errorMsg.includes('exists')"> -->
         <div></div>
-        <NuxtLink :to="{ name: 'auth-forgotpassword' }">
-          <span>Reset Password</span>
-        </NuxtLink>
+        <button @click="getNewToken">Get New Token</button>
       </div>
       <div>
         <FormsBaseInput v-model="email" label="Email" />
