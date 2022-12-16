@@ -42,7 +42,7 @@ const signin = async () => {
       <NuxtLink :to="{ name: 'index' }"> Forgot password? </NuxtLink>
     </div>
     <button @click="signin">
-      <Spinner v-if="loading" />
+      <BaseSpinner v-if="loading" />
       <div v-else>Login</div>
     </button>
     <!-- <div >

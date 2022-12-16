@@ -1,10 +1,9 @@
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
-// import { ObjectId } from 'mongodb'
-// import { CompatibilityEvent } from 'h3'
-// import AppError from '~/server/utils/AppError'
-// import mongoClient from '~/server/utils/mongoClient'
-// import errorHandler from '~/server/utils/errorHandler'
+import { ObjectId } from 'mongodb'
+import AppError from '~/server/utils/AppError'
+import mongoClient from '~/server/utils/mongoClient'
+import errorHandler from '~/server/utils/errorHandler'
 
 const config = useRuntimeConfig()
 
@@ -66,39 +65,39 @@ const setAuthCookie = (event: any, cookieName: string, cookieValue: string, maxA
 //   }
 // }
 
-// const getAuth = async (event: CompatibilityEvent) => {
-//   try {
-//     let user = null
-//     let jwtToken = ''
-//     if (useCookies(event) && useCookies(event).authToken) {
-//       jwtToken = useCookies(event).authToken
-//     } else {
-//       jwtToken =
-//         event.req.headers &&
-//         event.req.headers.authorization &&
-//         (event.req.headers.authorization as String).startsWith('Bearer')
-//           ? (event.req.headers.authorization as String).split(' ')[1]
-//           : ''
-//     }
-
-//     if (jwtToken) {
-//       const decoded: any = jwt.verify(jwtToken, config.jwtSecret)
-//       console.log(decoded)
-//       const found = await mongoClient
-//         .db()
-//         .collection('users')
-//         .findOne({
-//           _id: new ObjectId(decoded.id),
-//         })
-//       if (found && !(await hasPasswordChanged(decoded.iat, found))) {
-//         user = found
-//       }
-//     }
-//     return user
-//   } catch (err) {
-//     errorHandler(event, err)
-//   }
-// }
+const getAuth = async (event: any) => {
+  // try {
+  let user = null
+  let jwtToken = ''
+  console.log('CCCCCC', getCookie(event, 'userData'))
+  if (getCookie(event, 'userData') && getCookie(event, 'userData')) {
+    // jwtToken = getCookie(event, "userData")
+    // } else {
+    //   jwtToken =
+    //     event.req.headers &&
+    //     event.req.headers.authorization &&
+    //     (event.req.headers.authorization as String).startsWith('Bearer')
+    //       ? (event.req.headers.authorization as String).split(' ')[1]
+    //       : ''
+    // }
+    // if (jwtToken) {
+    //   const decoded: any = jwt.verify(jwtToken, config.jwtSecret)
+    //   console.log(decoded)
+    //   const found = await mongoClient
+    //     .db()
+    //     .collection('users')
+    //     .findOne({
+    //       _id: new ObjectId(decoded.id),
+    //     })
+    //   if (found && !(await hasPasswordChanged(decoded.iat, found))) {
+    //     user = found
+    //   }
+    // }
+    // return user
+    // } catch (err) {
+    //   errorHandler(event, err)
+  }
+}
 
 export {
   // fetchUserById,
@@ -107,5 +106,5 @@ export {
   checkPassword,
   getSinedJwtToken,
   setAuthCookie,
-  // getAuth
+  getAuth,
 }
