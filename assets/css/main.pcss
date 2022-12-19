@@ -65,6 +65,10 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
 
+  & p {
+    font-size: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  }
+
   & h1 {
     font-family: 'Merriweather', serif;
   }
@@ -72,16 +76,18 @@ body {
   /* background-color: var(--my-color); */
 
   & .main-div {
-    background-color: green;
+    /* background-color: green; */
 
     @media (--viewport-medium) {
-      background-color: black;
-      padding: 5rem;
+      /* background-color: black; */
+      /* padding: 5rem; */
     }
   }
 
   & :--heading {
-    background-color: blue;
+    /* background-color: blue; */
+    font-size: clamp(2rem, 5vw + 1rem, 4rem);
+    font-size: clamp(2.8rem, calc(1.94rem + 4.28vw), 5.26rem);
 
     @media (--viewport-medium) {
       border: 1px solid white;
