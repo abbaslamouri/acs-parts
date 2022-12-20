@@ -3,6 +3,8 @@
   --color-primary-glare: #d8e2f4;
   --color-secondary: #ee5141;
   --color-secondary-glare: #ffe3e5;
+  --color-dark: #333;
+  --color-light: #fff;
   --font-serif: 'Merriweather', serif;
   --font-sans-serif: 'Merriweather Sans', sans-serif;
 
@@ -46,16 +48,22 @@
   --space-s-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.5rem);
   --space-3xs-3xl: clamp(0.31rem, calc(-2.19rem + 12.5vw), 7.5rem);
 
-  --flow-space: var(--space-xs);
-  --region-space: var(--space-m-l);
+  --flow-space: var(--space-s);
+  --region-space: var(--space-l-xl);
 }
 
 :root {
   --gutter: var(--space-s-m);
-  --border-radius: var(--step-1);
+  --border-radius: var(--step--2);
   --transition-base: 250ms ease;
   --transition-movment: 200ms linear;
   --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
 }
+
+/* :root {
+  --grid-item-count: auto-fill;
+  --grid-min-item-size: 25rem;
+  --grid-gutter: var(--space-s-m);
+} */

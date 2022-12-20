@@ -487,6 +487,6 @@ svg {
 
 header,
 article {
-  border: 5px solid pink;
+  /* border: 5px solid pink; */
 }
 </style>
