@@ -251,6 +251,31 @@ body {
   max-width: unset;
 }
 
+.features {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 33%, 20rem);
+  --grid-gutter: var(--space-l-xl);
+  --flow-space: var(--space-s);
+
+  text-align: center;
+}
+
+.features svg {
+  display: block;
+  margin-inline: auto;
+  height: 4rem;
+}
+
+.features a {
+  text-decoration: none;
+}
+
+.features a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.08ex;
+  text-underline-offset: 0.3ex;
+}
+
 li {
   /* border: 5px solid red; */
 }

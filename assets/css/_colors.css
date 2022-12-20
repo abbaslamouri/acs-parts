@@ -53,7 +53,7 @@
 }
 
 :root {
-  --gutter: var(--space-s-m);
+  --grid-gutter: var(--space-s-m);
   --border-radius: var(--step--2);
   --transition-base: 250ms ease;
   --transition-movment: 200ms linear;
