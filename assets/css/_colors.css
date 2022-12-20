@@ -3,6 +3,8 @@
   --color-primary-glare: #d8e2f4;
   --color-secondary: #ee5141;
   --color-secondary-glare: #ffe3e5;
+  --font-serif: 'Merriweather', serif;
+  --font-sans-serif: 'Merriweather Sans', sans-serif;
 
   /* color-scheme: light dark; */
 }
@@ -42,6 +44,10 @@
   /* Custom pairs */
   --space-s-m: clamp(1.13rem, calc(0.86rem + 1.3vw), 1.88rem);
   --space-s-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.5rem);
+  --space-3xs-3xl: clamp(0.31rem, calc(-2.19rem + 12.5vw), 7.5rem);
+
+  --flow-space: var(--space-xs);
+  --region-space: var(--space-m-l);
 }
 
 :root {
