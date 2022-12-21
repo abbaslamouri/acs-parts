@@ -27,7 +27,7 @@ const signout = async () => {
 </script>
 
 <template>
-  <div>Header--{{ notification.message }}</div>
+  <div class="bg-200">Header--{{ notification.message }}</div>
   <div>{{ userData }}</div>
   <div>
     <NuxtLink :to="{ name: 'index' }">
@@ -46,7 +46,7 @@ const signout = async () => {
 </template>
 
 <style scoped>
-a {
+/* a {
   margin: 1rem;
-}
+} */
 </style>

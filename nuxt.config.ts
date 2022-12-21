@@ -39,6 +39,7 @@ export default defineNuxtConfig({
     plugins: {
       'postcss-import': {},
       'postcss-preset-env': { stage: 1 },
+      'postcss-each': {},
       // tailwindcss: {},
       // autoprefixer: {},
     },
