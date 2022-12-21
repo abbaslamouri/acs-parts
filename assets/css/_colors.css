@@ -8,6 +8,16 @@
   --font-serif: 'Merriweather', serif;
   --font-sans-serif: 'Merriweather Sans', sans-serif;
 
+  --color-20: hwb(215 0% 58%);
+  --color-30: hwb(217 9% 45%);
+  --color-40: hwb(220 21% 35%);
+  --color-50: hwb(221 31% 24%);
+  --color-60: hwb(221 42% 13%);
+  --color-80: hwb(222 68% 0%);
+  --color-90: hwb(225 86% 0%);
+  
+  
+
   /* color-scheme: light dark; */
 }
 
@@ -61,6 +71,9 @@
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
 }
+
+
+
 
 /* :root {
   --grid-item-count: auto-fill;
