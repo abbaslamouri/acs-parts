@@ -1,10 +1,3 @@
-<template>
-  <div class="wrapper">
-    <BaseHeader />
-    <slot />
-  </div>
-</template>
-
 <script setup lang="ts">
 useHead({
   title: `ACS | ${useRoute().meta.title}`,
@@ -18,9 +11,18 @@ useHead({
 })
 </script>
 
+<template>
+  <div class="">
+    <!-- <BaseHeader /> -->
+    <slot />
+  </div>
+</template>
+
+
+
 <style scoped>
-.wrapper {
+/* .wrapper {
   outline: solid pink;
   min-height: 100%;
-}
+} */
 </style>

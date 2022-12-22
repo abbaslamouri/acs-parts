@@ -22,6 +22,17 @@
   /* color-scheme: light dark; */
 }
 
+$colors:(
+    #002d6b,
+    #17448c,
+    #afc6ff,
+    /* --color-40: hwb(220 21% 35%);
+  --color-50: hwb(221 31% 24%);
+  --color-60: hwb(221 42% 13%);
+  --color-80: hwb(222 68% 0%);
+  --color-90: hwb(225 86% 0%); */
+  );
+
 @each $val, $i in (#002d6b, #17448c, #afc6ff) {
   .bg-$(i)00 {
     background-color: $val;

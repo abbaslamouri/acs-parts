@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <article class="wrapper">
+    <article class="wrapper flow">
       <h1 class="fluid-type">Full bleed CSS Utility</h1>
       <p>You can break an element out of its container while maintaining its flow within that container using <code>margin</code> and <code>transform</code>. There’s two examples, both using the <code>.full-bleed</code> utility to achieve this affect.</p> 
       <aside class="[ full-bleed ] [ promo ]">
