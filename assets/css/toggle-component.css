@@ -7,8 +7,8 @@ html {
 body,
 .button,
 .link-button {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 body {
@@ -121,7 +121,7 @@ a:not([class]):focus {
   font-size: 0.8rem;
 }
 
-.link-button[aria-expanded="true"] svg {
+.link-button[aria-expanded='true'] svg {
   transform: rotate(-180deg);
 }
 
@@ -140,14 +140,11 @@ a:not([class]):focus {
   transform: scale(0.99);
 }
 
-/* 
-
-
 /* Panel component which is completely controlled by a valid sibling 
    button element, such as the link button. We only conceal the content 
    if its sibling button has the correct aria attribute, so we can enforce
    accessibility and progressively enhance the UI */
-/* [aria-expanded] + .panel {
+[aria-expanded] + .panel {
   --panel-max-height: 500px;
 
   transition: all 200ms ease;
@@ -157,6 +154,8 @@ a:not([class]):focus {
   max-height: 0;
   visibility: hidden;
   -webkit-overflow-scrolling: touch;
+  color: red;
+  border: 2px solid pink;
 }
 
 [aria-expanded] + .panel .panel__inner {
@@ -165,14 +164,90 @@ a:not([class]):focus {
   opacity: 0;
   transform: translateY(1rem);
   padding-top: 1.5rem;
+  color: green;
 }
 
-[aria-expanded="true"] + .panel {
+[aria-expanded='true'] + .panel {
   max-height: var(--panel-max-height);
   visibility: visible;
 }
 
-[aria-expanded="true"] + .panel .panel__inner {
+[aria-expanded='true'] + .panel .panel__inner {
   opacity: 1;
   transform: translateY(0);
-} */
+}
+
+.fancy-link {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.fancy-link--large {
+  font-size: 2.5rem;
+}
+
+.fancy-link__icon {
+  /* font-size: 1em; */
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
+.profile {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.profile--large {
+  font-size: 5rem;
+}
+
+.profile > * + * {
+  margin-left: 0.5em;
+}
+
+.profile__heading {
+  font-size: 0.5em;
+  line-height: 1.1;
+}
+
+.profile__image {
+  width: 1.5em;
+  height: 1.5em;
+  object-fit: cover;
+  border-radius: 999px;
+  flex-shrink: 0;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Presentational styles */
+.user {
+  max-width: 75ch;
+}
+
+.user > * + * {
+  margin-top: 1em;
+}
+
+body {
+  background: #f9f9f9;
+  color: #17717a;
+  padding: 1rem;
+  line-height: 1.4;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}

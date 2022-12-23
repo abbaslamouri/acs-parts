@@ -4,9 +4,8 @@
 
 /* @import '_variables'; */
 /* @import 'full-bleed'; */
-@import 'toggle-component';
-
-
+/* @import 'toggle-component'; */
+@import 'split-faux-design';
 
 /* @import '_colors.css'; */
 
@@ -259,4 +258,3 @@ h6 {
   text-decoration-thickness: 0.08ex;
   text-underline-offset: 0.3ex;
 } */
-
