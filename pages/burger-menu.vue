@@ -1,24 +1,30 @@
 <script setup lang="ts">
 const navigationRef = ref()
-const menuTriggerRef = ref()
-const navMenuRef = ref()
+const burgerMenuRef = ref()
+// const headerBarRef = ref()
+const headerRef = ref()
 
 onMounted(() => {
+  // window.addEventListener('resize', () => {
+  //   console.log(navigationRef.value.getBoundingClientRect().height)
+  // })
   // if (process.client) {
   toggleMobileNav(
     document.documentElement.clientWidth,
-    window.getComputedStyle(document.body).getPropertyValue('--breakpoint')
+    window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
   )
   //   console.log('XXXXX', document.documentElement.clientWidth)
   // }
-
   window.addEventListener('resize', () => {
-    const windowWidth = document.documentElement.clientWidth
-    const breakPoint = window
-      .getComputedStyle(document.body)
-      .getPropertyValue('--breakpoint')
-
-    toggleMobileNav(windowWidth, breakPoint)
+    console.log('here')
+    // const windowWidth =
+    // const breakPoint =
+    toggleMobileNav(
+      document.documentElement.clientWidth,
+      window
+        .getComputedStyle(document.body)
+        .getPropertyValue('--nav-breakpoint')
+    )
     // console.log(Number(breakPoint) * 16)
     // console.log(windowWidth)
     // if (windowWidth < Number(breakPoint) * 16) {
@@ -30,33 +36,38 @@ onMounted(() => {
     //   //   navigationRef.value.setAttribute('data-labe', 'desktop')
     // }
   })
-
   //   const observer = new ResizeObserver((entries) => {
   //     console.log(entries[0])
   //   })
   //   observer.observe(navigationRef.value)
 })
 
-const toggleMobileNav = (windowWidth: any, breakPoint: any) => {
-  if (windowWidth < Number(breakPoint) * 16) {
-    //   console.log('Less')
-    navMenuRef.value.setAttribute('data-navmenu', 'true')
+const toggleMobileNav = (windowWidth: any, navBreakPoint: any) => {
+  if (windowWidth < Number(navBreakPoint) * 16) {
+    burgerMenuRef.value.setAttribute('data-enabled', 'true')
   } else {
-    navMenuRef.value.setAttribute('data-navmenu', 'false')
+    burgerMenuRef.value.setAttribute('data-enabled', 'false')
     //   console.log('More')
     //   navigationRef.value.setAttribute('data-labe', 'desktop')
   }
 }
 
-const showMobileNav = () => {
-  if (menuTriggerRef.value.getAttribute('aria-expanded') == 'true') {
-    menuTriggerRef.value.setAttribute('aria-expanded', 'false')
-    menuTriggerRef.value.setAttribute('aria-label', 'Open menu')
-    navigationRef.value.setAttribute('data-mobile', 'false')
+const showNavigation = () => {
+  const headerHeight = headerRef.value.getBoundingClientRect().height
+  console.log('KKKK', headerHeight)
+
+  document.documentElement.style.setProperty('--menu-bar-top', headerHeight)
+  if (
+    burgerMenuRef.value.getAttribute('aria-expanded') == 'false' ||
+    burgerMenuRef.value.getAttribute('aria-expanded') == null
+  ) {
+    burgerMenuRef.value.setAttribute('aria-expanded', 'true')
+    burgerMenuRef.value.setAttribute('aria-label', 'Close menu')
+    // navigationRef.value.setAttribute('data-mobile', 'false')
   } else {
-    menuTriggerRef.value.setAttribute('aria-expanded', 'true')
-    menuTriggerRef.value.setAttribute('aria-label', 'Close menu')
-    navigationRef.value.setAttribute('data-mobile', 'true')
+    burgerMenuRef.value.setAttribute('aria-expanded', 'false')
+    burgerMenuRef.value.setAttribute('aria-label', 'Open menu')
+    // navigationRef.value.setAttribute('data-mobile', 'true')
   }
   // trigger.value.getAttribute('aria-expanded') == false
   //   ) {
@@ -72,53 +83,73 @@ const showMobileNav = () => {
   //     panel.value.setAttribute('inert', '')
   //   }
 }
+
+const hideNavigation = () => {
+  // const headerHeight = headerRef.value.getBoundingClientRect().height
+  // console.log('KKKK', headerHeight)
+
+  // document.documentElement.style.setProperty('--menu-bar-top', headerHeight)
+  // if (
+  //   burgerMenuRef.value.getAttribute('aria-expanded') == 'false' ||
+  //   burgerMenuRef.value.getAttribute('aria-expanded') == null
+  // ) {
+  //   burgerMenuRef.value.setAttribute('aria-expanded', 'true')
+  //   burgerMenuRef.value.setAttribute('aria-label', 'Close menu')
+  //   // navigationRef.value.setAttribute('data-mobile', 'false')
+  // } else {
+  burgerMenuRef.value.setAttribute('aria-expanded', 'false')
+  burgerMenuRef.value.setAttribute('aria-label', 'Open menu')
+  // navigationRef.value.setAttribute('data-mobile', 'true')
+  // }
+  // trigger.value.getAttribute('aria-expanded') == false
+}
 </script>
 
 <template>
   <div>
-    <header class="site-head" role="banner">
+    <header class="header" role="banner" ref="headerRef">
       <a href="#main-content" class="skip-link">Skip to content</a>
       <div class="wrapper">
-        <div class="site-head__inner">
-          <a href="/" aria-label="ACME home" class="site-head__brand">
+        <div class="header-bar">
+          <a href="/" aria-label="ACME home" class="branding">
             <img src="images/logo.svg" alt="ACME logo" />
           </a>
-          <div class="nav-menu" max-width="600" ref="navMenuRef">
-            <nav
-              class="navigation"
-              aria-label="primary"
-              role="navigation"
-              ref="navigationRef"
-            >
-              <ul role="list">
-                <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Our Work</a>
-                </li>
-                <li>
-                  <a href="#">Contact Us</a>
-                </li>
-                <li>
-                  <a href="#">Your account</a>
-                </li>
-              </ul>
-            </nav>
-            <button
-              class="burger-menu"
-              type="button"
-              aria-label="Open menu"
-              aria-expanded="false"
-              ref="menuTriggerRef"
-              @click="showMobileNav"
-            >
-              <span class="burger-menu-bar"></span>
-            </button>
-          </div>
+          <!-- <div class="nav-menu" max-width="600" ref="navMenuRef"> -->
+          <button
+            class="burger-menu"
+            type="button"
+            hidden
+            ref="burgerMenuRef"
+            @click="showNavigation"
+          >
+            <span class="burger-menu-bar"></span>
+          </button>
+          <nav
+            class="navigation"
+            aria-label="primary"
+            role="navigation"
+            ref="navigationRef"
+          >
+            <ul role="list">
+              <li>
+                <a href="#" @click="hideNavigation">Home</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Our Work</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+              <li>
+                <a href="#">Your account</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- </div> -->
         </div>
       </div>
     </header>

@@ -49,17 +49,6 @@ a:not([class]):focus {
   --flow-space: 2rem;
 }
 
-/*
-
-/* Flow utility, which I write about here: https://24ways.org/2018/managing-flow-and-rhythm-with-css-custom-properties/ */
-/* .flow {
-  --flow-space: 1em;
-}
-
-.flow > * + * {
-  margin-top: var(--flow-space);
-} */
-
 /* Button component */
 .button {
   display: inline-block;
@@ -94,7 +83,7 @@ a:not([class]):focus {
 /* Link button component */
 
 .link-button {
-  display: none;
+  display: none; /* We hide this button by default / if there's no JS available */
   text-decoration: underline;
   text-decoration-skip-ink: auto;
   background: transparent;
@@ -133,7 +122,7 @@ a:not([class]):focus {
 .link-button:focus {
   text-decoration: none;
   outline: 1px solid rgba(255, 255, 255, 0.4);
-  outline-offset: 3rem;
+  outline-offset: 0.6rem;
 }
 
 .link-button:active {
@@ -145,6 +134,131 @@ a:not([class]):focus {
    if its sibling button has the correct aria attribute, so we can enforce
    accessibility and progressively enhance the UI */
 [aria-expanded] + .panel {
+  --panel-max-height: 500px;
+
+  transition: all 200ms ease;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 0;
+  visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+[aria-expanded] + .panel .panel__inner {
+  transition: all 500ms ease;
+  transition-delay: 50ms;
+  opacity: 0;
+  transform: translateY(1rem);
+  padding-top: 1.5rem;
+}
+
+[aria-expanded='true'] + .panel {
+  max-height: var(--panel-max-height);
+  visibility: visible;
+}
+
+[aria-expanded='true'] + .panel .panel__inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*
+
+/* Flow utility, which I write about here: https://24ways.org/2018/managing-flow-and-rhythm-with-css-custom-properties/ */
+/* .flow {
+  --flow-space: 1em;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space);
+} */
+
+/* Button component */
+/* .button {
+  display: inline-block;
+  border: none;
+  padding: 0.6rem 1.2rem 0.8rem 1.2rem;
+  text-decoration: none;
+  background: #98b06f;
+  color: #212d40;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.button:hover,
+.button:focus {
+  background: #ffffff;
+}
+
+.button:focus {
+  outline: 1px solid #212d40;
+  outline-offset: -4px;
+}
+
+.button:active {
+  transform: scale(0.99);
+}
+
+/* Link button component */
+
+/*.link-button {
+  display: none;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: #98b06f;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+} */
+
+/* When the link-button has a correct aria attribute, we can show it */
+/* .link-button[aria-expanded] {
+  display: inline-flex;
+  align-items: center;
+}
+
+.link-button svg {
+  opacity: 0.8;
+  margin-left: 0.5rem;
+  transition: all 250ms ease-in-out;
+  font-size: 0.8rem;
+}
+
+.link-button[aria-expanded='true'] svg {
+  transform: rotate(-180deg);
+}
+
+.link-button:hover,
+.link-button:focus {
+  text-decoration: none;
+}
+
+.link-button:focus {
+  text-decoration: none;
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 3rem;
+}
+
+.link-button:active {
+  transform: scale(0.99);
+} */
+
+/* Panel component which is completely controlled by a valid sibling 
+   button element, such as the link button. We only conceal the content 
+   if its sibling button has the correct aria attribute, so we can enforce
+   accessibility and progressively enhance the UI */
+/* [aria-expanded] + .panel {
   --panel-max-height: 500px;
 
   transition: all 200ms ease;
@@ -189,7 +303,6 @@ a:not([class]):focus {
 }
 
 .fancy-link__icon {
-  /* font-size: 1em; */
 }
 
 .icon {
@@ -223,31 +336,6 @@ a:not([class]):focus {
   border-radius: 999px;
   flex-shrink: 0;
   border: 2px solid rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Presentational styles */
-.user {
-  max-width: 75ch;
-}
-
-.user > * + * {
-  margin-top: 1em;
-}
-
-body {
-  background: #f9f9f9;
-  color: #17717a;
-  padding: 1rem;
-  line-height: 1.4;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
-hr {
-  margin: 2rem 0;
-  border: none;
-  border-top: 1px solid #ccc;
-}
