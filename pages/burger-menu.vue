@@ -112,7 +112,7 @@ const hideNavigation = () => {
       <div class="wrapper">
         <div class="header-bar">
           <a href="/" aria-label="ACME home" class="branding">
-            <img src="images/logo.svg" alt="ACME logo" />
+            <img src="/images/logo.svg" alt="ACME logo" />
           </a>
           <!-- <div class="nav-menu" max-width="600" ref="navMenuRef"> -->
           <button
