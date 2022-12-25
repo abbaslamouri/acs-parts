@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
 /* Remove default margin */
 body,
 h1,
@@ -14,6 +21,8 @@ h4,
 p,
 figure,
 blockquote,
+ul[class],
+ol[class],
 dl,
 dd {
   margin: 0;

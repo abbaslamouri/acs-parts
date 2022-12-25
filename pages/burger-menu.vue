@@ -107,6 +107,7 @@ const hideNavigation = () => {
 
 <template>
   <div>
+    <!-- <BaseHeader /> -->
     <header class="header" role="banner" ref="headerRef">
       <a href="#main-content" class="skip-link">Skip to content</a>
       <div class="wrapper">

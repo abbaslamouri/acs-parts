@@ -12,7 +12,9 @@ const loading = ref(false)
 const signout = async () => {
   loading.value = true
 
-  const { data, error } = await useFetch('/api/v1/auth/signin', { method: 'POST' })
+  const { data, error } = await useFetch('/api/v1/auth/signin', {
+    method: 'POST',
+  })
 
   // if (error.value && error.value.data) return setNotification({ message: error.value.data.statusMessage })
 
@@ -27,7 +29,7 @@ const signout = async () => {
 </script>
 
 <template>
-  <div class="bg-200">Header--{{ notification.message }}</div>
+  <div class="">Header--{{ notification.message }}</div>
   <div>{{ userData }}</div>
   <div>
     <NuxtLink :to="{ name: 'index' }">

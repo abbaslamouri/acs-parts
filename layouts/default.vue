@@ -18,8 +18,6 @@ useHead({
   </div>
 </template>
 
-
-
 <style scoped>
 /* .wrapper {
   outline: solid pink;
