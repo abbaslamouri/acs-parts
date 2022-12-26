@@ -1,9 +1,10 @@
+@use '_variables' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lora:wght@400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap');
 
-/* @import '_variables'; */
-@import '_reset';
+/* @import '_reset'; */
 /* @import 'full-bleed'; */
 /* @import 'toggle-component'; */
 /* @import 'relative-size-em'; */
@@ -12,12 +13,16 @@
 /* @import 'readability'; */
 /* @import 'typography-css-clamp'; */
 /* @import 'burger-menu'; */
-@import 'eleventy';
+/* @import 'eleventy'; */
 
 /* @import '_colors.css'; */
 
 /* @custom-media --viewport-medium (width <= 50rem); */
 /* @custom-selector :--heading h1, h2, h3, h4, h5, h6; */
+
+body {
+  /* color: $color; */
+}
 
 /* *,
 *::before,

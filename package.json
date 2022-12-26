@@ -14,7 +14,8 @@
     "postcss": "^8.4.19",
     "postcss-each": "^1.1.0",
     "postcss-import": "^15.0.1",
-    "postcss-preset-env": "^7.8.3"
+    "postcss-preset-env": "^7.8.3",
+    "sass": "^1.57.1"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",

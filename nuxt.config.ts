@@ -34,16 +34,16 @@ export default defineNuxtConfig({
   //   },
   // },
 
-  css: ['@/assets/css/main.css'],
-  postcss: {
-    plugins: {
-      'postcss-import': {},
-      'postcss-preset-env': { stage: 1 },
-      'postcss-each': {},
-      // tailwindcss: {},
-      // autoprefixer: {},
-    },
-  },
+  css: ['@/assets/css/main.scss'],
+  // postcss: {
+  //   plugins: {
+  //     'postcss-import': {},
+  //     'postcss-preset-env': { stage: 1 },
+  //     'postcss-each': {},
+  //     // tailwindcss: {},
+  //     // autoprefixer: {},
+  //   },
+  // },
 
   modules: [
     // '@sidebase/nuxt-auth',

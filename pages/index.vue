@@ -2,6 +2,7 @@
 
 <template>
   <article class="wrapper">
+    <!-- <FormsToggle />> -->
     <h1 class="fluid-type">Full bleed CSS Utility</h1>
     <p>
       You can break an element out of its container while maintaining its flow

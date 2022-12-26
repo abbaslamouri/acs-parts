@@ -1,0 +1,87 @@
+@use 'sass:math';
+
+$type-scales: (
+  minor-second: 1.067,
+  major-second: 1.125,
+  minor-third: 1.2,
+  major-third: 1.25,
+  perfect-fourth: 1.333,
+  augmented-fourth: 1.414,
+  perfect-fifth: 1.5,
+  golden-ratio: 1.618,
+  major-sixth: 1.667,
+  minor-seventh: 1.778,
+  major-seventh: 1.875,
+  octave: 2,
+);
+
+$font-base: 1rem;
+$font-min-size: 18;
+$font-max-size: 20;
+$type-scale-sm: map-get(
+  $map: $type-scales,
+  $key: minor-third,
+);
+$type-scale-lg: map-get(
+  $map: $type-scales,
+  $key: augmented-fourth,
+);
+$fluid-min-width: 320;
+$fluid-max-width: 1240;
+
+$type-steps: (-1, -2, 0, 1, 2, 3, 4, 5);
+
+/* @debug math.pow(10, 2); */
+
+:root {
+  -xx: 2;
+
+  @each $step in $type-steps {
+    /* --step-#{$step}: clamp($font-min-size * math.pow($type-scale-sm, $step)); */
+    @debug $font-min-size * math.pow($type-scale-sm, $step);
+  }
+
+  /* --step-5: clamp(
+    calc(
+      (
+          var(--font-min-size) * var(--type-scale-sm) * var(--type-scale-sm) *
+            var(--type-scale-sm) * var(--type-scale-sm) * var(--type-scale-sm)
+        ) * (1 / 16) * 1rem
+    ),
+    calc(
+      100 *
+        (
+          (
+              (
+                  var(--font-max-size) * var(--type-scale-lg) *
+                    var(--type-scale-lg) * var(--type-scale-lg) *
+                    var(--type-scale-lg) * var(--type-scale-lg)
+                ) -
+                (
+                  var(--font-min-size) * var(--type-scale-sm) *
+                    var(--type-scale-sm) * var(--type-scale-sm) *
+                    var(--type-scale-sm) * var(--type-scale-sm)
+                )
+            ) / (var(--fluid-max-width) - var(--fluid-min-width))
+        ) * 1vw +
+        (
+          (
+              var(--font-min-size) * var(--type-scale-sm) * var(--type-scale-sm) *
+                var(--type-scale-sm) * var(--type-scale-sm) *
+                var(--type-scale-sm)
+            ) * var(--fluid-max-width) -
+            (
+              var(--font-max-size) * var(--type-scale-lg) * var(--type-scale-lg) *
+                var(--type-scale-lg) * var(--type-scale-lg) *
+                var(--type-scale-lg)
+            ) * var(--fluid-min-width)
+        ) / (var(--fluid-max-width) - var(--fluid-min-width)) * (1 / 16) * 1rem
+    ),
+    calc(
+      (
+          var(--font-max-size) * var(--type-scale-lg) * var(--type-scale-lg) *
+            var(--type-scale-lg) * var(--type-scale-lg) * var(--type-scale-lg)
+        ) * (1 / 16) * 1rem
+    )
+  ); */
+}
