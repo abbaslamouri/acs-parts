@@ -24,7 +24,7 @@ $type-scale-sm: map-get(
 );
 $type-scale-lg: map-get(
   $map: $type-scales,
-  $key: augmented-fourth,
+  $key: perfect-fourth,
 );
 $fluid-min-width: 320;
 $fluid-max-width: 1240;
@@ -79,21 +79,20 @@ $space-steps: (
   ),
 );
 
-@function get-slope($step) {
+@function get-slope($step, $multiplier-sm, $multiplier-lg) {
   $slope: 100 *
     math.div(
-      $font-max-size * math.pow($type-scale-lg, $step) - $font-min-size *
-        math.pow($type-scale-sm, $step),
+      $font-max-size * $multiplier-lg - $font-min-size * $multiplier-sm,
       $fluid-max-width - $fluid-min-width
     ) * 1vw;
   @return $slope;
 }
 
-@function get-intercept($step) {
+@function get-intercept($step, $multiplier-sm, $multiplier-lg) {
   $intercept: (
       math.div(
-        $font-min-size * $fluid-max-width * math.pow($type-scale-sm, $step) -
-          $font-max-size * $fluid-min-width * math.pow($type-scale-lg, $step),
+        $font-min-size * $fluid-max-width * $multiplier-sm - $font-max-size *
+          $fluid-min-width * $multiplier-lg,
         $fluid-max-width - $fluid-min-width
       )
     ) * math.div(1, 16) * 1rem;
@@ -109,7 +108,18 @@ $space-steps: (
         math.pow($type-scale-sm, $step) *
         math.div(1, 16) *
         1rem},
-      calc(#{get-slope($step)} + #{get-intercept($step)}),
+      calc(
+        #{get-slope(
+            $step,
+            math.pow($type-scale-sm, $step),
+            math.pow($type-scale-lg, $step)
+          )} +
+          #{get-intercept(
+            $step,
+            math.pow($type-scale-sm, $step),
+            math.pow($type-scale-lg, $step)
+          )}
+      ),
       #{$font-max-size *
         math.pow($type-scale-lg, $step) *
         math.div(1, 16) *
@@ -156,5 +166,13 @@ $space-steps: (
 }
 
 h1 {
-  font-size: var(--step-5);
+  font-size: var(--step-4);
+}
+
+h2 {
+  font-size: var(--step-2);
+}
+
+p {
+  font-size: var(--step-0);
 }
