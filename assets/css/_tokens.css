@@ -12,13 +12,13 @@
   --type-scale-major-seventh: 1.875;
   --type-scale-octave: 2; */
 
-  --font-base: 1rem;
+  /* --font-base: 1rem;
   --font-min-size: 18;
   --font-max-size: 20;
   --type-scale-sm: var(--type-scale-minor-third);
   --type-scale-lg: var(--type-scale-Augmented-fourth);
   --fluid-min-width: 320;
-  --fluid-max-width: 1240;
+  --fluid-max-width: 1240; */
 
   /* @each $val, $i in -0.27141077, -0.09301396, 0.217391304, 0.726086957,
     1.529121739, 2.765099878, 4.633357315, 7.419774547
@@ -61,7 +61,7 @@
       ) / (var(--fluid-max-width) - var(--fluid-min-width))
   ); */
 
-  --step-5: clamp(
+  /* --step-5: clamp(
     calc(
       (
           var(--font-min-size) * var(--type-scale-sm) * var(--type-scale-sm) *
@@ -103,9 +103,5 @@
             var(--type-scale-lg) * var(--type-scale-lg) * var(--type-scale-lg)
         ) * (1 / 16) * 1rem
     )
-  );
-}
-
-h1 {
-  font-size: var(--step-4);
+  ); */
 }

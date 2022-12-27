@@ -29,59 +29,132 @@ $type-scale-lg: map-get(
 $fluid-min-width: 320;
 $fluid-max-width: 1240;
 
-$type-steps: (-1, -2, 0, 1, 2, 3, 4, 5);
+/* font-size: clamp(min-font, v*x + r , max-font) */
+
+$type-steps: (-2, -1, 0, 1, 2, 3, 4, 5);
+$space-steps: (
+  3xs: (
+    min: 0.25,
+    max: 0.25,
+  ),
+  2xs: (
+    min: 0.5,
+    max: 0.5,
+  ),
+  xs: (
+    min: 0.75,
+    max: 0.75,
+  ),
+  s: (
+    min: 1,
+    max: 1,
+  ),
+  m: (
+    min: 1.5,
+    max: 1.5,
+  ),
+  L: (
+    min: 2,
+    max: 2,
+  ),
+  xl: (
+    min: 3,
+    max: 3,
+  ),
+  2xl: (
+    min: 4,
+    max: 4,
+  ),
+  3xl: (
+    min: 6,
+    max: 6,
+  ),
+  's-l': (
+    min: 1,
+    max: 2,
+  ),
+  '3xs-3xl': (
+    min: 0.25,
+    max: 6,
+  ),
+);
+
+@function get-slope($step) {
+  $slope: 100 *
+    math.div(
+      $font-max-size * math.pow($type-scale-lg, $step) - $font-min-size *
+        math.pow($type-scale-sm, $step),
+      $fluid-max-width - $fluid-min-width
+    ) * 1vw;
+  @return $slope;
+}
+
+@function get-intercept($step) {
+  $intercept: (
+      math.div(
+        $font-min-size * $fluid-max-width * math.pow($type-scale-sm, $step) -
+          $font-max-size * $fluid-min-width * math.pow($type-scale-lg, $step),
+        $fluid-max-width - $fluid-min-width
+      )
+    ) * math.div(1, 16) * 1rem;
+  @return $intercept;
+}
 
 /* @debug math.pow(10, 2); */
 
 :root {
-  -xx: 2;
-
   @each $step in $type-steps {
-    /* --step-#{$step}: clamp($font-min-size * math.pow($type-scale-sm, $step)); */
-    @debug $font-min-size * math.pow($type-scale-sm, $step);
+    --step-#{$step}: clamp(
+      #{$font-min-size *
+        math.pow($type-scale-sm, $step) *
+        math.div(1, 16) *
+        1rem},
+      calc(#{get-slope($step)} + #{get-intercept($step)}),
+      #{$font-max-size *
+        math.pow($type-scale-lg, $step) *
+        math.div(1, 16) *
+        1rem}
+    );
   }
 
-  /* --step-5: clamp(
-    calc(
-      (
-          var(--font-min-size) * var(--type-scale-sm) * var(--type-scale-sm) *
-            var(--type-scale-sm) * var(--type-scale-sm) * var(--type-scale-sm)
-        ) * (1 / 16) * 1rem
-    ),
-    calc(
-      100 *
-        (
+  @each $step, $range in $space-steps {
+    --space-#{$step}: clamp(
+      #{map-get($map: $range, $key: min) *
+        $font-min-size *
+        math.div(1, 16) *
+        1rem},
+      calc(
+        #{100 *
           (
-              (
-                  var(--font-max-size) * var(--type-scale-lg) *
-                    var(--type-scale-lg) * var(--type-scale-lg) *
-                    var(--type-scale-lg) * var(--type-scale-lg)
-                ) -
-                (
-                  var(--font-min-size) * var(--type-scale-sm) *
-                    var(--type-scale-sm) * var(--type-scale-sm) *
-                    var(--type-scale-sm) * var(--type-scale-sm)
-                )
-            ) / (var(--fluid-max-width) - var(--fluid-min-width))
-        ) * 1vw +
-        (
-          (
-              var(--font-min-size) * var(--type-scale-sm) * var(--type-scale-sm) *
-                var(--type-scale-sm) * var(--type-scale-sm) *
-                var(--type-scale-sm)
-            ) * var(--fluid-max-width) -
-            (
-              var(--font-max-size) * var(--type-scale-lg) * var(--type-scale-lg) *
-                var(--type-scale-lg) * var(--type-scale-lg) *
-                var(--type-scale-lg)
-            ) * var(--fluid-min-width)
-        ) / (var(--fluid-max-width) - var(--fluid-min-width)) * (1 / 16) * 1rem
-    ),
-    calc(
-      (
-          var(--font-max-size) * var(--type-scale-lg) * var(--type-scale-lg) *
-            var(--type-scale-lg) * var(--type-scale-lg) * var(--type-scale-lg)
-        ) * (1 / 16) * 1rem
-    )
-  ); */
+            math.div(
+              $font-max-size *
+                map-get($map: $range, $key: max) -
+                $font-min-size *
+                map-get($map: $range, $key: min),
+              $fluid-max-width - $fluid-min-width
+            )
+          ) *
+          1vw} +
+          #{math.div(
+            $font-min-size *
+              $fluid-max-width *
+              map-get($map: $range, $key: min) -
+              $font-max-size *
+              $fluid-min-width *
+              map-get($map: $range, $key: max),
+            $fluid-max-width - $fluid-min-width
+          ) *
+          math.div(1, 16) *
+          1rem},
+        #{map-get($map: $range, $key: max) *
+          $font-max-size *
+          math.div(1, 16) *
+          1rem}
+      )
+    );
+  }
+}
+
+h1 {
+  font-size: var(--step-5);
 }
