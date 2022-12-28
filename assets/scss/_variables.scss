@@ -24,10 +24,10 @@ $type-scale-sm: map-get(
 );
 $type-scale-lg: map-get(
   $map: $type-scales,
-  $key: perfect-fourth,
+  $key: augmented-fourth,
 );
 $fluid-min-width: 320;
-$fluid-max-width: 1240;
+$fluid-max-width: 1920;
 
 /* font-size: clamp(min-font, v*x + r , max-font) */
 
@@ -81,15 +81,18 @@ $space-steps: (
 
 @function get-slope($step, $multiplier-sm, $multiplier-lg) {
   $slope: 100 *
-    math.div($font-max-size * $multiplier-lg - $font-min-size * $multiplier-sm, $fluid-max-width - $fluid-min-width) *
-    1vw;
+    math.div(
+      $font-max-size * $multiplier-lg - $font-min-size * $multiplier-sm,
+      $fluid-max-width - $fluid-min-width
+    ) * 1vw;
   @return $slope;
 }
 
 @function get-intercept($step, $multiplier-sm, $multiplier-lg) {
   $intercept: (
       math.div(
-        $font-min-size * $fluid-max-width * $multiplier-sm - $font-max-size * $fluid-min-width * $multiplier-lg,
+        $font-min-size * $fluid-max-width * $multiplier-sm - $font-max-size *
+          $fluid-min-width * $multiplier-lg,
         $fluid-max-width - $fluid-min-width
       )
     ) * math.div(1, 16) * $font-base;
@@ -101,23 +104,43 @@ $space-steps: (
 :root {
   @each $step in $type-steps {
     --step-#{$step}: clamp(
-      #{$font-min-size * math.pow($type-scale-sm, $step) * math.div(1, 16) * $font-base},
+      #{$font-min-size *
+        math.pow($type-scale-sm, $step) *
+        math.div(1, 16) *
+        $font-base},
       calc(
-        #{get-slope($step, math.pow($type-scale-sm, $step), math.pow($type-scale-lg, $step))} +
-          #{get-intercept($step, math.pow($type-scale-sm, $step), math.pow($type-scale-lg, $step))}
+        #{get-slope(
+            $step,
+            math.pow($type-scale-sm, $step),
+            math.pow($type-scale-lg, $step)
+          )} +
+          #{get-intercept(
+            $step,
+            math.pow($type-scale-sm, $step),
+            math.pow($type-scale-lg, $step)
+          )}
       ),
-      #{$font-max-size * math.pow($type-scale-lg, $step) * math.div(1, 16) * $font-base}
+      #{$font-max-size *
+        math.pow($type-scale-lg, $step) *
+        math.div(1, 16) *
+        $font-base}
     );
   }
 
   @each $step, $range in $space-steps {
     --space-#{$step}: clamp(
-      #{map-get($map: $range, $key: min) * $font-min-size * math.div(1, 16) * $font-base},
+      #{map-get($map: $range, $key: min) *
+        $font-min-size *
+        math.div(1, 16) *
+        $font-base},
       calc(
         #{100 *
           (
             math.div(
-              $font-max-size * map-get($map: $range, $key: max) - $font-min-size * map-get($map: $range, $key: min),
+              $font-max-size *
+                map-get($map: $range, $key: max) -
+                $font-min-size *
+                map-get($map: $range, $key: min),
               $fluid-max-width - $fluid-min-width
             )
           ) *
@@ -133,7 +156,10 @@ $space-steps: (
           ) *
           math.div(1, 16) *
           $font-base},
-        #{map-get($map: $range, $key: max) * $font-max-size * math.div(1, 16) * $font-base}
+        #{map-get($map: $range, $key: max) *
+          $font-max-size *
+          math.div(1, 16) *
+          $font-base}
       )
     );
   }

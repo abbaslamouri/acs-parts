@@ -44,6 +44,10 @@ h2 {
   letter-spacing: -1px;
 }
 
+p {
+  max-width: 75ch;
+}
+
 /* body {
   font-family: var(--font-sans-serif);
   color: var(--color-dark);
