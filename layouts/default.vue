@@ -1,9 +1,10 @@
 <script setup lang="ts">
 useHead({
-  title: `ACS | ${useRoute().meta.title}`,
+  title: useRoute().meta.title ? `ACS | ${useRoute().meta.title}` : '',
   meta: [
-    { name: 'description', content: `${useRoute().meta.description}` },
-    { name: 'robots', content: `${useRoute().meta.robots}` },
+    { name: 'description', content: useRoute().meta.description ? `${useRoute().meta.description}` : '' },
+    { name: 'robots', content: useRoute().meta.robots ? `${useRoute().meta.robots}` : '' },
+    { 'http-equiv': 'X-UA-Compatible', content: 'ie=edge' },
   ],
   bodyAttrs: {
     class: 'test',
@@ -12,15 +13,10 @@ useHead({
 </script>
 
 <template>
-  <div class="">
+  <div class="h-screen">
     <!-- <BaseHeader /> -->
     <slot />
   </div>
 </template>
 
-<style scoped>
-/* .wrapper {
-  outline: solid pink;
-  min-height: 100%;
-} */
-</style>
+<style lang="scss" scoped></style>

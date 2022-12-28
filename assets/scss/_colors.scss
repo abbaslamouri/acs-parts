@@ -1,103 +1,69 @@
+$colors: (
+  primary: (
+    900: #001944,
+    800: #002d6d,
+    700: #16448f,
+    600: #355ca8,
+    500: #5075c3,
+    400: #6b8fdf,
+    300: #86aafc,
+    200: #afc6ff,
+    100: #d9e2ff,
+    50: #edf0ff,
+    10: #fefbff,
+  ),
+  secondary: (
+    900: #141b2c,
+    800: #293042,
+    700: #404759,
+    600: #575e71,
+    500: #70778b,
+    400: #8990a5,
+    300: #a4abc0,
+    200: #bfc6dc,
+    100: #dbe2f9,
+    50: #edf0ff,
+    10: #fefbff,
+  ),
+  accent: (
+    900: #2a132c,
+    800: #412743,
+    700: #593e5a,
+    600: #725573,
+    500: #8c6d8c,
+    400: #a786a7,
+    300: #c3a0c2,
+    200: #dfbbde,
+    100: #fcd7fb,
+    50: #ffebfb,
+    10: #fffbff,
+  ),
+  neutral: (
+    900: #1b1b1f,
+    800: #303034,
+    700: #46464a,
+    600: #5e5e62,
+    500: #77777a,
+    400: #919094,
+    300: #acabaf,
+    200: #c7c6ca,
+    100: #e3e2e6,
+    50: #f2f0f4,
+    10: #fefbff,
+  ),
+);
+
 :root {
-  --color-primary: #0042bf;
-  --color-primary-glare: #d8e2f4;
-  --color-secondary: #ee5141;
-  --color-secondary-glare: #ffe3e5;
-  --color-dark: #333;
-  --color-light: #fff;
-  --font-serif: 'Merriweather', serif;
-  --font-sans-serif: 'Merriweather Sans', sans-serif;
+  @each $hue, $shades in $colors {
+    @each $shade, $color in $shades {
+      --#{$hue}-#{$shade}: #{$color};
+      .text-#{$hue}-#{$shade} {
+        color: #{$color};
+      }
 
-  --colors: (
-    #002d6b,
-    #17448c,
-    #afc6ff,
-    /* --color-40: hwb(220 21% 35%);
-  --color-50: hwb(221 31% 24%);
-  --color-60: hwb(221 42% 13%);
-  --color-80: hwb(222 68% 0%);
-  --color-90: hwb(225 86% 0%); */
-  );
-
-  /* color-scheme: light dark; */
-}
-
-$colors:(
-    #002d6b,
-    #17448c,
-    #afc6ff,
-    /* --color-40: hwb(220 21% 35%);
-  --color-50: hwb(221 31% 24%);
-  --color-60: hwb(221 42% 13%);
-  --color-80: hwb(222 68% 0%);
-  --color-90: hwb(225 86% 0%); */
-  );
-
-@each $val, $i in (#002d6b, #17448c, #afc6ff) {
-  .bg-$(i)00 {
-    background-color: $val;
+      .bg-#{$hue}-#{$shade} {
+        background-color: #{$color};
+      }
+    }
   }
 }
-
-/* @each $color $i in (#002d6b, #17448c) {
-  .bg-#{$i} {
-    background-color:$color;
-  }
-} */
-
-:root {
-  --step--2: clamp(0.56rem, calc(0.86rem + -0.39vw), 0.78rem);
-  --step--1: clamp(0.83rem, calc(0.97rem + -0.18vw), 0.94rem);
-  --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
-  --step-1: clamp(1.35rem, calc(1.17rem + 0.91vw), 1.88rem);
-  --step-2: clamp(1.62rem, calc(1.21rem + 2.07vw), 2.81rem);
-  --step-3: clamp(1.94rem, calc(1.15rem + 3.96vw), 4.22rem);
-  --step-4: clamp(2.33rem, calc(0.94rem + 6.95vw), 6.33rem);
-  --step-5: clamp(2.8rem, calc(0.47rem + 11.64vw), 9.49rem);
-}
-
-:root {
-  --space-3xs: clamp(0.31rem, calc(0.31rem + 0vw), 0.31rem);
-  --space-2xs: clamp(0.56rem, calc(0.54rem + 0.11vw), 0.63rem);
-  --space-xs: clamp(0.88rem, calc(0.85rem + 0.11vw), 0.94rem);
-  --space-s: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
-  --space-m: clamp(1.69rem, calc(1.62rem + 0.33vw), 1.88rem);
-  --space-l: clamp(2.25rem, calc(2.16rem + 0.43vw), 2.5rem);
-  --space-xl: clamp(3.38rem, calc(3.24rem + 0.65vw), 3.75rem);
-  --space-2xl: clamp(4.5rem, calc(4.33rem + 0.87vw), 5rem);
-  --space-3xl: clamp(6.75rem, calc(6.49rem + 1.3vw), 7.5rem);
-
-  /* One-up pairs */
-  --space-3xs-2xs: clamp(0.31rem, calc(0.2rem + 0.54vw), 0.63rem);
-  --space-2xs-xs: clamp(0.56rem, calc(0.43rem + 0.65vw), 0.94rem);
-  --space-xs-s: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
-  --space-s-m: clamp(1.13rem, calc(0.86rem + 1.3vw), 1.88rem);
-  --space-m-l: clamp(1.69rem, calc(1.4rem + 1.41vw), 2.5rem);
-  --space-l-xl: clamp(2.25rem, calc(1.73rem + 2.61vw), 3.75rem);
-  --space-xl-2xl: clamp(3.38rem, calc(2.81rem + 2.83vw), 5rem);
-  --space-2xl-3xl: clamp(4.5rem, calc(3.46rem + 5.22vw), 7.5rem);
-
-  /* Custom pairs */
-  --space-s-m: clamp(1.13rem, calc(0.86rem + 1.3vw), 1.88rem);
-  --space-s-l: clamp(1.13rem, calc(0.65rem + 2.39vw), 2.5rem);
-  --space-3xs-3xl: clamp(0.31rem, calc(-2.19rem + 12.5vw), 7.5rem);
-
-  --flow-space: var(--space-s);
-  --region-space: var(--space-l-xl);
-}
-
-:root {
-  --grid-gutter: var(--space-s-m);
-  --border-radius: var(--step--2);
-  --transition-base: 250ms ease;
-  --transition-movment: 200ms linear;
-  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-  --tracking: -0.05ch;
-  --tracking-s: -0.075ch;
-}
-
-/* :root {
-  --grid-item-count: auto-fill;
-  --grid-min-item-size: 25rem;
-  --grid-gutter: var(--space-s-m);
-} */
