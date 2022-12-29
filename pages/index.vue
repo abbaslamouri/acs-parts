@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  title: 'Page Title',
+  description: 'Description',
+})
+</script>
 
 <template>
   <article class="wrapper">
@@ -6,10 +11,11 @@
     <h1 class="fluid-type">Full bleed CSS Utility</h1>
     <p>
       You can break an element out of its container while maintaining its flow
-      within that container using <code>margin</code> and
-      <code>transform</code>. There’s two examples, both using the
-      <code>.full-bleed</code> utility to achieve this affect.
+      within that container using
+      <code>margin</code> and <code>transform</code>. There’s two examples, both
+      using the <code>.full-bleed</code> utility to achieve this affect.
     </p>
+    <FormsToggle />>
     <aside class="[ full-bleed ] [ promo ]">
       <div class="wrapper">
         <h2 class="fluid-type">Some aside content that is full bleed</h2>
