@@ -14,11 +14,12 @@ definePageMeta({
       <code>margin</code> and <code>transform</code>. There’s two examples, both
       using the <code>.full-bleed</code> utility to achieve this affect.
     </p>
+
+    <DuoTone />
     <BreakoutButton />
     <FormsToggle />
     <ProgressStepper />
 
-    <DuoTone />
     <aside class="[ full-bleed ] [ promo ]">
       <div class="wrapper">
         <h2 class="fluid-type">Some aside content that is full bleed</h2>
