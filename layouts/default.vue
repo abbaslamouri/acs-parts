@@ -23,7 +23,7 @@ useHead({
 <template>
   <div class="h-screen">
     <header>
-      <Logo />
+      <!-- <Logo /> -->
       <div>
         <input type="text" />
         <button>Account</button>
