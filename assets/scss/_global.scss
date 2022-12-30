@@ -1,5 +1,5 @@
 // @use 'variables' as *;
-@use 'colors' as *;
+// @use 'colors' as *;
 // @use 'reset' as *;
 // @use 'typography' as *;
 
@@ -21,6 +21,54 @@
 // --metric-gutter: 2rem;
 // --metric-box-padding: 1rem 1rem;
 // --metric-interaction-padding: 0.6rem 0.6rem;
+
+// GLOBAL STYLES
+body {
+  font-family: var(--font-sans-serif);
+  background: #f3f3f3;
+  color: #252525;
+
+  &.dark {
+    background: #252525;
+    color: #ffffff;
+  }
+  // padding: var(--metric-gutter, 2rem);
+
+  // border: 1px solid red;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #4c2982;
+  line-height: 1.1;
+}
+
+label {
+  color: #4c2982;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+input[type],
+button {
+  border: none;
+  line-height: 1;
+  padding: 0.8rem;
+  // padding: var(--metric-interaction-padding);
+  outline-offset: -1px;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  input[type],
+  button {
+    border: 1px solid;
+  }
+}
+
+:focus {
+  outline: 1px solid #4c2982;
+}
 
 // UTILITY
 
@@ -69,6 +117,10 @@
 //   font-size: var(--step-2);
 //   letter-spacing: -1px;
 // }
+
+p {
+  max-width: 75ch;
+}
 
 /* body {
   font-family: var(--font-sans-serif);

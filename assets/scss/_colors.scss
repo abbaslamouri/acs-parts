@@ -1,69 +1,84 @@
-$colors: (
-  primary: (
-    900: #001944,
-    800: #002d6d,
-    700: #16448f,
-    600: #355ca8,
-    500: #5075c3,
-    400: #6b8fdf,
-    300: #86aafc,
-    200: #afc6ff,
-    100: #d9e2ff,
-    50: #edf0ff,
-    10: #fefbff,
-  ),
-  secondary: (
-    900: #141b2c,
-    800: #293042,
-    700: #404759,
-    600: #575e71,
-    500: #70778b,
-    400: #8990a5,
-    300: #a4abc0,
-    200: #bfc6dc,
-    100: #dbe2f9,
-    50: #edf0ff,
-    10: #fefbff,
-  ),
-  accent: (
-    900: #2a132c,
-    800: #412743,
-    700: #593e5a,
-    600: #725573,
-    500: #8c6d8c,
-    400: #a786a7,
-    300: #c3a0c2,
-    200: #dfbbde,
-    100: #fcd7fb,
-    50: #ffebfb,
-    10: #fffbff,
-  ),
-  neutral: (
-    900: #1b1b1f,
-    800: #303034,
-    700: #46464a,
-    600: #5e5e62,
-    500: #77777a,
-    400: #919094,
-    300: #acabaf,
-    200: #c7c6ca,
-    100: #e3e2e6,
-    50: #f2f0f4,
-    10: #fefbff,
-  ),
-);
+@use 'variables' as *;
 
 :root {
   @each $hue, $shades in $colors {
     @each $shade, $color in $shades {
       --#{$hue}-#{$shade}: #{$color};
-      .text-#{$hue}-#{$shade} {
+      .bg-#{$hue}-#{$shade} {
         color: #{$color};
       }
 
       .bg-#{$hue}-#{$shade} {
         background-color: #{$color};
       }
+
+      .fill-#{$hue}-#{$shade} {
+        fill: #{$color};
+      }
     }
   }
+}
+
+.bg-inherit {
+  color: inherit;
+}
+
+.text-current {
+  color: currentColor;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.text-black {
+  color: rgb(0 0 0);
+}
+
+.text-white {
+  color: rgb(255 255 255);
+}
+
+.bg-inherit {
+  background-color: inherit;
+}
+
+.bg-current {
+  background-color: currentColor;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-black {
+  background-color: rgb(0 0 0);
+}
+
+.bg-white {
+  background-color: rgb(255 255 255);
+}
+
+.fill-none {
+  fill: none;
+}
+
+.fill-inherit {
+  fill: inherit;
+}
+
+.fill-current {
+  fill: currentColor;
+}
+
+.fill-transparent {
+  fill: transparent;
+}
+
+.fill-black {
+  fill: rgb(0 0 0);
+}
+
+.fill-white {
+  fill: rgb(255 255 255);
 }

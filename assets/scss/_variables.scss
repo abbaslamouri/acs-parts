@@ -1,5 +1,6 @@
 @use 'sass:math';
 
+// type
 $type-scales: (
   minor-second: 1.067,
   major-second: 1.125,
@@ -14,7 +15,6 @@ $type-scales: (
   major-seventh: 1.875,
   octave: 2,
 );
-
 $font-base: 1rem;
 $font-min-size: 18;
 $font-max-size: 20;
@@ -26,11 +26,6 @@ $type-scale-lg: map-get(
   $map: $type-scales,
   $key: augmented-fourth,
 );
-$fluid-min-width: 320;
-$fluid-max-width: 1920;
-
-/* font-size: clamp(min-font, v*x + r , max-font) */
-
 $type-steps: (-2, -1, 0, 1, 2, 3, 4, 5);
 $space-steps: (
   3xs: (
@@ -79,88 +74,148 @@ $space-steps: (
   ),
 );
 
-@function get-slope($step, $multiplier-sm, $multiplier-lg) {
-  $slope: 100 *
-    math.div(
-      $font-max-size * $multiplier-lg - $font-min-size * $multiplier-sm,
-      $fluid-max-width - $fluid-min-width
-    ) * 1vw;
-  @return $slope;
-}
+// fluid layout
+$fluid-min-width: 320;
+$fluid-max-width: 1920;
 
-@function get-intercept($step, $multiplier-sm, $multiplier-lg) {
-  $intercept: (
-      math.div(
-        $font-min-size * $fluid-max-width * $multiplier-sm - $font-max-size *
-          $fluid-min-width * $multiplier-lg,
-        $fluid-max-width - $fluid-min-width
-      )
-    ) * math.div(1, 16) * $font-base;
-  @return $intercept;
-}
+// Colors
+$colors: (
+  primary: (
+    900: rgb(0, 26, 71),
+    800: rgb(0, 46, 110),
+    700: rgb(23, 69, 143),
+    600: rgb(54, 92, 168),
+    500: rgb(79, 115, 194),
+    400: rgb(107, 143, 222),
+    300: rgb(135, 170, 252),
+    200: rgb(176, 198, 255),
+    100: rgb(217, 226, 255),
+    50: rgb(237, 240, 255),
+    10: rgb(254, 250, 255),
+  ),
+  secondary: (
+    900: #141b2c,
+    800: #293042,
+    700: #404759,
+    600: #575e71,
+    500: #70778b,
+    400: #8990a5,
+    300: #a4abc0,
+    200: #bfc6dc,
+    100: #dbe2f9,
+    50: #edf0ff,
+    10: #fefbff,
+  ),
+  accent: (
+    900: #2a132c,
+    800: #412743,
+    700: #593e5a,
+    600: #725573,
+    500: #8c6d8c,
+    400: #a786a7,
+    300: #c3a0c2,
+    200: #dfbbde,
+    100: #fcd7fb,
+    50: #ffebfb,
+    10: #fffbff,
+  ),
+  neutral: (
+    900: #1b1b1f,
+    800: #303034,
+    700: #46464a,
+    600: #5e5e62,
+    500: #77777a,
+    400: #919094,
+    300: #acabaf,
+    200: #c7c6ca,
+    100: #e3e2e6,
+    50: #f2f0f4,
+    10: #fefbff,
+  ),
+);
+
+// @function get-slope($step, $multiplier-sm, $multiplier-lg) {
+//   $slope: 100 *
+//     math.div(
+//       $font-max-size * $multiplier-lg - $font-min-size * $multiplier-sm,
+//       $fluid-max-width - $fluid-min-width
+//     ) * 1vw;
+//   @return $slope;
+// }
+
+// @function get-intercept($step, $multiplier-sm, $multiplier-lg) {
+//   $intercept: (
+//       math.div(
+//         $font-min-size * $fluid-max-width * $multiplier-sm - $font-max-size *
+//           $fluid-min-width * $multiplier-lg,
+//         $fluid-max-width - $fluid-min-width
+//       )
+//     ) * math.div(1, 16) * $font-base;
+//   @return $intercept;
+// }
 
 /* @debug math.pow(10, 2); */
 
-:root {
-  @each $step in $type-steps {
-    --step-#{$step}: clamp(
-      #{$font-min-size *
-        math.pow($type-scale-sm, $step) *
-        math.div(1, 16) *
-        $font-base},
-      calc(
-        #{get-slope(
-            $step,
-            math.pow($type-scale-sm, $step),
-            math.pow($type-scale-lg, $step)
-          )} +
-          #{get-intercept(
-            $step,
-            math.pow($type-scale-sm, $step),
-            math.pow($type-scale-lg, $step)
-          )}
-      ),
-      #{$font-max-size *
-        math.pow($type-scale-lg, $step) *
-        math.div(1, 16) *
-        $font-base}
-    );
-  }
+// :root {
+// @each $step in $type-steps {
+//   --step-#{$step}: clamp(
+//     #{$font-min-size *
+//       math.pow($type-scale-sm, $step) *
+//       math.div(1, 16) *
+//       $font-base},
+//     calc(
+//       #{get-slope(
+//           $step,
+//           math.pow($type-scale-sm, $step),
+//           math.pow($type-scale-lg, $step)
+//         )} +
+//         #{get-intercept(
+//           $step,
+//           math.pow($type-scale-sm, $step),
+//           math.pow($type-scale-lg, $step)
+//         )}
+//     ),
+//     #{$font-max-size *
+//       math.pow($type-scale-lg, $step) *
+//       math.div(1, 16) *
+//       $font-base}
+//   );
+// }
 
-  @each $step, $range in $space-steps {
-    --space-#{$step}: clamp(
-      #{map-get($map: $range, $key: min) *
-        $font-min-size *
-        math.div(1, 16) *
-        $font-base},
-      calc(
-        #{100 *
-          (
-            math.div(
-              $font-max-size *
-                map-get($map: $range, $key: max) -
-                $font-min-size *
-                map-get($map: $range, $key: min),
-              $fluid-max-width - $fluid-min-width
-            )
-          ) *
-          1vw} +
-          #{math.div(
-            $font-min-size *
-              $fluid-max-width *
-              map-get($map: $range, $key: min) -
-              $font-max-size *
-              $fluid-min-width *
-              map-get($map: $range, $key: max),
-            $fluid-max-width - $fluid-min-width
-          ) *
-          math.div(1, 16) *
-          $font-base},
-        #{map-get($map: $range, $key: max) *
-          $font-max-size *
-          math.div(1, 16) *
-          $font-base}
-      )
-    );
-  }
-}
+// @each $step, $range in $space-steps {
+//   --space-#{$step}: clamp(
+//     #{map-get($map: $range, $key: min) *
+//       $font-min-size *
+//       math.div(1, 16) *
+//       $font-base},
+//     calc(
+//       #{100 *
+//         (
+//           math.div(
+//             $font-max-size *
+//               map-get($map: $range, $key: max) -
+//               $font-min-size *
+//               map-get($map: $range, $key: min),
+//             $fluid-max-width - $fluid-min-width
+//           )
+//         ) *
+//         1vw} +
+//         #{math.div(
+//           $font-min-size *
+//             $fluid-max-width *
+//             map-get($map: $range, $key: min) -
+//             $font-max-size *
+//             $fluid-min-width *
+//             map-get($map: $range, $key: max),
+//           $fluid-max-width - $fluid-min-width
+//         ) *
+//         math.div(1, 16) *
+//         $font-base},
+//       #{map-get($map: $range, $key: max) *
+//         $font-max-size *
+//         math.div(1, 16) *
+//         $font-base}
+//     )
+//   );
+// }
+// }
