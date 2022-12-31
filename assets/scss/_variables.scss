@@ -15,7 +15,7 @@ $type-scales: (
 );
 $font-base: 1rem;
 $font-min-size: 16;
-$font-max-size: 18;
+$font-max-size: 20;
 $type-scale-sm: map-get(
   $map: $type-scales,
   $key: minor-third,
@@ -24,7 +24,7 @@ $type-scale-lg: map-get(
   $map: $type-scales,
   $key: augmented-fourth,
 );
-$type-steps: (-2, -1, 0, 1, 2, 3, 4, 5);
+$size-steps: (-2, -1, 0, 1, 2, 3, 4, 5);
 $space-steps: (
   3xs: (
     min: 0.25,
@@ -46,7 +46,7 @@ $space-steps: (
     min: 1.5,
     max: 1.5,
   ),
-  L: (
+  l: (
     min: 2,
     max: 2,
   ),
@@ -62,8 +62,28 @@ $space-steps: (
     min: 6,
     max: 6,
   ),
+  'xs-s': (
+    min: 0.75,
+    max: 1,
+  ),
+  's-m': (
+    min: 1,
+    max: 1.5,
+  ),
   's-l': (
     min: 1,
+    max: 2,
+  ),
+  's-xl': (
+    min: 1,
+    max: 3,
+  ),
+  'l-2xl': (
+    min: 2,
+    max: 4,
+  ),
+  'm-l': (
+    min: 1.5,
     max: 2,
   ),
   '3xs-3xl': (
@@ -74,61 +94,61 @@ $space-steps: (
 
 // fluid layout
 $fluid-min-width: 320;
-$fluid-max-width: 1920;
+$fluid-max-width: 1350;
 
 // Colors
 $colors: (
   primary: (
-    900: rgb(0, 26, 71),
-    800: rgb(0, 46, 110),
-    700: rgb(23, 69, 143),
-    600: rgb(54, 92, 168),
-    500: rgb(79, 115, 194),
-    400: rgb(107, 143, 222),
-    300: rgb(135, 170, 252),
-    200: rgb(176, 198, 255),
-    100: rgb(217, 226, 255),
-    50: rgb(237, 240, 255),
-    10: rgb(254, 250, 255),
+    10: #001a47,
+    20: #002e6e,
+    30: #17458f,
+    40: #365ca8,
+    50: #4f73c2,
+    60: #6b8fde,
+    70: #87aafc,
+    80: #b0c6ff,
+    90: #d9e2ff,
+    95: #edf0ff,
+    99: #fefaff,
   ),
   secondary: (
-    900: #141b2c,
-    800: #293042,
-    700: #404759,
-    600: #575e71,
-    500: #70778b,
-    400: #8990a5,
-    300: #a4abc0,
-    200: #bfc6dc,
-    100: #dbe2f9,
-    50: #edf0ff,
-    10: #fefbff,
+    10: #141b2c,
+    20: #293042,
+    30: #404759,
+    40: #575e71,
+    50: #70778b,
+    60: #8990a5,
+    70: #a4abc0,
+    80: #bfc6dc,
+    90: #dbe2f9,
+    95: #edf0ff,
+    99: #fefbff,
   ),
   accent: (
-    900: #2a132c,
-    800: #412743,
-    700: #593e5a,
-    600: #725573,
-    500: #8c6d8c,
-    400: #a786a7,
-    300: #c3a0c2,
-    200: #dfbbde,
-    100: #fcd7fb,
-    50: #ffebfb,
-    10: #fffbff,
+    10: #2a132c,
+    20: #412743,
+    30: #593e5a,
+    40: #725573,
+    50: #8c6d8c,
+    60: #a786a7,
+    70: #c3a0c2,
+    80: #dfbbde,
+    90: #fcd7fb,
+    95: #ffebfb,
+    99: #fffbff,
   ),
   neutral: (
-    900: #1b1b1f,
-    800: #303034,
-    700: #46464a,
-    600: #5e5e62,
-    500: #77777a,
-    400: #919094,
-    300: #acabaf,
-    200: #c7c6ca,
-    100: #e3e2e6,
-    50: #f2f0f4,
-    10: #fefbff,
+    10: #1b1b1f,
+    20: #303034,
+    30: #46464a,
+    40: #5e5e62,
+    50: #77777a,
+    60: #919094,
+    70: #acabaf,
+    80: #c7c6ca,
+    90: #e3e2e6,
+    95: #f2f0f4,
+    99: #fefbff,
   ),
 );
 
@@ -155,7 +175,7 @@ $colors: (
 /* @debug math.pow(10, 2); */
 
 // :root {
-// @each $step in $type-steps {
+// @each $step in $size-steps {
 //   --step-#{$step}: clamp(
 //     #{$font-min-size *
 //       math.pow($type-scale-sm, $step) *

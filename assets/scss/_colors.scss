@@ -3,82 +3,87 @@
 :root {
   @each $hue, $shades in $colors {
     @each $shade, $color in $shades {
-      --#{$hue}-#{$shade}: #{$color};
-      .bg-#{$hue}-#{$shade} {
-        color: #{$color};
-      }
+      //
 
-      .bg-#{$hue}-#{$shade} {
-        background-color: #{$color};
-      }
+      // .bg-#{$hue}-#{$shade} {
+      //   background-color: #{$color};
+      // }
 
-      .fill-#{$hue}-#{$shade} {
-        fill: #{$color};
-      }
+      // .fill-#{$hue}-#{$shade} {
+      //   fill: #{$color};
+      // }
     }
   }
+
+  --color-primary: #355ca8;
+  --color-primary-light: #d9e2ff;
+  --color-secondary: #1b1b1e;
+  --color-secondary-light: #dbe2f9;
+  --color-neutral: #5e5e62;
+  --color-neutral-light: #fefbfe;
+  --color-neutral-dark: #1b1b1e;
 }
 
-.bg-inherit {
-  color: inherit;
-}
+// .bg-inherit {
+//   color: inherit;
+// }
 
-.text-current {
-  color: currentColor;
-}
+// .text-current {
+//   color: currentColor;
+// }
 
-.text-transparent {
-  color: transparent;
-}
+// .text-transparent {
+//   color: transparent;
+// }
 
-.text-black {
-  color: rgb(0 0 0);
-}
+// .text-black {
+//   color: rgb(0 0 0);
+// }
 
-.text-white {
-  color: rgb(255 255 255);
-}
+// .text-white {
+//   color: rgb(255 255 255);
+// }
 
-.bg-inherit {
-  background-color: inherit;
-}
+// .bg-inherit {
+//   background-color: inherit;
+// }
 
-.bg-current {
-  background-color: currentColor;
-}
+// .bg-current {
+//   background-color: currentColor;
+// }
 
-.bg-transparent {
-  background-color: transparent;
-}
+// .bg-transparent {
+//   background-color: transparent;
+// }
 
-.bg-black {
-  background-color: rgb(0 0 0);
-}
+// .bg-black {
+//   background-color: rgb(0 0 0);
+// }
 
-.bg-white {
-  background-color: rgb(255 255 255);
-}
+// .bg-white {
+//   background-color: rgb(255 255 255);
+// }
 
-.fill-none {
-  fill: none;
-}
+// .fill-none {
+//   fill: none;
+// }
 
-.fill-inherit {
-  fill: inherit;
-}
+// .fill-inherit {
+//   fill: inherit;
+// }
 
-.fill-current {
-  fill: currentColor;
-}
+// .fill-current {
+//   fill: currentColor;
+// }
 
-.fill-transparent {
-  fill: transparent;
-}
+// .fill-transparent {
+//   fill: transparent;
+// }
 
-.fill-black {
-  fill: rgb(0 0 0);
-}
+// .fill-black {
+//   fill: rgb(0 0 0);
+// }
 
-.fill-white {
-  fill: rgb(255 255 255);
-}
+// .fill-white {
+//   fill: rgb(255 255 255);
+// }

@@ -1,5 +1,9 @@
 .flow > * + * {
-  margin-top: var(--flow-space, 2em);
+  margin-top: var(--flow-space, 1em);
+}
+
+.region {
+  padding-block: var(--region-space, var(--space-l-2xl));
 }
 
 .visually-hidden {
@@ -16,23 +20,29 @@
 
 .grid {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter, var(--space-s-l));
+
+  &[data-layout='3'] {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.place-items-center {
-  place-items: center;
-}
+// .place-items-center {
+//   place-items: center;
+// }
 
 .h-screen {
   min-height: 100vh;
 }
 
-.wr-6 {
-  width: 1.5rem;
-}
+// .wr-6 {
+//   width: 1.5rem;
+// }
 
-.hr-6 {
-  height: 1.5rem;
-}
+// .hr-6 {
+//   height: 1.5rem;
+// }
 
 // .container {
 //   max-width: 70rem;
@@ -50,4 +60,20 @@
 .full-bleed > * {
   max-width: 50rem;
   margin-inline: auto;
+}
+
+.b-red {
+  border: 2px solid red;
+}
+
+.b-pink {
+  border: 2px solid pink;
+}
+
+.b-green {
+  border: 2px solid green;
+}
+
+.b-blue {
+  border: 2px solid blue;
 }

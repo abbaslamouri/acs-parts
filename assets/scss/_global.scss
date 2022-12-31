@@ -24,10 +24,17 @@
 
 // GLOBAL STYLES
 body {
-  font-family: var(--font-sans-serif);
+  color: var(--color-neutral-dark);
+  background: var(--color-neutral-light);
+  font-family: var(--font-base);
+  font-size: var(--size-step-0);
+  line-height: 1.4;
+  letter-spacing: var(--tracking);
   max-width: 77.5rem;
   // padding: 0 1.33rem;
   margin-inline: auto;
+  overflow-x: hidden;
+
   // background: #f3f3f3;
   // color: #252525;
 
@@ -37,38 +44,76 @@ body {
   // }
   // padding: var(--metric-gutter, 2rem);
 
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-weight: 600;
-  color: var(--primary-900);
-  line-height: 1.1;
-  max-width: 18ch;
+  line-height: 1;
+  letter-spacing: var(--tracking-s);
+  max-width: 20ch;
+  // font-weight: 600;
+  // color: var(--primary-900);
+  // line-height: 1.1;
+  // max-width: 18ch;
 }
 
 h1 {
-  font-size: var(--step-4);
+  font-size: var(--size-step-4);
 }
 
 h2 {
-  font-size: var(--step-3);
+  font-size: var(--size-step-3);
 }
 
 h3 {
-  font-size: var(--step-2);
+  font-size: var(--size-step-2);
 }
 
 h4 {
-  font-size: var(--step-1);
+  font-size: var(--size-step-1);
 }
 
-p {
-  font-size: var(--step--0);
+p,
+li,
+blockquote:not([class]) {
+  // font-size: var(--size-step--0);
   max-width: 65ch;
+}
+
+blockquote:not([class]) {
+  font-family: var(--font-serif);
+  font-size: var(--size-step--1);
+
+  p:last-of-type {
+    font-family: var(--font-base);
+    font-size: var(--size-step--0);
+    font-weight: normal;
+  }
+}
+
+a {
+  color: currentColor;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+:focus {
+  outline: 1px solid;
+  outline-offset: 0.3ch;
+}
+
+:target {
+  scroll-margin-top: 2ex;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  padding: 0;
 }
 
 label {
@@ -93,13 +138,10 @@ button {
   // }
 }
 
-:focus {
-  // outline: 1px solid #4c2982;
-}
-
 svg {
-  width: 1.5em;
   height: 1.5em;
+  width: auto;
+  flex: none;
 }
 
 // UTILITY
@@ -141,12 +183,12 @@ svg {
 // }
 
 // h1 {
-//   font-size: var(--step-4);
+//   font-size: var(--size-step-4);
 //   letter-spacing: -2px;
 // }
 
 // h2 {
-//   font-size: var(--step-2);
+//   font-size: var(--size-step-2);
 //   letter-spacing: -1px;
 // }
 
@@ -154,7 +196,7 @@ svg {
   font-family: var(--font-sans-serif);
   color: var(--color-dark);
   background: var(--color-light);
-  font-size: var(--step-0);
+  font-size: var(--size-step-0);
   line-height: 1.4;
   letter-spacing: var(--tracking);
 
@@ -170,15 +212,15 @@ svg {
   }
 
   & h1 {
-    font-size: var(--step-3);
+    font-size: var(--size-step-3);
   }
 
   & h2 {
-    font-size: var(--step-2);
+    font-size: var(--size-step-2);
   }
 
   & h3 {
-    font-size: var(--step-1);
+    font-size: var(--size-step-1);
   }
 
   & p,
@@ -194,12 +236,12 @@ svg {
 
   & blockquote:not([class]) {
     font-family: var(--font-serif);
-    font-size: var(--step-1);
+    font-size: var(--size-step-1);
   }
 
   & blockquote:not([class]) p:last-of-type {
     font-family: var(--font-sans-serif);
-    font-size: var(--step-1);
+    font-size: var(--size-step-1);
     font-weight: normal;
   }
 

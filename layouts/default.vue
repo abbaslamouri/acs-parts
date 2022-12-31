@@ -19,19 +19,48 @@ useHead({
 </script>
 
 <template>
-  <div class="h-screen">
-    <header class="full-bleed bg-primary-200">
-      <Logo />
+  <div class="layout h-screen flow">
+    <header class="">
       <div>
-        <input type="text" placeholder="Search" />
-        <IconsSearch />
+        <div>
+          <Logo />
+        </div>
+        <div>
+          <div>
+            <input type="text" placeholder="Search" />
+            <IconsSearch />
+          </div>
+          <button>Sign in / Create Account</button>
+          <button>Your Bag</button>
+        </div>
       </div>
-      <button>Sign in / Create Account</button>
-      <button>Your Bag</button>
+      <div>
+        <ul role="list">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Our Parts</a>
+          </li>
+          <li>
+            <a href="#">Capabilities</a>
+          </li>
+          <li>
+            <a href="#">News</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <slot />
     <Footer />
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.layout {
+  --flow-space: 1rem;
+}
+</style>
