@@ -25,3 +25,29 @@
 .h-screen {
   min-height: 100vh;
 }
+
+.wr-6 {
+  width: 1.5rem;
+}
+
+.hr-6 {
+  height: 1.5rem;
+}
+
+// .container {
+//   max-width: 70rem;
+//   // padding: 0 1.33rem;
+//   margin-inline: auto;
+//   // margin-right: auto;
+//   // position: relative;
+// }
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.full-bleed > * {
+  max-width: 50rem;
+  margin-inline: auto;
+}

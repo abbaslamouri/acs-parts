@@ -4,9 +4,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: useRoute().meta.description
-        ? `${useRoute().meta.description}`
-        : '',
+      content: useRoute().meta.description ? `${useRoute().meta.description}` : '',
     },
     {
       name: 'robots',
@@ -22,21 +20,18 @@ useHead({
 
 <template>
   <div class="h-screen">
-    <header>
-      <!-- <Logo /> -->
+    <header class="full-bleed bg-primary-200">
+      <Logo />
       <div>
-        <input type="text" />
-        <button>Account</button>
-        <button>Basket</button>
+        <input type="text" placeholder="Search" />
+        <IconsSearch />
       </div>
+      <button>Sign in / Create Account</button>
+      <button>Your Bag</button>
     </header>
-
     <slot />
+    <Footer />
   </div>
 </template>
 
-<style lang="scss" scoped>
-header {
-  border: 1px solid red;
-}
-</style>
+<style lang="scss" scoped></style>
