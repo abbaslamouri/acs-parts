@@ -25,6 +25,7 @@
     "colors": "^1.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.12.1",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.5",
+    "tailwindcss-every-layout": "^1.0.0"
   }
 }

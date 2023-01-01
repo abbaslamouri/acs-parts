@@ -22,18 +22,28 @@
 // --metric-box-padding: 1rem 1rem;
 // --metric-interaction-padding: 0.6rem 0.6rem;
 
+* {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 // GLOBAL STYLES
 body {
-  color: var(--color-neutral-dark);
-  background: var(--color-neutral-light);
   font-family: var(--font-base);
   font-size: var(--size-step-0);
+  font-weight: var(--font-normal);
   line-height: 1.4;
   letter-spacing: var(--tracking);
-  max-width: 77.5rem;
+
+  color: var(--color-on-background);
+  background: var(--color-background);
+
+  max-width: var(--fluid-max-width);
   // padding: 0 1.33rem;
   margin-inline: auto;
   overflow-x: hidden;
+  padding: 1rem;
 
   // background: #f3f3f3;
   // color: #252525;
@@ -44,13 +54,14 @@ body {
   // }
   // padding: var(--metric-gutter, 2rem);
 
-  // border: 1px solid red;
+  border: 1px solid red;
 }
 
 h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-serif);
   line-height: 1;
   letter-spacing: var(--tracking-s);
   max-width: 20ch;
@@ -80,7 +91,7 @@ p,
 li,
 blockquote:not([class]) {
   // font-size: var(--size-step--0);
-  max-width: 65ch;
+  max-width: 70ch;
 }
 
 blockquote:not([class]) {
@@ -103,10 +114,15 @@ a {
 }
 
 :focus {
-  outline: 1px solid;
+  outline: 3 px solid red;
   outline-offset: 0.3ch;
 }
 
+#main {
+  &:focus {
+    outline: none;
+  }
+}
 :target {
   scroll-margin-top: 2ex;
 }

@@ -7,17 +7,23 @@ definePageMeta({
 
 const featuresRef = ref()
 
+const setFeaturesRef = () => {
+  console.log('JJJJJJ')
+  if (featuresRef.value.getBoundingClientRect().width > 46 * 16) featuresRef.value.setAttribute('data-layout', '3')
+  else featuresRef.value.removeAttribute('data-layout')
+}
+
 onMounted(() => {
+  setFeaturesRef()
   window.addEventListener('resize', () => {
-    if (featuresRef.value.getBoundingClientRect().width > 46 * 16) featuresRef.value.setAttribute('data-layout', '3')
-    else featuresRef.value.removeAttribute('data-layout')
+    setFeaturesRef()
   })
 })
 </script>
 
 <template>
-  <main class="flow">
-    <article class="hero flow region">
+  <div class="flow">
+    <article class="hero">
       <div>
         <p>Aviation Component Solutions</p>
         <h1>A Leading Supplier of OEM Alternative Parts</h1>
@@ -30,7 +36,7 @@ onMounted(() => {
       <a href="#">Explore Our Catalog</a>
     </article>
 
-    <article class="flow region b-red">
+    <article class="">
       <h2>All ACS parts are FAA-PMA approved</h2>
       <p>
         We realize there’s more to our customer’s purchasing decision than just price. This is why ACS seeks not only to
@@ -107,7 +113,7 @@ onMounted(() => {
       </ul>
       <a href="#">Learn More</a>
     </article>
-    <article class="flow region">
+    <article class="">
       <h2>Our Team</h2>
       <ul class="grid" role="list">
         <li>
@@ -132,7 +138,7 @@ onMounted(() => {
       <a href="#">Learn More</a>
       <a href="#">Contact Us</a>
     </article>
-    <article class="flow region">
+    <article class="">
       <h2>Ready to work with us</h2>
       <blockquote>
         <p>
@@ -149,22 +155,17 @@ onMounted(() => {
         <a href="tel:Phone: +14402956590">+1 (440) 295-6590 x 111</a>
       </address>
     </article>
-  </main>
+  </div>
 </template>
 
 <style scoped lang="scss">
 article {
-  --flow-space: 2rem;
-  .hero {
+  border: 2px solid green;
+  // --flow-space: 2rem;
+  &.hero {
     background-image: url(/images/home-page-hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
 
-    a {
-      display: inline-block;
-    }
+    color: var(--color-background);
   }
 }
 </style>

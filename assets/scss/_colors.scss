@@ -1,27 +1,101 @@
 @use 'variables' as *;
 
-:root {
+$site-colors: (
+  primary: (
+    primary,
+    40,
+  ),
+  on-primary: (
+    primary,
+    99,
+  ),
+  primary-container: (
+    primary,
+    90,
+  ),
+  on-primary-container: (
+    primary,
+    10,
+  ),
+  secondary: (
+    secondary,
+    40,
+  ),
+  on-secondary: (
+    secondary,
+    99,
+  ),
+  background: (
+    neutral,
+    99,
+  ),
+  on-background: (
+    neutral,
+    10,
+  ),
+  surface: (
+    neutral,
+    99,
+  ),
+  on-surface: (
+    neutral,
+    10,
+  ),
+);
+
+@function fetch-color($h, $index) {
   @each $hue, $shades in $colors {
     @each $shade, $color in $shades {
-      //
-
-      // .bg-#{$hue}-#{$shade} {
-      //   background-color: #{$color};
-      // }
-
-      // .fill-#{$hue}-#{$shade} {
-      //   fill: #{$color};
-      // }
+      @if ($index == $shade and $h== $hue) {
+        @return $color;
+      }
     }
   }
+  @return null;
+}
 
-  --color-primary: #355ca8;
-  --color-primary-light: #d9e2ff;
-  --color-secondary: #1b1b1e;
-  --color-secondary-light: #dbe2f9;
-  --color-neutral: #5e5e62;
-  --color-neutral-light: #fefbfe;
-  --color-neutral-dark: #1b1b1e;
+:root {
+  @each $color, $shades in $site-colors {
+    // @each $shade in $shades {
+    @debug nth($shades, 2);
+    @if (fetch-color(primary, 40)) {
+      --color-#{$color}: #{fetch-color(nth($shades, 1), nth($shades, 2))}; // #355ca8;
+    }
+    //
+
+    // .bg-#{$hue}-#{$shade} {
+    //   background-color: #{$color};
+    // }
+
+    // .fill-#{$hue}-#{$shade} {
+    //   fill: #{$color};
+    // }
+    // }
+  }
+
+  // // @debug fetch-color(800);
+  // @if (fetch-color(primary, 40)) {
+  //   --color-primary: #{fetch-color(primary,40)}; // #355ca8;
+  // }
+  // @if (fetch-color(primary,90)) {
+  //   --color-primary-light: #{fetch-color(primary,90)}; // #355ca8;
+  // }
+  // @if (fetch-color(secondary,40)) {
+  //   --color-secondary: #{fetch-color(secondary,40)}; // #355ca8;
+  // }
+  // @if (fetch-color(primary,90)) {
+  //   --color-secondary-light: #{fetch-color(primary,90)}; // #355ca8;
+  // }
+  // @if (fetch-color(neutral,99)) {
+  //   --color-neutral-light: #{fetch-color(neutral,99)}; // #355ca8;
+  // }
+  // @if (fetch-color(neutral,40)) {
+  //   --color-neutral:: #{fetch-color(neutral,40)}; // #355ca8;
+  // }
+
+  // @if (fetch-color(neutral,10)) {
+  //   --color-neutral-dark: #{fetch-color(neutral,10)}; // #355ca8;
+  // }
 }
 
 // .bg-inherit {

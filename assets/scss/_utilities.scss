@@ -18,6 +18,22 @@
   white-space: nowrap;
 }
 
+.flex {
+  display: flex;
+
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.items-center {
+    align-items: center;
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;

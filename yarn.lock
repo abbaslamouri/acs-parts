@@ -6320,6 +6320,11 @@ svgo@^2.7.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
+tailwindcss-every-layout@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-every-layout/-/tailwindcss-every-layout-1.0.0.tgz#40eb1276d5ed4943366ad9cfabccbbc1e676a6af"
+  integrity sha512-jFYFx00fsTLUCHk56f60jbhESNjCLyLadZD5NeHoRjKJQhQy2x+UM7tkqtDY0s4PTGehYmh19171Ao9eA1NB1Q==
+
 tapable@^1.0.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"

@@ -21,9 +21,7 @@ onMounted(() => {
     // const breakPoint =
     toggleMobileNav(
       document.documentElement.clientWidth,
-      window
-        .getComputedStyle(document.body)
-        .getPropertyValue('--nav-breakpoint')
+      window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
     )
     // console.log(Number(breakPoint) * 16)
     // console.log(windowWidth)
@@ -116,21 +114,10 @@ const hideNavigation = () => {
             <img src="/images/logo.svg" alt="ACME logo" />
           </a>
           <!-- <div class="nav-menu" max-width="600" ref="navMenuRef"> -->
-          <button
-            class="burger-menu"
-            type="button"
-            hidden
-            ref="burgerMenuRef"
-            @click="showNavigation"
-          >
+          <button class="burger-menu" type="button" hidden ref="burgerMenuRef" @click="showNavigation">
             <span class="burger-menu-bar"></span>
           </button>
-          <nav
-            class="navigation"
-            aria-label="primary"
-            role="navigation"
-            ref="navigationRef"
-          >
+          <nav class="navigation" aria-label="primary" ref="navigationRef">
             <ul role="list">
               <li>
                 <a href="#" @click="hideNavigation">Home</a>
@@ -158,25 +145,19 @@ const hideNavigation = () => {
       <article class="[ post ] [ flow ]">
         <h1>A responsive, progressively enhanced burger menu</h1>
         <p>
-          Burger menus are a relic of responsive design that no matter what your
-          opinion of them is, they continue to be a dominant design pattern.
-          They’re very good at preserving often-limited horizontal space, but
-          they also, more often than not, are built in a user-hostile,
-          non-accessible fashion.
+          Burger menus are a relic of responsive design that no matter what your opinion of them is, they continue to be
+          a dominant design pattern. They’re very good at preserving often-limited horizontal space, but they also, more
+          often than not, are built in a user-hostile, non-accessible fashion.
         </p>
         <p>
-          <a
-            href="https://piccalil.li/premium/build-a-fully-responsive-progressively-enhanced-burger-menu"
+          <a href="https://piccalil.li/premium/build-a-fully-responsive-progressively-enhanced-burger-menu"
             >In this premium tutorial</a
-          >, we’re going to build a burger menu from the ground up, using
-          progressive enhancement, `ResizeObserver`, `Proxy` state and of
-          course, super-solid HTML and CSS that pull from the CUBE CSS
-          principles.
+          >, we’re going to build a burger menu from the ground up, using progressive enhancement, `ResizeObserver`,
+          `Proxy` state and of course, super-solid HTML and CSS that pull from the CUBE CSS principles.
         </p>
         <p>
           This whole page is what you’re building in the tutorial 👆.
-          <a
-            href="https://piccalil.li/premium/build-a-fully-responsive-progressively-enhanced-burger-menu"
+          <a href="https://piccalil.li/premium/build-a-fully-responsive-progressively-enhanced-burger-menu"
             >Let’s dive in</a
           >
         </p>

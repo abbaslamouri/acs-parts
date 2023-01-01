@@ -31,6 +31,7 @@
     );
   }
 
+  --fluid-max-width: #{$fluid-max-width * math.div(1, 16) * 1rem};
   --gutter: var(--space-s-m);
   --border-radius: var(--size-step-1);
   --transition-base: 250ms ease;
