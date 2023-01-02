@@ -22,6 +22,10 @@
 // --metric-box-padding: 1rem 1rem;
 // --metric-interaction-padding: 0.6rem 0.6rem;
 
+:root {
+  --nav-breakpoint: 60;
+}
+
 * {
   background-repeat: no-repeat;
   background-position: center;
@@ -43,7 +47,7 @@ body {
   // padding: 0 1.33rem;
   margin-inline: auto;
   overflow-x: hidden;
-  padding: 1rem;
+  // padding: 1rem;
 
   // background: #f3f3f3;
   // color: #252525;
@@ -54,7 +58,7 @@ body {
   // }
   // padding: var(--metric-gutter, 2rem);
 
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 h1,
@@ -118,7 +122,8 @@ a {
   outline-offset: 0.3ch;
 }
 
-#main {
+#main,
+#header {
   &:focus {
     outline: none;
   }

@@ -4,26 +4,11 @@ definePageMeta({
   description:
     'A leader in the design, development, manufacture, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket',
 })
-
-const featuresRef = ref()
-
-const setFeaturesRef = () => {
-  console.log('JJJJJJ')
-  if (featuresRef.value.getBoundingClientRect().width > 46 * 16) featuresRef.value.setAttribute('data-layout', '3')
-  else featuresRef.value.removeAttribute('data-layout')
-}
-
-onMounted(() => {
-  setFeaturesRef()
-  window.addEventListener('resize', () => {
-    setFeaturesRef()
-  })
-})
 </script>
 
 <template>
   <div class="flow">
-    <article class="hero">
+    <article class="hero full-bleed">
       <div>
         <p>Aviation Component Solutions</p>
         <h1>A Leading Supplier of OEM Alternative Parts</h1>

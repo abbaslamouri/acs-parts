@@ -85,11 +85,11 @@
 .full-bleed {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-}
 
-.full-bleed > * {
-  max-width: 50rem;
-  margin-inline: auto;
+  & > * {
+    max-width: var(--fluid-max-width);
+    margin-inline: auto;
+  }
 }
 
 .b-red {
