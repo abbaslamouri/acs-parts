@@ -46,6 +46,13 @@
   &.items-center {
     align-items: center;
   }
+
+  &-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // gap: var(--space-3xs);
+  }
 }
 
 .grid {
@@ -64,6 +71,12 @@
 
 .h-screen {
   min-height: 100vh;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  // display: none;
 }
 
 // .wr-6 {

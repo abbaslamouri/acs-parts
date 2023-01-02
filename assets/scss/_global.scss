@@ -165,6 +165,23 @@ svg {
   flex: none;
 }
 
+.btn {
+  border: 1px solid white;
+  background: transparent;
+  color: currentColor;
+  display: flex;
+  align-items: center;
+  font-size: var(--size-step--1);
+  padding: var(--space-2xs) var(--space-s);
+  border-radius: var(--border-radius);
+
+  svg {
+    height: 1.5em;
+    width: 1.5em;
+    border: 1px solid green;
+  }
+}
+
 // UTILITY
 
 // .flow {

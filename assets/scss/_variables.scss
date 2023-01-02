@@ -18,11 +18,11 @@ $font-min-size: 16;
 $font-max-size: 20;
 $type-scale-sm: map-get(
   $map: $type-scales,
-  $key: minor-third,
+  $key: minor-second,
 );
 $type-scale-lg: map-get(
   $map: $type-scales,
-  $key: augmented-fourth,
+  $key: major-third,
 );
 $size-steps: (-2, -1, 0, 1, 2, 3, 4, 5);
 $space-steps: (
