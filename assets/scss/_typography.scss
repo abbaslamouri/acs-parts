@@ -30,61 +30,65 @@
 //   @return $intercept;
 // }
 
-:root {
-  @each $step in $font-sizes {
-    --font-size-#{$step}: clamp(
-      #{$font-min-size * math.pow($type-scale-sm, $step) * math.div(1, 16) * $font-base},
-      calc(
-        #{get-slope($step, math.pow($type-scale-sm, $step), math.pow($type-scale-lg, $step))} +
-          #{get-intercept($step, math.pow($type-scale-sm, $step), math.pow($type-scale-lg, $step))}
-      ),
-      #{$font-max-size * math.pow($type-scale-lg, $step) * math.div(1, 16) * $font-base}
-    );
-  }
+// :root {
+//   @each $step in $font-sizes {
+//     --font-size-#{$step}: clamp(
+//       #{$font-min-size * math.pow($type-scale-sm, $step) * math.div(1, 16) * $font-base},
+//       calc(
+//         #{get-slope($step, math.pow($type-scale-sm, $step), math.pow($type-scale-lg, $step))} +
+//           #{get-intercept($step, math.pow($type-scale-sm, $step), math.pow($type-scale-lg, $step))}
+//       ),
+//       #{$font-max-size * math.pow($type-scale-lg, $step) * math.div(1, 16) * $font-base}
+//     );
+//   }
 
-  // @each $step, $range in $space-steps {
-  //   --space-#{$step}: clamp(
-  //     #{map-get($map: $range, $key: min) *
-  //       $font-min-size *
-  //       math.div(1, 16) *
-  //       $font-base},
-  //     calc(
-  //       #{100 *
-  //         (
-  //           math.div(
-  //             $font-max-size *
-  //               map-get($map: $range, $key: max) -
-  //               $font-min-size *
-  //               map-get($map: $range, $key: min),
-  //             $fluid-max-width - $fluid-min-width
-  //           )
-  //         ) *
-  //         1vw} +
-  //         #{math.div(
-  //           $font-min-size *
-  //             $fluid-max-width *
-  //             map-get($map: $range, $key: min) -
-  //             $font-max-size *
-  //             $fluid-min-width *
-  //             map-get($map: $range, $key: max),
-  //           $fluid-max-width - $fluid-min-width
-  //         ) *
-  //         math.div(1, 16) *
-  //         $font-base},
-  //       #{map-get($map: $range, $key: max) *
-  //         $font-max-size *
-  //         math.div(1, 16) *
-  //         $font-base}
-  //     )
-  //   );
-  // }
+//   @each $weight, $value in $font-weights {
+//     --font-#{$weight}: #{$value};
+//   }
 
-  --font-serif: 'Merriweather', serif;
-  --font-base: 'Inter', sans-serif;
+// @each $step, $range in $space-steps {
+//   --space-#{$step}: clamp(
+//     #{map-get($map: $range, $key: min) *
+//       $font-min-size *
+//       math.div(1, 16) *
+//       $font-base},
+//     calc(
+//       #{100 *
+//         (
+//           math.div(
+//             $font-max-size *
+//               map-get($map: $range, $key: max) -
+//               $font-min-size *
+//               map-get($map: $range, $key: min),
+//             $fluid-max-width - $fluid-min-width
+//           )
+//         ) *
+//         1vw} +
+//         #{math.div(
+//           $font-min-size *
+//             $fluid-max-width *
+//             map-get($map: $range, $key: min) -
+//             $font-max-size *
+//             $fluid-min-width *
+//             map-get($map: $range, $key: max),
+//           $fluid-max-width - $fluid-min-width
+//         ) *
+//         math.div(1, 16) *
+//         $font-base},
+//       #{map-get($map: $range, $key: max) *
+//         $font-max-size *
+//         math.div(1, 16) *
+//         $font-base}
+//     )
+//   );
+// }
 
-  --font-thin: 300;
-  --font-normal: 400;
-  --font-semibold: 500;
-  --font-bold: 600;
-  --font-extrabold: 700;
-}
+// --font-serif: 'Merriweather', serif;
+// --font-base: 'Inter', sans-serif;
+
+// --font-thin: 300;
+// --font-normal: 400;
+// --font-semibold: 500;
+// --font-bold: 600;
+// --font-extrabold: 700;
+// }

@@ -3,8 +3,8 @@
 .skip-link {
   display: inline-block;
   padding: 0.7rem 1rem 0.5rem 1rem;
-  background: var(--color-primary-container);
-  color: var(--color-on-primary-container);
+  background: var(--color-primary-90);
+  color: var(--color-primary-10);
   text-decoration: none;
   font-weight: 700;
   text-transform: uppercase;
@@ -14,22 +14,23 @@
   z-index: 1;
 
   &:hover {
-    background: var(--color-on-primary-container);
-    color: var(--color-primary-container);
+    background: var(--color-primary-10);
+    color: var(--color-primary-90);
   }
 }
 
 .hero {
   background-image: url(/images/home-page-hero.jpg);
-  color: var(--color-background);
-  padding-block: var(--space-l);
-  --flow-space: 2rem;
+  color: var(--color-primary-99);
+  padding: var(--space-l) var(--space-l);
+  --flow-space: 3rem;
 
   .panorama {
     text-transform: uppercase;
     font-size: var(--font-size--1);
     letter-spacing: 0.3rem;
-    color: var(--color-on-tertiary);
+    color: var(--color-accent-70);
+    font-weight: bold;
   }
 
   h1 {
@@ -37,7 +38,7 @@
   }
 
   p {
-    // max-width: 70ch;
+    // color: white;
   }
 
   a {

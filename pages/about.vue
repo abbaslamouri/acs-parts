@@ -3,16 +3,16 @@ definePageMeta({
   title: 'Home',
   description:
     'A leader in the design, development, manufacture, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket',
-  layout: 'home',
 })
 </script>
 
 <template>
   <div class="flow">
     <div class="hero flow full-bleed">
-      <header>
+      <!-- <header>
         <Header class="home" />
-      </header>
+      </header> -->
+
       <article>
         <div class="flow">
           <p class="panorama">Aviation Component Solutions</p>
