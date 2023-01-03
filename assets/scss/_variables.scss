@@ -14,15 +14,15 @@ $type-scales: (
   octave: 2,
 );
 $font-base: 1rem;
-$font-min-size: 16;
-$font-max-size: 20;
+$font-min-size: 15;
+$font-max-size: 18;
 $type-scale-sm: map-get(
   $map: $type-scales,
-  $key: minor-second,
+  $key: minor-third,
 );
 $type-scale-lg: map-get(
   $map: $type-scales,
-  $key: major-third,
+  $key: augmented-fourth,
 );
 $size-steps: (-2, -1, 0, 1, 2, 3, 4, 5);
 $space-steps: (
@@ -124,7 +124,7 @@ $colors: (
     95: #edf0ff,
     99: #fefbff,
   ),
-  accent: (
+  tertiary: (
     10: #2a132c,
     20: #412743,
     30: #593e5a,

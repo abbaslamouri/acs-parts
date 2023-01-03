@@ -1,0 +1,46 @@
+/***********SKIPO LINK ***********/
+
+.skip-link {
+  display: inline-block;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  background: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+
+  &:hover {
+    background: var(--color-on-primary-container);
+    color: var(--color-primary-container);
+  }
+}
+
+.hero {
+  background-image: url(/images/home-page-hero.jpg);
+  color: var(--color-background);
+  padding-block: var(--space-l);
+  --flow-space: 2rem;
+
+  .panorama {
+    text-transform: uppercase;
+    font-size: var(--size-step--1);
+    letter-spacing: 0.3rem;
+    color: var(--color-on-tertiary);
+  }
+
+  h1 {
+    margin-block-start: 0.3rem;
+  }
+
+  p {
+    // max-width: 70ch;
+  }
+
+  a {
+    // display: inline-block;
+  }
+}

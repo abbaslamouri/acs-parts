@@ -67,8 +67,8 @@ h3,
 h4 {
   font-family: var(--font-serif);
   line-height: 1.1;
-  letter-spacing: var(--tracking-s);
-  max-width: 20ch;
+  // letter-spacing: var(--tracking-s);
+  max-width: 18ch;
   // font-weight: 600;
   // color: var(--primary-900);
   // line-height: 1.1;
@@ -76,19 +76,19 @@ h4 {
 }
 
 h1 {
-  font-size: var(--size-step-4);
-}
-
-h2 {
   font-size: var(--size-step-3);
 }
 
-h3 {
+h2 {
   font-size: var(--size-step-2);
 }
 
-h4 {
+h3 {
   font-size: var(--size-step-1);
+}
+
+h4 {
+  font-size: var(--size-step-0);
 }
 
 p,
@@ -161,25 +161,8 @@ button {
 
 svg {
   height: 1.5em;
-  width: auto;
-  flex: none;
-}
-
-.btn {
-  border: 1px solid white;
-  background: transparent;
-  color: currentColor;
-  display: flex;
-  align-items: center;
-  font-size: var(--size-step--1);
-  padding: var(--space-2xs) var(--space-s);
-  border-radius: var(--border-radius);
-
-  svg {
-    height: 1.5em;
-    width: 1.5em;
-    border: 1px solid green;
-  }
+  width: 1.5em;
+  // flex: none;
 }
 
 // UTILITY

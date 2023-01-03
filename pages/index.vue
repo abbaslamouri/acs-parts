@@ -9,20 +9,25 @@ definePageMeta({
 <template>
   <div class="flow">
     <article class="hero full-bleed">
-      <div>
-        <p>Aviation Component Solutions</p>
+      <div class="flow">
+        <p class="panorama">Aviation Component Solutions</p>
         <h1>A Leading Supplier of OEM Alternative Parts</h1>
+        <p>
+          <abbr title="Aviation Component Solutions">ACS </abbr> strives to be the leader in the design, development,
+          manufacturing, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket segment
+          using continuous improvement to drive stakeholder satisfaction.
+        </p>
+        <a href="#" class="btn">Explore Our Catalog</a>
       </div>
-      <p>
-        <abbr title="Aviation Component Solutions">ACS </abbr> strives to be the leader in the design, development,
-        manufacturing, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket segment
-        using continuous improvement to drive stakeholder satisfaction.
-      </p>
-      <a href="#">Explore Our Catalog</a>
     </article>
 
     <article class="">
       <h2>All ACS parts are FAA-PMA approved</h2>
+      <button class="btn">
+        <IconsPerson />
+        <span>Test</span>
+        <IconsBag />
+      </button>
       <p>
         We realize there’s more to our customer’s purchasing decision than just price. This is why ACS seeks not only to
         provide the best pricing in the industry, but to create value using any means available to us. Stocking 100% of
@@ -32,20 +37,7 @@ definePageMeta({
       </p>
       <ul class="grid" role="list" ref="featuresRef">
         <li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-            />
-          </svg>
+          <IconsPerson class="w-6 h-6" />
           <h3>Design and Engineering</h3>
           <p>
             To assure customers that the parts we provide will perform as promised, both functional and dimensional
@@ -53,20 +45,7 @@ definePageMeta({
           </p>
         </li>
         <li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-            />
-          </svg>
+          <IconsPerson class="w-6 h-6" />
           <h3>Quality Control</h3>
           <p>
             The driving force behind our approach to quality control is simple – to assure that our customers receive
@@ -74,20 +53,7 @@ definePageMeta({
           </p>
         </li>
         <li>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-            />
-          </svg>
+          <IconsPerson class="w-6 h-6 b-red" />
           <h3>Materials Testing</h3>
           <p>
             Our partnership with some of the industry’s most sophisticated Materials Labs provides us with the ability
@@ -145,12 +111,7 @@ definePageMeta({
 
 <style scoped lang="scss">
 article {
-  border: 2px solid green;
+  // border: 2px solid green;
   // --flow-space: 2rem;
-  &.hero {
-    background-image: url(/images/home-page-hero.jpg);
-
-    color: var(--color-background);
-  }
 }
 </style>
