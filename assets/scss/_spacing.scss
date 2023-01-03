@@ -33,7 +33,7 @@
 
   --fluid-max-width: #{$fluid-max-width * math.div(1, 16) * 1rem};
   --gutter: var(--space-s-m);
-  --border-radius: var(--size-step--2);
+  --border-radius: var(--font-size--2);
   --transition-base: 250ms ease;
   --transition-movement: 200ms linear;
   --transition-fade: 200ms ease;

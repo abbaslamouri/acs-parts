@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // type
 $type-scales: (
   minor-second: 1.067,
@@ -24,7 +26,7 @@ $type-scale-lg: map-get(
   $map: $type-scales,
   $key: augmented-fourth,
 );
-$size-steps: (-2, -1, 0, 1, 2, 3, 4, 5);
+$font-sizes: (-2, -1, 0, 1, 2, 3, 4, 5);
 $space-steps: (
   3xs: (
     min: 0.25,
@@ -152,6 +154,24 @@ $colors: (
   ),
 );
 
+@function get-slope($step, $multiplier-sm, $multiplier-lg) {
+  $slope: 100 *
+    math.div($font-max-size * $multiplier-lg - $font-min-size * $multiplier-sm, $fluid-max-width - $fluid-min-width) *
+    1vw;
+  @return $slope;
+}
+
+// Font size curve inrecept
+@function get-intercept($step, $multiplier-sm, $multiplier-lg) {
+  $intercept: (
+      math.div(
+        $font-min-size * $fluid-max-width * $multiplier-sm - $font-max-size * $fluid-min-width * $multiplier-lg,
+        $fluid-max-width - $fluid-min-width
+      )
+    ) * math.div(1, 16) * $font-base;
+  @return $intercept;
+}
+
 // @function get-slope($step, $multiplier-sm, $multiplier-lg) {
 //   $slope: 100 *
 //     math.div(
@@ -175,7 +195,7 @@ $colors: (
 /* @debug math.pow(10, 2); */
 
 // :root {
-// @each $step in $size-steps {
+// @each $step in $font-sizes {
 //   --step-#{$step}: clamp(
 //     #{$font-min-size *
 //       math.pow($type-scale-sm, $step) *

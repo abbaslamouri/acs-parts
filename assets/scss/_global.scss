@@ -35,7 +35,7 @@
 // GLOBAL STYLES
 body {
   font-family: var(--font-base);
-  font-size: var(--size-step-0);
+  font-size: var(--font-size-0);
   font-weight: var(--font-normal);
   line-height: 1.4;
   letter-spacing: var(--tracking);
@@ -76,35 +76,35 @@ h4 {
 }
 
 h1 {
-  font-size: var(--size-step-3);
+  font-size: var(--font-size-3);
 }
 
 h2 {
-  font-size: var(--size-step-2);
+  font-size: var(--font-size-2);
 }
 
 h3 {
-  font-size: var(--size-step-1);
+  font-size: var(--font-size-1);
 }
 
 h4 {
-  font-size: var(--size-step-0);
+  font-size: var(--font-size-0);
 }
 
 p,
 li,
 blockquote:not([class]) {
-  // font-size: var(--size-step--0);
+  // font-size: var(--font-size--0);
   max-width: 70ch;
 }
 
 blockquote:not([class]) {
   font-family: var(--font-serif);
-  font-size: var(--size-step--1);
+  font-size: var(--font-size--1);
 
   p:last-of-type {
     font-family: var(--font-base);
-    font-size: var(--size-step--0);
+    font-size: var(--font-size--0);
     font-weight: normal;
   }
 }
@@ -204,12 +204,12 @@ svg {
 // }
 
 // h1 {
-//   font-size: var(--size-step-4);
+//   font-size: var(--font-size-4);
 //   letter-spacing: -2px;
 // }
 
 // h2 {
-//   font-size: var(--size-step-2);
+//   font-size: var(--font-size-2);
 //   letter-spacing: -1px;
 // }
 
@@ -217,7 +217,7 @@ svg {
   font-family: var(--font-sans-serif);
   color: var(--color-dark);
   background: var(--color-light);
-  font-size: var(--size-step-0);
+  font-size: var(--font-size-0);
   line-height: 1.4;
   letter-spacing: var(--tracking);
 
@@ -233,15 +233,15 @@ svg {
   }
 
   & h1 {
-    font-size: var(--size-step-3);
+    font-size: var(--font-size-3);
   }
 
   & h2 {
-    font-size: var(--size-step-2);
+    font-size: var(--font-size-2);
   }
 
   & h3 {
-    font-size: var(--size-step-1);
+    font-size: var(--font-size-1);
   }
 
   & p,
@@ -257,12 +257,12 @@ svg {
 
   & blockquote:not([class]) {
     font-family: var(--font-serif);
-    font-size: var(--size-step-1);
+    font-size: var(--font-size-1);
   }
 
   & blockquote:not([class]) p:last-of-type {
     font-family: var(--font-sans-serif);
-    font-size: var(--size-step-1);
+    font-size: var(--font-size-1);
     font-weight: normal;
   }
 

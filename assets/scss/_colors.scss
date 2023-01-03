@@ -81,9 +81,29 @@ $site-colors: (
 :root {
   @each $color, $shades in $site-colors {
     // @each $shade in $shades {
-    @debug nth($shades, 2);
+    // @debug nth($shades, 2);
     @if (fetch-color(primary, 40)) {
       --color-#{$color}: #{fetch-color(nth($shades, 1), nth($shades, 2))}; // #355ca8;
+    }
+    //
+
+    // .bg-#{$hue}-#{$shade} {
+    //   background-color: #{$color};
+    // }
+
+    // .fill-#{$hue}-#{$shade} {
+    //   fill: #{$color};
+    // }
+    // }
+  }
+
+  @each $color, $shades in $colors {
+    @each $shade, $hex in $shades {
+      @debug --color-#{$color}-#{$shade};
+      --color-#{$color}-#{$shade}: #{$hex};
+      // @debug nth($shades, 2);
+      // @if (fetch-color(primary, 40)) {
+      //   --color-#{$color}: #{fetch-color(nth($shades, 1), nth($shades, 2))}; // #355ca8;
     }
     //
 

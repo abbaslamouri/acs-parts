@@ -71,7 +71,7 @@ const props = defineProps({
 svg {
   width: auto;
   height: 1em;
-  font-size: var(--size-step-2);
+  font-size: var(--font-size-2);
   /* border: 2px solid green; */
 }
 </style>

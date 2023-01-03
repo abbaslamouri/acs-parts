@@ -17,6 +17,28 @@ export default defineNuxtConfig({
         // },
       ],
 
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' },
+
+        // Inter, Merriweather serif & Merriweather Sans serif from Google
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap',
+        },
+
+        // // Montserrat sans serif from Adobe
+        {
+          rel: 'stylesheet',
+          href: 'https://use.typekit.net/nwr4chk.css',
+        },
+      ],
+
+      // Inter, Merriweather serif & Merriweather Sans serif from Google
+      // @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap');
+
+      // // Montserrat sans serif from Adobe
+      // @import url('https://use.typekit.net/nwr4chk.css');
+
       // {
       //   name: 'canonical',
       //   content:'href="http://example.com/"'

@@ -2,37 +2,37 @@
 
 @use 'variables' as *;
 
-// Merriweather serif & sans serif from Google
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap');
+// Inter, Merriweather serif & Merriweather Sans serif from Google
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap');
 
-// Inter snas serif from Google
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lora:wght@400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap');
+// // Inter sans serif from Google
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lora:wght@400;500;600;700&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap');
 
-// Montserrat sans serif from Adobe
-@import url('https://use.typekit.net/nwr4chk.css');
+// // Montserrat sans serif from Adobe
+// @import url('https://use.typekit.net/nwr4chk.css');
 
 // Font size curve slope
-@function get-slope($step, $multiplier-sm, $multiplier-lg) {
-  $slope: 100 *
-    math.div($font-max-size * $multiplier-lg - $font-min-size * $multiplier-sm, $fluid-max-width - $fluid-min-width) *
-    1vw;
-  @return $slope;
-}
+// @function get-slope($step, $multiplier-sm, $multiplier-lg) {
+//   $slope: 100 *
+//     math.div($font-max-size * $multiplier-lg - $font-min-size * $multiplier-sm, $fluid-max-width - $fluid-min-width) *
+//     1vw;
+//   @return $slope;
+// }
 
-// Font size curve inrecept
-@function get-intercept($step, $multiplier-sm, $multiplier-lg) {
-  $intercept: (
-      math.div(
-        $font-min-size * $fluid-max-width * $multiplier-sm - $font-max-size * $fluid-min-width * $multiplier-lg,
-        $fluid-max-width - $fluid-min-width
-      )
-    ) * math.div(1, 16) * $font-base;
-  @return $intercept;
-}
+// // Font size curve inrecept
+// @function get-intercept($step, $multiplier-sm, $multiplier-lg) {
+//   $intercept: (
+//       math.div(
+//         $font-min-size * $fluid-max-width * $multiplier-sm - $font-max-size * $fluid-min-width * $multiplier-lg,
+//         $fluid-max-width - $fluid-min-width
+//       )
+//     ) * math.div(1, 16) * $font-base;
+//   @return $intercept;
+// }
 
 :root {
-  @each $step in $size-steps {
-    --size-step-#{$step}: clamp(
+  @each $step in $font-sizes {
+    --font-size-#{$step}: clamp(
       #{$font-min-size * math.pow($type-scale-sm, $step) * math.div(1, 16) * $font-base},
       calc(
         #{get-slope($step, math.pow($type-scale-sm, $step), math.pow($type-scale-lg, $step))} +
