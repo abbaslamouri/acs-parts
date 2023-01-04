@@ -9,10 +9,6 @@ definePageMeta({
 <template>
   <div class="flow">
     <div class="hero flow full-bleed">
-      <!-- <header>
-        <Header class="home" />
-      </header> -->
-
       <article>
         <div class="flow">
           <p class="panorama">Aviation Component Solutions</p>

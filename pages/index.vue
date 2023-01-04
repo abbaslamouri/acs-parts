@@ -51,7 +51,7 @@ onMounted(() => {
 <template>
   <div class="flow">
     <div class="hero flow full-bleed">
-      <header id="header">
+      <header id="header" class="">
         <Header class="home" />
       </header>
       <article>

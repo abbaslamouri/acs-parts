@@ -3,6 +3,12 @@ header {
     background-color: var(--color-primary-10);
     padding-block-start: var(--space-s);
     box-shadow: 12px 12px 2px 1px rgba(black, 0.2);
+    // margin-inline: 0;
+
+    > * {
+      max-width: unset;
+      margin-inline: 0;
+    }
     .header {
       &.home {
       }

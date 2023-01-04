@@ -194,19 +194,19 @@ const toggleNavigation = () => {
         <nav class="primary-navigation" aria-label="primary">
           <ul role="list">
             <li>
-              <a href="#">Home</a>
+              <Nuxt-link :to="{ name: 'index' }">Home</Nuxt-link>
             </li>
             <li>
-              <a href="#">Our Parts</a>
+              <Nuxt-link :to="{ name: 'index' }">Our Parts</Nuxt-link>
             </li>
             <li>
-              <a href="#">Capabilities</a>
+              <Nuxt-link :to="{ name: 'index' }">Capabilities</Nuxt-link>
             </li>
             <li>
-              <a href="#">News</a>
+              <Nuxt-link :to="{ name: 'index' }">News</Nuxt-link>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <Nuxt-link :to="{ name: 'about' }">About Us</Nuxt-link>
             </li>
           </ul>
         </nav>
