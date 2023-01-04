@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { isTSUndefinedKeyword } from '@babel/types'
-
 useHead({
   title: useRoute().meta.title ? `ACS | ${useRoute().meta.title}` : '',
   meta: [
@@ -160,56 +158,60 @@ const toggleNavigation = () => {
 </script>
 
 <template>
-  <div class="header full-bleed" id="header" role="banner" ref="headerRef">
+  <div class="header" role="banner" ref="headerRef">
     <SkipLink />
     <div class="nav-wrapper">
-      <div class="top">
-        <div class="branding">
-          <Nuxt-link :to="{ name: 'index' }" aria-label="Aviation Component Solutions">
-            <img src="/images/logo-transparent.svg" alt="ACS Logo Home Page" />
-          </Nuxt-link>
-        </div>
-        <div class="search-customer-bag">
-          <div class="search">
-            <button class="btn btn-header search">
-              <IconsSearch aria-hidden="true" />
-              <span class="header-button-span">Search Products</span>
-            </button>
-            <input type="text" placeholder="Search products" aria-label="Search Products" />
+      <div class="top container full-bleed">
+        <div class="top__inner">
+          <div class="branding">
+            <Nuxt-link :to="{ name: 'index' }" aria-label="Aviation Component Solutions">
+              <img src="/images/logo-transparent.svg" alt="ACS Logo Home Page" />
+            </Nuxt-link>
           </div>
-          <button class="customer btn btn-header">
-            <IconsPerson aria-hidden="true" />
-            <span class="header-button-span">Sign in / Create Account</span>
-          </button>
-          <button class="bag btn btn-header">
-            <IconsBag aria-hidden="true" />
-            <span class="header-button-span">Your Bag</span>
-          </button>
+          <div class="customer">
+            <div class="search">
+              <button class="btn btn-header search">
+                <IconsSearch aria-hidden="true" />
+                <span class="header-button-span">Search Products</span>
+              </button>
+              <input type="text" placeholder="Search products" aria-label="Search Products" />
+            </div>
+            <button class="customer btn btn-header">
+              <IconsPerson aria-hidden="true" />
+              <span class="header-button-span">Sign in / Create Account</span>
+            </button>
+            <button class="bag btn btn-header">
+              <IconsBag aria-hidden="true" />
+              <span class="header-button-span">Your Bag</span>
+            </button>
+          </div>
         </div>
       </div>
       <div class="bottom full-bleed">
-        <button class="btn burger-toggle" type="button" hidden ref="burgerToggleRef" @click="toggleNavigation">
-          <span class="burger-bar"></span>
-        </button>
-        <nav class="primary-navigation" aria-label="primary">
-          <ul role="list">
-            <li>
-              <Nuxt-link :to="{ name: 'index' }">Home</Nuxt-link>
-            </li>
-            <li>
-              <Nuxt-link :to="{ name: 'index' }">Our Parts</Nuxt-link>
-            </li>
-            <li>
-              <Nuxt-link :to="{ name: 'index' }">Capabilities</Nuxt-link>
-            </li>
-            <li>
-              <Nuxt-link :to="{ name: 'index' }">News</Nuxt-link>
-            </li>
-            <li>
-              <Nuxt-link :to="{ name: 'about' }">About Us</Nuxt-link>
-            </li>
-          </ul>
-        </nav>
+        <div class="">
+          <button class="btn burger-toggle" type="button" hidden ref="burgerToggleRef" @click="toggleNavigation">
+            <span class="burger-bar"></span>
+          </button>
+          <nav class="primary-navigation" aria-label="primary">
+            <ul role="list">
+              <li>
+                <Nuxt-link :to="{ name: 'index' }">Home</Nuxt-link>
+              </li>
+              <li>
+                <Nuxt-link :to="{ name: 'index' }">Our Parts</Nuxt-link>
+              </li>
+              <li>
+                <Nuxt-link :to="{ name: 'index' }">Capabilities</Nuxt-link>
+              </li>
+              <li>
+                <Nuxt-link :to="{ name: 'index' }">News</Nuxt-link>
+              </li>
+              <li>
+                <Nuxt-link :to="{ name: 'about' }">About Us</Nuxt-link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </div>

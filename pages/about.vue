@@ -1,28 +1,27 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Home',
+  title: 'About',
   description:
     'A leader in the design, development, manufacture, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket',
 })
 </script>
 
 <template>
-  <div class="flow">
-    <div class="hero flow full-bleed">
-      <article>
-        <div class="flow">
-          <p class="panorama">Aviation Component Solutions</p>
-          <h1>A Leading Supplier of OEM Alternative Parts</h1>
-          <p>
-            <abbr title="Aviation Component Solutions">ACS </abbr> strives to be the leader in the design, development,
-            manufacturing, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket segment
-            using continuous improvement to drive stakeholder satisfaction.
-          </p>
-          <a href="#" class="btn btn-secondary">Explore Our Catalog</a>
-        </div>
-      </article>
-    </div>
-    <div class="flow">
+  <div class="">
+    <article class="hero container full-bleed">
+      <div class="hero__inner flow">
+        <p class="panorama">Aviation Component Solutions</p>
+        <h1>A Leading Supplier of OEM Alternative Parts</h1>
+        <p>
+          <abbr title="Aviation Component Solutions">ACS </abbr> strives to be the leader in the design, development,
+          manufacturing, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket segment
+          using continuous improvement to drive stakeholder satisfaction.
+        </p>
+        <a href="#" class="btn btn-secondary">Explore Our Catalog</a>
+      </div>
+    </article>
+
+    <div class="">
       <article class="">
         <h2>All ACS parts are FAA-PMA approved</h2>
         <button class="btn">
