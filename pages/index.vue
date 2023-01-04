@@ -3,9 +3,12 @@ definePageMeta({
   title: 'Home',
   description:
     'A leader in the design, development, manufacture, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket',
-  // layout: 'home',
+  layout: 'home',
 })
 
+const headerRef = ref()
+
+const currentRoute = computed(() => useRoute().name)
 onMounted(() => {
   // console.log(window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint'))
   // console.log(document.documentElement.clientWidth)
@@ -47,24 +50,24 @@ onMounted(() => {
 
 <template>
   <div class="">
-    <div class="hero">
-      <!-- <header id="header" class="">
+    <div class="hero home">
+      <header class="b-green" :data-home="currentRoute === 'index' ? 'home' : ''" ref="headerRef">
         <Header class="home" />
-      </header> -->
-      <article>
-        <div class="hero__inner">
-          <p class="panorama">Aviation Component Solutions</p>
-          <h1>A Leading Supplier of OEM Alternative Parts</h1>
-          <p>
-            <abbr title="Aviation Component Solutions">ACS </abbr> strives to be the leader in the design, development,
-            manufacturing, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket segment
-            using continuous improvement to drive stakeholder satisfaction.
-          </p>
-          <a href="#" class="btn btn-secondary">Explore Our Catalog</a>
-        </div>
+      </header>
+      <article class="hero__inner flow">
+        <!-- <div> -->
+        <p class="panorama">Aviation Component Solutions</p>
+        <h1>A Leading Supplier of OEM Alternative Parts</h1>
+        <p>
+          <abbr title="Aviation Component Solutions">ACS </abbr> strives to be the leader in the design, development,
+          manufacturing, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket segment
+          using continuous improvement to drive stakeholder satisfaction.
+        </p>
+        <a href="#" class="btn btn-secondary">Explore Our Catalog</a>
+        <!-- </div> -->
       </article>
     </div>
-    <div class="flow grid-3">
+    <div class="b-red">
       <article class="">
         <h2>All ACS parts are FAA-PMA approved</h2>
         <button class="btn">
@@ -109,6 +112,8 @@ onMounted(() => {
         </ul>
         <a href="#">Learn More</a>
       </article>
+    </div>
+    <div>
       <article class="">
         <h2>Our Team</h2>
         <ul class="grid" role="list">

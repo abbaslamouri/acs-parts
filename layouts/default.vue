@@ -19,9 +19,9 @@ useHead({
 
 // const burgerToggleRef = ref()
 // const router = useRouter()
-const headerRef = ref()
+// const headerRef = ref()
 
-const currentRoute = computed(() => useRoute().name)
+// const currentRoute = computed(() => useRoute().name)
 // const toggleMobileNav = (windowWidth: any, navBreakPoint: any) => {
 //   const headerButtonSpans = headerRef.value.querySelectorAll('.header-button-span')
 //   burgerToggleRef.value.setAttribute('aria-expanded', 'false')
@@ -155,8 +155,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="layout h-screen" id="main-container">
-    <header class="" :data-home="currentRoute === 'index' ? 'home' : ''" ref="headerRef">
+  <div class="h-screen" id="main-container">
+    <header>
       <Header />
     </header>
     <main id="main" tabindex="-1">

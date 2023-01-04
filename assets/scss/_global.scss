@@ -13,7 +13,7 @@ body {
   letter-spacing: var(--tracking);
   color: var(--color-neutral-10);
   background: var(--color-neutral-99);
-  max-width: var(--fluid-max-width);
+  // max-width: var(--fluid-max-width);
   margin-inline: auto;
   overflow-x: hidden;
 
@@ -49,7 +49,7 @@ h4 {
 p,
 li,
 blockquote:not([class]) {
-  max-width: 70ch;
+  max-width: 55ch;
 }
 
 blockquote:not([class]) {

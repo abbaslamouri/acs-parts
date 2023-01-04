@@ -161,8 +161,8 @@ const toggleNavigation = () => {
   <div class="header" role="banner" ref="headerRef">
     <SkipLink />
     <div class="nav-wrapper">
-      <div class="top container full-bleed">
-        <div class="top__inner">
+      <div class="top">
+        <div class="top__inner container">
           <div class="branding">
             <Nuxt-link :to="{ name: 'index' }" aria-label="Aviation Component Solutions">
               <img src="/images/logo-transparent.svg" alt="ACS Logo Home Page" />
@@ -187,13 +187,13 @@ const toggleNavigation = () => {
           </div>
         </div>
       </div>
-      <div class="bottom full-bleed">
+      <div class="bottom">
         <div class="">
           <button class="btn burger-toggle" type="button" hidden ref="burgerToggleRef" @click="toggleNavigation">
             <span class="burger-bar"></span>
           </button>
-          <nav class="primary-navigation" aria-label="primary">
-            <ul role="list">
+          <nav class="container" aria-label="primary">
+            <ul class="" role="list">
               <li>
                 <Nuxt-link :to="{ name: 'index' }">Home</Nuxt-link>
               </li>
@@ -217,4 +217,12 @@ const toggleNavigation = () => {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+//
+<style lang="scss" scoped>
+// .branding {
+//   img {
+//     font-size: var(--font-size-5);
+//     height: 2rem;
+//   }
+// }
+</style>

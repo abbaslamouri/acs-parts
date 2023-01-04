@@ -8,8 +8,8 @@ definePageMeta({
 
 <template>
   <div class="">
-    <article class="hero container full-bleed">
-      <div class="hero__inner flow">
+    <article class="hero">
+      <div class="hero__inner container">
         <p class="panorama">Aviation Component Solutions</p>
         <h1>A Leading Supplier of OEM Alternative Parts</h1>
         <p>
@@ -20,9 +20,8 @@ definePageMeta({
         <a href="#" class="btn btn-secondary">Explore Our Catalog</a>
       </div>
     </article>
-
-    <div class="">
-      <article class="">
+    <article class="b-red">
+      <div class="container">
         <h2>All ACS parts are FAA-PMA approved</h2>
         <button class="btn">
           <IconsPerson />
@@ -64,50 +63,50 @@ definePageMeta({
           </li>
         </ul>
         <a href="#">Learn More</a>
-      </article>
-      <article class="">
-        <h2>Our Team</h2>
-        <ul class="grid" role="list">
-          <li>
-            <img src="/images/mike-carabotta.png" alt="Mike Carabotta, Engineering Manager" />
-            <h4>Mike Carabotta</h4>
-            <p>Engineering Manager</p>
-            <p>Mike is directly responsible for the continued expansion of our already-vast catalog.</p>
-          </li>
-          <li>
-            <img src="/images/joe-klinehamer.png" alt="Mike Carabotta, Engineering Manager" />
-            <h4>Joe Klinehamer</h4>
-            <p>President</p>
-            <p>Joe is always looking for the next opportunity to expand and develop our business at ACS.</p>
-          </li>
-          <li>
-            <img src="/images/mitch-kokish.png" alt="Mike Carabotta, Engineering Manager" />
-            <h4>Mitch Kokish Carabotta</h4>
-            <p>Quality Manager</p>
-            <p>Mike is a certified FAA Manufacturing DAR with involvement in over 500 certification projects.</p>
-          </li>
-        </ul>
-        <a href="#">Learn More</a>
-        <a href="#">Contact Us</a>
-      </article>
-      <article class="">
-        <h2>Ready to work with us</h2>
-        <blockquote>
-          <p>
-            It was as though the web design community were participating in a shared consensual hallucination. Rather
-            than acknowledge the flexible nature of the browser window, they chose to settle on one set width as the
-            ideal …even if that meant changing the ideal every few years.
-          </p>
-          <p>Jeremy Keith - Resilient Web Design</p>
-        </blockquote>
-        <address>
-          <p>26451 Curtiss Wright Pkwy</p>
-          <p>Cleveland, OH 44143</p>
-          <a href="mailto:abbaslamouri@yrlus.com">Email: info@acs-parts.com</a>
-          <a href="tel:Phone: +14402956590">+1 (440) 295-6590 x 111</a>
-        </address>
-      </article>
-    </div>
+      </div>
+    </article>
+    <article class="">
+      <h2>Our Team</h2>
+      <ul class="grid" role="list">
+        <li>
+          <img src="/images/mike-carabotta.png" alt="Mike Carabotta, Engineering Manager" />
+          <h4>Mike Carabotta</h4>
+          <p>Engineering Manager</p>
+          <p>Mike is directly responsible for the continued expansion of our already-vast catalog.</p>
+        </li>
+        <li>
+          <img src="/images/joe-klinehamer.png" alt="Mike Carabotta, Engineering Manager" />
+          <h4>Joe Klinehamer</h4>
+          <p>President</p>
+          <p>Joe is always looking for the next opportunity to expand and develop our business at ACS.</p>
+        </li>
+        <li>
+          <img src="/images/mitch-kokish.png" alt="Mike Carabotta, Engineering Manager" />
+          <h4>Mitch Kokish Carabotta</h4>
+          <p>Quality Manager</p>
+          <p>Mike is a certified FAA Manufacturing DAR with involvement in over 500 certification projects.</p>
+        </li>
+      </ul>
+      <a href="#">Learn More</a>
+      <a href="#">Contact Us</a>
+    </article>
+    <article class="">
+      <h2>Ready to work with us</h2>
+      <blockquote>
+        <p>
+          It was as though the web design community were participating in a shared consensual hallucination. Rather than
+          acknowledge the flexible nature of the browser window, they chose to settle on one set width as the ideal
+          …even if that meant changing the ideal every few years.
+        </p>
+        <p>Jeremy Keith - Resilient Web Design</p>
+      </blockquote>
+      <address>
+        <p>26451 Curtiss Wright Pkwy</p>
+        <p>Cleveland, OH 44143</p>
+        <a href="mailto:abbaslamouri@yrlus.com">Email: info@acs-parts.com</a>
+        <a href="tel:Phone: +14402956590">+1 (440) 295-6590 x 111</a>
+      </address>
+    </article>
   </div>
 </template>
 

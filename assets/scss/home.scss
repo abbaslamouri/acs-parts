@@ -4,10 +4,15 @@
   background-image: url(/images/home-page-hero.jpg);
   color: var(--color-primary-99);
   // padding: var(--space-s) var(--space-l);
-  padding-block: var(--space-xl);
+  // padding-block: var(--space-xl);
   // --flow-space: 3rem;
   &__inner {
-    --flow-space: 2rem;
+    // --flow-space: 2rem;
+    // padding-block: var(--space-l);
+  }
+
+  &.home {
+    // padding-top: var(--space-3xl);
   }
 
   .panorama {
@@ -19,11 +24,11 @@
   }
 
   h1 {
-    margin-block-start: 0.3rem;
+    // margin-block-start: 0.3rem;
   }
 
   p {
-    color: var(--color-primary-90);
+    // color: var(--color-primary-90);
   }
 
   a {

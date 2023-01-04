@@ -146,6 +146,8 @@ useHead({
 //   burgerMenuRef.value.setAttribute('aria-label', 'Open menu')
 
 // }
+
+// class="" :data-home="currentRoute === 'index' ? 'home' : ''" ref="headerRef"
 </script>
 
 <template>

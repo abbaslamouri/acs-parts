@@ -1,3 +1,6 @@
+@use 'sass:math';
+@use 'variables' as *;
+
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
@@ -53,10 +56,20 @@
     align-items: center;
     // gap: var(--space-3xs);
   }
+
+  &-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: var(--space-3xs);
+  }
 }
 
 .container {
-  padding: var(--space-s) var(--space-l);
+  padding: var(--space-xl) var(--space-s);
+  max-width: var(--fluid-max-width);
+  margin-inline: auto;
+  // border: 1px solid red;
 }
 // .grid {
 //   display: grid;
@@ -84,6 +97,14 @@
   width: 1.5em;
 }
 
+.h-4 {
+  height: 1em;
+}
+
+.w-4 {
+  width: 1em;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;
@@ -106,19 +127,19 @@
 //   // position: relative;
 // }
 
-.full-bleed {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+// .full-bleed {
+//   width: 100vw;
+//   margin-left: calc(50% - 50vw);
 
-  & > * {
-    max-width: var(--fluid-max-width);
-    margin-inline: auto;
-  }
+//   & > * {
+//     max-width: var(--fluid-max-width);
+//     margin-inline: auto;
+//   }
 
-  p {
-    max-width: 70ch;
-  }
-}
+//   p {
+//     max-width: 70ch;
+//   }
+// }
 
 .b-red {
   border: 2px solid red;
@@ -217,4 +238,36 @@
     )
   );
   gap: var(--space-l);
+}
+
+@each $hue, $shades in $colors {
+  @each $shade, $hex in $shades {
+    // @debug --color-#{$color}-#{$shade};
+    // --color-#{$color}-#{$shade}: #{$hex};
+    // @debug nth($shades, 2);
+    // @if (fetch-color(primary, 40)) {
+    //   --color-#{$color}: #{fetch-color(nth($shades, 1), nth($shades, 2))}; // #355ca8;
+
+    //
+
+    .text-#{$hue}-#{$shade} {
+      color: #{$hex};
+    }
+
+    .bg-#{$hue}-#{$shade} {
+      background-color: #{$hex};
+    }
+
+    .fill-#{$hue}-#{$shade} {
+      fill: #{$hex};
+    }
+  }
+}
+
+.pb-l {
+  padding-block: var(--space-l);
+}
+
+.pb-xl {
+  padding-block: var(--space-xl);
 }
