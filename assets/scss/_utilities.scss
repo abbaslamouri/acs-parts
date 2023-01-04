@@ -55,6 +55,9 @@
   }
 }
 
+.container {
+  padding: var(--space-s) var(--space-l);
+}
 // .grid {
 //   display: grid;
 //   grid-template-columns: 1fr;

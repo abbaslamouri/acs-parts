@@ -3,7 +3,7 @@ definePageMeta({
   title: 'Home',
   description:
     'A leader in the design, development, manufacture, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket',
-  layout: 'home',
+  // layout: 'home',
 })
 
 onMounted(() => {
@@ -27,35 +27,32 @@ onMounted(() => {
   //   document.documentElement.clientWidth,
   //   window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
   // )
-
-  let header: any = document.getElementById('header')
-  const sticky = header.offsetTop
-
-  window.addEventListener('scroll', () => {
-    console.log(header.offsetTop)
-
-    if (window.pageYOffset > sticky) {
-      header.classList.add('sticky')
-    } else {
-      header.classList.remove('sticky')
-    }
-    // if (window.scrollY > 0) {
-    //   headerRef.value.setAttribute('data-sticky', true)
-    // } else {
-    //   headerRef.value.removeAttribute('data-sticky')
-    // }
-  })
+  // let header: any = document.getElementById('header')
+  // const sticky = header.offsetTop
+  // window.addEventListener('scroll', () => {
+  //   console.log(header.offsetTop)
+  //   if (window.pageYOffset > sticky) {
+  //     header.classList.add('sticky')
+  //   } else {
+  //     header.classList.remove('sticky')
+  //   }
+  //   // if (window.scrollY > 0) {
+  //   //   headerRef.value.setAttribute('data-sticky', true)
+  //   // } else {
+  //   //   headerRef.value.removeAttribute('data-sticky')
+  //   // }
+  // })
 })
 </script>
 
 <template>
-  <div class="flow">
-    <div class="hero flow full-bleed">
-      <header id="header">
+  <div class="">
+    <div class="hero">
+      <!-- <header id="header" class="">
         <Header class="home" />
-      </header>
+      </header> -->
       <article>
-        <div class="hero__inner flow">
+        <div class="hero__inner">
           <p class="panorama">Aviation Component Solutions</p>
           <h1>A Leading Supplier of OEM Alternative Parts</h1>
           <p>

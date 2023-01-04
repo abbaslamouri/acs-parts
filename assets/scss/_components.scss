@@ -1,3 +1,22 @@
+.skip-link {
+  display: inline-block;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  background: var(--color-primary-90);
+  color: var(--color-primary-10);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+
+  &:hover {
+    background: var(--color-primary-10);
+    color: var(--color-primary-90);
+  }
+}
+
 .btn {
   border: 1px solid white;
   background: transparent;
