@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { isTSUndefinedKeyword } from '@babel/types'
+
 useHead({
   title: useRoute().meta.title ? `ACS | ${useRoute().meta.title}` : '',
   meta: [
@@ -60,6 +62,15 @@ onMounted(() => {
   //   document.documentElement.clientWidth,
   //   window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
   // )
+
+  // window.addEventListener('scroll', () => {
+  //   console.log(window.scrollY)
+  //   if (window.scrollY > 0) {
+  //     headerRef.value.setAttribute('data-sticky', true)
+  //   } else {
+  //     headerRef.value.removeAttribute('data-sticky')
+  //   }
+  // })
 })
 
 const toggleNavigation = () => {

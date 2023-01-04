@@ -5,16 +5,57 @@ definePageMeta({
     'A leader in the design, development, manufacture, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket',
   layout: 'home',
 })
+
+onMounted(() => {
+  // console.log(window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint'))
+  // console.log(document.documentElement.clientWidth)
+  // console.log(burgerToggleRef.value)
+  // console.log(headerRef.value)
+  // toggleMobileNav(
+  //   document.documentElement.clientWidth,
+  //   window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
+  // )
+  // window.addEventListener('resize', () => {
+  //   toggleMobileNav(
+  //     document.documentElement.clientWidth,
+  //     window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
+  //   )
+  // })
+  // viewportWidth.value = document.documentElement.clientWidth
+  // console.log(viewportWidth.value)
+  // toggleMobileNav(
+  //   document.documentElement.clientWidth,
+  //   window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
+  // )
+
+  let header: any = document.getElementById('header')
+  const sticky = header.offsetTop
+
+  window.addEventListener('scroll', () => {
+    console.log(header.offsetTop)
+
+    if (window.pageYOffset > sticky) {
+      header.classList.add('sticky')
+    } else {
+      header.classList.remove('sticky')
+    }
+    // if (window.scrollY > 0) {
+    //   headerRef.value.setAttribute('data-sticky', true)
+    // } else {
+    //   headerRef.value.removeAttribute('data-sticky')
+    // }
+  })
+})
 </script>
 
 <template>
   <div class="flow">
     <div class="hero flow full-bleed">
-      <header>
+      <header id="header">
         <Header class="home" />
       </header>
       <article>
-        <div class="flow">
+        <div class="hero__inner flow">
           <p class="panorama">Aviation Component Solutions</p>
           <h1>A Leading Supplier of OEM Alternative Parts</h1>
           <p>
@@ -26,7 +67,7 @@ definePageMeta({
         </div>
       </article>
     </div>
-    <div class="flow">
+    <div class="flow grid-3">
       <article class="">
         <h2>All ACS parts are FAA-PMA approved</h2>
         <button class="btn">
@@ -34,6 +75,7 @@ definePageMeta({
           <span>Test</span>
           <IconsBag />
         </button>
+
         <p>
           We realize there’s more to our customer’s purchasing decision than just price. This is why ACS seeks not only
           to provide the best pricing in the industry, but to create value using any means available to us. Stocking
@@ -43,7 +85,7 @@ definePageMeta({
         </p>
         <ul class="grid" role="list" ref="featuresRef">
           <li>
-            <IconsPerson class="w-6 h-6" />
+            <IconsPerson class="" />
             <h3>Design and Engineering</h3>
             <p>
               To assure customers that the parts we provide will perform as promised, both functional and dimensional
@@ -51,7 +93,7 @@ definePageMeta({
             </p>
           </li>
           <li>
-            <IconsPerson class="w-6 h-6" />
+            <IconsPerson class="" />
             <h3>Quality Control</h3>
             <p>
               The driving force behind our approach to quality control is simple – to assure that our customers receive
@@ -59,7 +101,7 @@ definePageMeta({
             </p>
           </li>
           <li>
-            <IconsPerson class="w-6 h-6 b-red" />
+            <IconsPerson class="" />
             <h3>Materials Testing</h3>
             <p>
               Our partnership with some of the industry’s most sophisticated Materials Labs provides us with the ability
@@ -116,9 +158,4 @@ definePageMeta({
   </div>
 </template>
 
-<style scoped lang="scss">
-article {
-  // border: 2px solid green;
-  // --flow-space: 2rem;
-}
-</style>
+<style scoped lang="scss"></style>

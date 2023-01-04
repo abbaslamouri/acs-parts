@@ -22,8 +22,12 @@
 .hero {
   background-image: url(/images/home-page-hero.jpg);
   color: var(--color-primary-99);
-  padding: var(--space-l) var(--space-l);
+  padding: var(--space-s) var(--space-l);
+  padding-block-end: var(--space-xl);
   --flow-space: 3rem;
+  &__inner {
+    --flow-space: 2rem;
+  }
 
   .panorama {
     text-transform: uppercase;
@@ -38,7 +42,7 @@
   }
 
   p {
-    // color: white;
+    color: var(--color-primary-90);
   }
 
   a {
