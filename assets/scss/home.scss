@@ -2,6 +2,7 @@
 
 .hero {
   background-image: url(/images/home-page-hero.jpg);
+  background-image: linear-gradient(to bottom, rgba(#141b2c, 0.8), rgba(white, 0)), url(/images/home-page-hero.jpg);
   color: var(--color-primary-99);
   // padding: var(--space-s) var(--space-l);
   // padding-block: var(--space-xl);
@@ -41,8 +42,20 @@
   }
 }
 
-header[data-route='index'] + main {
-  .hero {
-    padding-top: var(--space-3xl);
+header {
+  &[data-route='index'] {
+    + main {
+      .hero {
+        padding-top: var(--hero-top-padding, 7rem);
+      }
+    }
+  }
+
+  &[data-route='index'][data-mobilenav='true'] {
+    + main {
+      .hero {
+        padding-top: var(--hero-top-padding, 3rem);
+      }
+    }
   }
 }

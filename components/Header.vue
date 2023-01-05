@@ -23,8 +23,16 @@ const burgerToggleVisible = ref(false)
 const burgerToggleExpanded = ref(false)
 
 const toggleMobileNav = (windowWidth: any, navBreakPoint: any) => {
-  burgerToggleVisible.value = windowWidth < Number(navBreakPoint) * 16 ? true : false
   burgerToggleExpanded.value = false
+  if ((burgerToggleVisible.value = windowWidth < Number(navBreakPoint) * 16)) {
+    burgerToggleVisible.value = true
+    document.documentElement.style.setProperty('--hero-top-padding', '3em')
+  } else {
+    burgerToggleVisible.value = false
+    document.documentElement.style.setProperty('--hero-top-padding', '7em')
+  }
+  // burgerToggleVisible.value = windowWidth < Number(navBreakPoint) * 16 ? true : false
+
   // const headerButtonSpans = headerRef.value.querySelectorAll('.header-button-span')
   // burgerToggleRef.value.setAttribute('aria-expanded', 'false')
   // if (windowWidth < Number(navBreakPoint) * 16) {
@@ -63,13 +71,7 @@ onMounted(() => {
   //   document.documentElement.clientWidth,
   //   window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
   // )
-  // window.addEventListener('scroll', () => {
-  //   console.log(window.scrollY)
-  //   if (window.scrollY > 0) {
-  //     headerRef.value.setAttribute('data-sticky', true)
-  //   } else {
-  //     headerRef.value.removeAttribute('data-sticky')
-  //   }
+
   // })
 })
 

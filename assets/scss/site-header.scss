@@ -1,6 +1,11 @@
 header {
   position: sticky;
   top: 0;
+
+  &[data-route='index'][data-scroll='true'] {
+    background-color: var(--color-primary-10);
+    min-height: calc(var(--hero-top-padding, 8rem) + 1.5rem);
+  }
   // // border: 1px solid red;
 
   &[data-route='index'] {
@@ -96,6 +101,7 @@ header {
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
+            padding-block: var(--space-s);
             // border: 1px solid red;
             margin: 0 auto;
 
@@ -104,17 +110,17 @@ header {
               min-width: 6rem;
 
               &:not(:last-of-type) {
-                border-right: 1px solid var(--color-neutral-40);
+                border-inline-end: 1px solid var(--color-neutral-60);
               }
             }
 
             a {
               font-weight: var(--font-bold);
               letter-spacing: var(--tracking-3, 0);
-
+              // border: 1px solid red;
               text-transform: uppercase;
               text-decoration: none;
-              padding-block: var(--space-s);
+              padding-block: var(--space-4xs);
               display: flex;
               justify-content: center;
               align-items: center;
