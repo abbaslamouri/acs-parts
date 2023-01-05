@@ -1,13 +1,19 @@
 <script setup lang="ts">
-definePageMeta({
-  title: 'About',
-  description:
-    'A leader in the design, development, manufacture, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket',
-})
+// definePageMeta({
+//   title: 'About',
+//   description:
+//     'A leader in the design, development, manufacture, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket',
+// })
+
+const pageTitle = 'About'
 </script>
 
 <template>
   <div class="">
+    <Head>
+      <Title>ACS | {{ pageTitle }}</Title>
+      <Meta name="description" :content="pageTitle" />
+    </Head>
     <article class="hero">
       <div class="hero__inner | flow container">
         <div>
