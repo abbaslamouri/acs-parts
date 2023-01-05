@@ -55,6 +55,10 @@ $font-weights: (
 
 // ******** SPACING *********
 $space-steps: (
+  4xs: (
+    min: 0.125,
+    max: 0.125,
+  ),
   3xs: (
     min: 0.25,
     max: 0.25,

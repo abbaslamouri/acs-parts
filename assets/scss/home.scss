@@ -7,31 +7,42 @@
   // padding-block: var(--space-xl);
   // --flow-space: 3rem;
   &__inner {
-    // --flow-space: 2rem;
+    // --flow-space: 3rem;
     // padding-block: var(--space-l);
-  }
 
-  &.home {
-    // padding-top: var(--space-3xl);
-  }
+    &.home {
+      // padding-top: var(--space-3xl);
+    }
 
-  .panorama {
-    text-transform: uppercase;
-    font-size: var(--font-size--1);
-    letter-spacing: 0.3rem;
-    color: var(--color-accent-70);
-    font-weight: bold;
-  }
+    .panorama {
+      text-transform: uppercase;
+      font-size: var(--font-size--1);
+      letter-spacing: var(--tracking-9);
+      color: var(--color-accent-70);
+      font-weight: bold;
+      margin-block-end: var(--space-4xs, 0);
+    }
 
-  h1 {
-    // margin-block-start: 0.3rem;
-  }
+    h1 {
+      // margin-block-start: 0.3rem;
+    }
 
-  p {
-    // color: var(--color-primary-90);
-  }
+    p {
+      // color: var(--color-primary-90);
+    }
 
-  a {
-    // display: inline-block;
+    a {
+      // display: inline-block;
+    }
+
+    .btn {
+      margin-block-start: var(--space-l);
+    }
+  }
+}
+
+header[data-route='index'] + main {
+  .hero {
+    padding-top: var(--space-3xl);
   }
 }

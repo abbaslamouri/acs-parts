@@ -31,6 +31,18 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://use.typekit.net/nwr4chk.css',
         },
+
+        // Proxima Nova sans serif from Adobe
+        {
+          rel: 'stylesheet',
+          href: 'https://use.typekit.net/yge8xsm.css',
+        },
+
+        // Proxima Nova sans serif from Adobe
+        {
+          rel: 'stylesheet',
+          href: 'https://use.typekit.net/dto7hnb.css',
+        },
       ],
 
       // Inter, Merriweather serif & Merriweather Sans serif from Google

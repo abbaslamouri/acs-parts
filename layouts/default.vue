@@ -17,6 +17,11 @@ useHead({
   },
 })
 
+// const currentPage = ref('index')
+
+const currentPage = computed(() => useRoute().name)
+// currentPage.value = useRoute().name
+
 // const burgerToggleRef = ref()
 // const router = useRouter()
 // const headerRef = ref()
@@ -156,7 +161,7 @@ onMounted(() => {
 
 <template>
   <div class="h-screen" id="main-container">
-    <header>
+    <header :data-route="currentPage">
       <Header />
     </header>
     <main id="main" tabindex="-1">

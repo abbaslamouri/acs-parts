@@ -17,26 +17,29 @@ useHead({
   },
 })
 
-const burgerToggleRef = ref()
-const headerRef = ref()
+// const burgerToggleRef = ref()
+// const headerRef = ref()
+const burgerToggleVisible = ref(false)
+const burgerToggleExpanded = ref(false)
 
 const toggleMobileNav = (windowWidth: any, navBreakPoint: any) => {
-  const headerButtonSpans = headerRef.value.querySelectorAll('.header-button-span')
-  burgerToggleRef.value.setAttribute('aria-expanded', 'false')
-
-  if (windowWidth < Number(navBreakPoint) * 16) {
-    headerRef.value.setAttribute('data-mobilenav', 'true')
-    burgerToggleRef.value.setAttribute('data-enabled', 'true')
-    for (let i = 0; i < headerButtonSpans.length; i++) {
-      headerButtonSpans[i].classList.add('visually-hidden')
-    }
-  } else {
-    headerRef.value.removeAttribute('data-mobilenav')
-    burgerToggleRef.value.setAttribute('data-enabled', 'false')
-    for (let i = 0; i < headerButtonSpans.length; i++) {
-      headerButtonSpans[i].classList.remove('visually-hidden')
-    }
-  }
+  burgerToggleVisible.value = windowWidth < Number(navBreakPoint) * 16 ? true : false
+  burgerToggleExpanded.value = false
+  // const headerButtonSpans = headerRef.value.querySelectorAll('.header-button-span')
+  // burgerToggleRef.value.setAttribute('aria-expanded', 'false')
+  // if (windowWidth < Number(navBreakPoint) * 16) {
+  //   headerRef.value.setAttribute('data-mobilenav', 'true')
+  //   burgerToggleRef.value.setAttribute('data-enabled', 'true')
+  //   for (let i = 0; i < headerButtonSpans.length; i++) {
+  //     headerButtonSpans[i].classList.add('visually-hidden')
+  //   }
+  // } else {
+  //   headerRef.value.removeAttribute('data-mobilenav')
+  //   burgerToggleRef.value.setAttribute('data-enabled', 'false')
+  //   for (let i = 0; i < headerButtonSpans.length; i++) {
+  //     headerButtonSpans[i].classList.remove('visually-hidden')
+  //   }
+  // }
 }
 
 onMounted(() => {
@@ -60,7 +63,6 @@ onMounted(() => {
   //   document.documentElement.clientWidth,
   //   window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
   // )
-
   // window.addEventListener('scroll', () => {
   //   console.log(window.scrollY)
   //   if (window.scrollY > 0) {
@@ -72,20 +74,20 @@ onMounted(() => {
 })
 
 const toggleNavigation = () => {
+  burgerToggleExpanded.value = !burgerToggleExpanded.value
   // const headerHeight = headerRef.value.getBoundingClientRect().height
   // console.log('KKKK', headerHeight)
-
   // document.documentElement.style.setProperty('--menu-bar-top', headerHeight)
-  if (
-    burgerToggleRef.value.getAttribute('aria-expanded') == 'false' ||
-    burgerToggleRef.value.getAttribute('aria-expanded') == null
-  ) {
-    burgerToggleRef.value.setAttribute('aria-expanded', 'true')
-    burgerToggleRef.value.setAttribute('aria-label', 'Close menu')
-  } else {
-    burgerToggleRef.value.setAttribute('aria-expanded', 'false')
-    burgerToggleRef.value.setAttribute('aria-label', 'Open menu')
-  }
+  // if (
+  //   burgerToggleRef.value.getAttribute('aria-expanded') == 'false' ||
+  //   burgerToggleRef.value.getAttribute('aria-expanded') == null
+  // ) {
+  //   burgerToggleRef.value.setAttribute('aria-expanded', 'true')
+  //   burgerToggleRef.value.setAttribute('aria-label', 'Close menu')
+  // } else {
+  //   burgerToggleRef.value.setAttribute('aria-expanded', 'false')
+  //   burgerToggleRef.value.setAttribute('aria-label', 'Open menu')
+  // }
 }
 
 // watch(
@@ -158,7 +160,7 @@ const toggleNavigation = () => {
 </script>
 
 <template>
-  <div class="header" role="banner" ref="headerRef">
+  <div class="site-header" role="banner" :data-mobilenav="burgerToggleVisible">
     <SkipLink />
     <div class="nav-wrapper">
       <div class="top">
@@ -172,52 +174,67 @@ const toggleNavigation = () => {
             <div class="search">
               <button class="btn btn-header search">
                 <IconsSearch aria-hidden="true" />
-                <span class="header-button-span">Search Products</span>
+                <span class="" v-if="!burgerToggleVisible">Search Products</span>
               </button>
               <input type="text" placeholder="Search products" aria-label="Search Products" />
             </div>
             <button class="customer btn btn-header">
               <IconsPerson aria-hidden="true" />
-              <span class="header-button-span">Sign in / Create Account</span>
+              <span class="" v-if="!burgerToggleVisible">Sign in / Create Account</span>
             </button>
             <button class="bag btn btn-header">
               <IconsBag aria-hidden="true" />
-              <span class="header-button-span">Your Bag</span>
+              <span class="" v-if="!burgerToggleVisible">Your Bag</span>
             </button>
           </div>
         </div>
       </div>
       <div class="bottom">
         <div class="">
-          <button class="btn burger-toggle" type="button" hidden ref="burgerToggleRef" @click="toggleNavigation">
-            <span class="burger-bar"></span>
-          </button>
-          <nav class="container" aria-label="primary">
-            <ul class="" role="list">
-              <li>
-                <Nuxt-link :to="{ name: 'index' }">Home</Nuxt-link>
-              </li>
-              <li>
-                <Nuxt-link :to="{ name: 'index' }">Our Parts</Nuxt-link>
-              </li>
-              <li>
-                <Nuxt-link :to="{ name: 'index' }">Capabilities</Nuxt-link>
-              </li>
-              <li>
-                <Nuxt-link :to="{ name: 'index' }">News</Nuxt-link>
-              </li>
-              <li>
-                <Nuxt-link :to="{ name: 'about' }">About Us</Nuxt-link>
-              </li>
-            </ul>
-          </nav>
+          <transition name="burger-toggle">
+            <button
+              class="btn burger-toggle"
+              type="button"
+              :data-enabled="burgerToggleVisible"
+              :aria-expanded="burgerToggleExpanded"
+              :aria-label="burgerToggleExpanded ? 'Close menu' : 'Open menu'"
+              v-if="burgerToggleVisible"
+              @click="toggleNavigation"
+            >
+              <span class="burger-bar"></span>
+            </button>
+          </transition>
+          <transition name="site-nav">
+            <nav
+              class=""
+              aria-label="primary"
+              v-if="!burgerToggleVisible || (burgerToggleVisible && burgerToggleExpanded)"
+            >
+              <ul class="container" role="list">
+                <li>
+                  <Nuxt-link :to="{ name: 'index' }">Home</Nuxt-link>
+                </li>
+                <li>
+                  <Nuxt-link :to="{ name: 'index' }">Our Parts</Nuxt-link>
+                </li>
+                <li>
+                  <Nuxt-link :to="{ name: 'index' }">Capabilities</Nuxt-link>
+                </li>
+                <li>
+                  <Nuxt-link :to="{ name: 'index' }">News</Nuxt-link>
+                </li>
+                <li>
+                  <Nuxt-link :to="{ name: 'about' }">About Us</Nuxt-link>
+                </li>
+              </ul>
+            </nav>
+          </transition>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-//
 <style lang="scss" scoped>
 // .branding {
 //   img {

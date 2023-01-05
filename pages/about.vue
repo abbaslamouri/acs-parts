@@ -9,9 +9,11 @@ definePageMeta({
 <template>
   <div class="">
     <article class="hero">
-      <div class="hero__inner container">
-        <p class="panorama">Aviation Component Solutions</p>
-        <h1>A Leading Supplier of OEM Alternative Parts</h1>
+      <div class="hero__inner | flow container">
+        <div>
+          <p class="panorama">Aviation Component Solutions</p>
+          <h1>A Leading Supplier of OEM Alternative Parts</h1>
+        </div>
         <p>
           <abbr title="Aviation Component Solutions">ACS </abbr> strives to be the leader in the design, development,
           manufacturing, and delivery of Aerospace Engine/Airframe PMA parts to service the global Aftermarket segment

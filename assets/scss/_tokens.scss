@@ -17,10 +17,23 @@
   @each $weight, $value in $font-weights {
     --font-#{$weight}: #{$value};
   }
-  --tracking: -0.05ch;
-  --tracking-s: -0.075ch;
-  --font-base: 'Inter', sans-serif;
-  --font-serif: 'Merriweather', serif;
+
+  --font-base: 'proxima-nova', sans-serif;
+  --font-serif: 'proxima-sera', serif;
+
+  --tracking--3: -0.025ch;
+  --tracking--2: -0.05ch;
+  --tracking--1: -0.075ch;
+  --tracking-0: 0;
+  --tracking-1: 0.05ch;
+  --tracking-2: 0.075ch;
+  --tracking-3: 0.1ch;
+  --tracking-4: 0.15ch;
+  --tracking-5: 0.2ch;
+  --tracking-6: 0.25ch;
+  --tracking-7: 0.3ch;
+  --tracking-8: 0.4ch;
+  --tracking-9: 0.5ch;
 
   // ******** COLORS *********
   @each $color, $shades in $colors {
@@ -59,7 +72,8 @@
   }
   --fluid-max-width: #{$fluid-max-width * math.div(1, 16) * 1rem};
   --gutter: var(--space-s-m);
-  --nav-breakpoint: 55; // rem
+
+  --nav-breakpoint: 60; // rem
 
   // ******** OTHER *********
   --border-radius: var(--font-size--3);
