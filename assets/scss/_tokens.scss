@@ -73,7 +73,8 @@
   --fluid-max-width: #{$fluid-max-width * math.div(1, 16) * 1rem};
   --gutter: var(--space-s-m);
 
-  --nav-breakpoint: 60; // rem
+  --nav-breakpoint: 50; // rem
+  --hero-top-padding: 6rem;
 
   // ******** OTHER *********
   --border-radius: var(--font-size--3);

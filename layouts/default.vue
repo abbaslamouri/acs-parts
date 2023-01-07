@@ -18,7 +18,9 @@ useHead({
 })
 
 // const currentPage = ref('index')
-
+const headerMobileAttr = ref()
+const headerScrollAttr = ref()
+const jsActive = ref(false)
 const currentPage = computed(() => useRoute().name)
 // currentPage.value = useRoute().name
 
@@ -46,7 +48,60 @@ const currentPage = computed(() => useRoute().name)
 //   }
 // }
 
+const toggleHeaderMobileAttr = (windowWidth: any, navBreakPoint: any) => {
+  headerMobileAttr.value = windowWidth < Number(navBreakPoint) * 16 ? true : false
+  // burgerToggleExpanded.value = false
+  // const headerButtonSpans = headerRef.value.querySelectorAll('.header-button-span')
+  // burgerToggleRef.value.setAttribute('aria-expanded', 'false')
+  // if (windowWidth < Number(navBreakPoint) * 16) {
+  //   headerRef.value.setAttribute('data-mobilenav', 'true')
+  //   burgerToggleRef.value.setAttribute('data-enabled', 'true')
+  //   for (let i = 0; i < headerButtonSpans.length; i++) {
+  //     headerButtonSpans[i].classList.add('visually-hidden')
+  //   }
+  // } else {
+  //   headerRef.value.removeAttribute('data-mobilenav')
+  //   burgerToggleRef.value.setAttribute('data-enabled', 'false')
+  //   for (let i = 0; i < headerButtonSpans.length; i++) {
+  //     headerButtonSpans[i].classList.remove('visually-hidden')
+  //   }
+  // }
+}
+
 onMounted(() => {
+  jsActive.value = true
+  toggleHeaderMobileAttr(
+    document.documentElement.clientWidth,
+    window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
+  )
+  window.addEventListener('resize', () => {
+    toggleHeaderMobileAttr(
+      document.documentElement.clientWidth,
+      window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
+    )
+  })
+
+  window.addEventListener('scroll', () => {
+    console.log(window.scrollY)
+    if (window.scrollY > 0) {
+      headerScrollAttr.value = true
+    } else {
+      headerScrollAttr.value = false
+      // headerRef.value.removeAttribute('data-sticky')
+    }
+  })
+  // let headerHeight = headerRef.value.getBoundingClientRect().height
+  // window.addEventListener('scroll', () => {
+  //   console.log(window.scrollY)
+  //   // if (window.scrollY > 0) {
+  //   headerHeight = headerRef.value.getBoundingClientRect().height
+  //   console.log('KKKK', headerHeight)
+  //   console.log(window.getComputedStyle(document.body).getPropertyValue('--header-height'))
+  //   // headerRef.value.setAttribute('data-sticky', true)
+  //   // } else {
+  //   // headerRef.value.removeAttribute('data-sticky')
+  //   // }
+  // })
   // if (useRoute().name === 'index') headerRef.value.setAttribute('data-name', 'home')
   // else headerRef.value.removeAttribute('data-name')
   // console.log(useRouter().currentRoute.value.name)
@@ -161,7 +216,11 @@ onMounted(() => {
 
 <template>
   <div class="h-screen" id="main-container">
-    <header :data-route="currentPage">
+    <header
+      :data-route="jsActive ? currentPage : null"
+      :data-mobilenav="headerMobileAttr"
+      :data-scroll="headerScrollAttr"
+    >
       <Header />
     </header>
     <main id="main" tabindex="-1">

@@ -1,30 +1,46 @@
 <script setup lang="ts">
-useHead({
-  title: useRoute().meta.title ? `ACS | ${useRoute().meta.title}` : '',
-  meta: [
-    {
-      name: 'description',
-      content: useRoute().meta.description ? `${useRoute().meta.description}` : '',
-    },
-    {
-      name: 'robots',
-      content: useRoute().meta.robots ? `${useRoute().meta.robots}` : '',
-    },
-    { 'http-equiv': 'X-UA-Compatible', content: 'ie=edge' },
-  ],
-  bodyAttrs: {
-    class: 'test',
-  },
-})
+// useHead({
+//   title: useRoute().meta.title ? `ACS | ${useRoute().meta.title}` : '',
+//   meta: [
+//     {
+//       name: 'description',
+//       content: useRoute().meta.description ? `${useRoute().meta.description}` : '',
+//     },
+//     {
+//       name: 'robots',
+//       content: useRoute().meta.robots ? `${useRoute().meta.robots}` : '',
+//     },
+//     { 'http-equiv': 'X-UA-Compatible', content: 'ie=edge' },
+//   ],
+//   bodyAttrs: {
+//     class: 'test',
+//   },
+// })
 
-// const burgerToggleRef = ref()
-// const headerRef = ref()
+const navItems = ref([
+  { routeName: 'index', title: 'Home' },
+  { routeName: 'index', title: 'Our parts' },
+  { routeName: 'index', title: 'Capabilities' },
+  { routeName: 'index', title: 'News' },
+  { routeName: 'about', title: 'About Us' },
+])
+
 const burgerToggleVisible = ref(false)
 const burgerToggleExpanded = ref(false)
 
 const toggleMobileNav = (windowWidth: any, navBreakPoint: any) => {
-  burgerToggleVisible.value = windowWidth < Number(navBreakPoint) * 16 ? true : false
   burgerToggleExpanded.value = false
+  if ((burgerToggleVisible.value = windowWidth < Number(navBreakPoint) * 16)) {
+    burgerToggleVisible.value = true
+    document.documentElement.style.setProperty('--hero-top-padding', '3em')
+  } else {
+    burgerToggleVisible.value = false
+    document.documentElement.style.setProperty('--hero-top-padding', '6em')
+  }
+
+  // ********
+  // burgerToggleVisible.value = windowWidth < Number(navBreakPoint) * 16 ? true : false
+
   // const headerButtonSpans = headerRef.value.querySelectorAll('.header-button-span')
   // burgerToggleRef.value.setAttribute('aria-expanded', 'false')
   // if (windowWidth < Number(navBreakPoint) * 16) {
@@ -63,13 +79,7 @@ onMounted(() => {
   //   document.documentElement.clientWidth,
   //   window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint')
   // )
-  // window.addEventListener('scroll', () => {
-  //   console.log(window.scrollY)
-  //   if (window.scrollY > 0) {
-  //     headerRef.value.setAttribute('data-sticky', true)
-  //   } else {
-  //     headerRef.value.removeAttribute('data-sticky')
-  //   }
+
   // })
 })
 
@@ -157,12 +167,20 @@ const toggleNavigation = () => {
 //   burgerMenuRef.value.setAttribute('aria-label', 'Open menu')
 
 // }
+
+watch(
+  () => useRoute(),
+  (currentVal, oldValue) => {
+    // burgerToggleExpanded.value = !burgerToggleExpanded.value
+  },
+  { deep: true }
+)
 </script>
 
 <template>
-  <div class="site-header" role="banner" :data-mobilenav="burgerToggleVisible">
+  <div class="site-header" role="banner">
     <SkipLink />
-    <div class="nav-wrapper">
+    <div class="nav-wrapper flow">
       <div class="top">
         <div class="top__inner container">
           <div class="branding">
@@ -211,20 +229,10 @@ const toggleNavigation = () => {
               v-if="!burgerToggleVisible || (burgerToggleVisible && burgerToggleExpanded)"
             >
               <ul class="container" role="list">
-                <li>
-                  <Nuxt-link :to="{ name: 'index' }">Home</Nuxt-link>
-                </li>
-                <li>
-                  <Nuxt-link :to="{ name: 'index' }">Our Parts</Nuxt-link>
-                </li>
-                <li>
-                  <Nuxt-link :to="{ name: 'index' }">Capabilities</Nuxt-link>
-                </li>
-                <li>
-                  <Nuxt-link :to="{ name: 'index' }">News</Nuxt-link>
-                </li>
-                <li>
-                  <Nuxt-link :to="{ name: 'about' }">About Us</Nuxt-link>
+                <li v-for="(item, index) in navItems" :index="`menu-item-${index}`">
+                  <Nuxt-link :to="{ name: item.routeName }" @click="burgerToggleExpanded = !burgerToggleExpanded">
+                    {{ item.title }}
+                  </Nuxt-link>
                 </li>
               </ul>
             </nav>

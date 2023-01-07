@@ -1,6 +1,30 @@
 header {
   position: sticky;
   top: 0;
+
+  &[data-mobilenav='true'] {
+    .site-header {
+      .nav-wrapper {
+        .top {
+          .branding {
+            margin-inline-start: var(--space-xl);
+          }
+
+          .customer {
+            svg {
+              color: var(--color-primary-99, #fff);
+              height: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &[data-route='index'][data-scroll='true'] {
+    background-color: var(--color-primary-10);
+    min-height: calc(var(--hero-top-padding, 8rem) + 1.5rem);
+  }
   // // border: 1px solid red;
 
   &[data-route='index'] {
@@ -26,26 +50,10 @@ header {
     //   // padding: var(--space-l);
     //   // padding-block-end: 0;
 
-    &[data-mobilenav='true'] {
-      .nav-wrapper {
-        .top {
-          .branding {
-            margin-inline-start: var(--space-xl);
-          }
-
-          .customer {
-            svg {
-              color: var(--color-primary-99, #fff);
-              height: 1.5em;
-            }
-          }
-        }
-      }
-    }
-
     .nav-wrapper {
       color: var(--color-primary-99);
       background-color: var(--color-primary-10);
+      --flow-space: var(--space-xs);
       //     position: relative;
       //     // border: 1px solid green;
 
@@ -96,29 +104,33 @@ header {
             flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
+            // padding-block: var(--space-s);
             // border: 1px solid red;
             margin: 0 auto;
+            // border: 1px solid red;
 
             li {
               flex: 1;
               min-width: 6rem;
 
               &:not(:last-of-type) {
-                border-right: 1px solid var(--color-neutral-40);
+                border-inline-end: 1px solid var(--color-neutral-60);
               }
             }
 
             a {
               font-weight: var(--font-bold);
               letter-spacing: var(--tracking-3, 0);
-
+              color: var(--color-primary-99);
+              // border: 1px solid red;
               text-transform: uppercase;
               text-decoration: none;
-              padding-block: var(--space-s);
+              padding-block: var(--space-4xs);
               display: flex;
               justify-content: center;
               align-items: center;
               font-size: var(--font-size--1);
+              padding: var(--space-xs, 1rem);
 
               &:hover {
                 background-color: var(--color-primary-90);
@@ -161,7 +173,7 @@ header {
 
           &[data-enabled] {
             position: absolute;
-            top: 1.4rem;
+            top: 1.1rem;
             left: 0.6rem;
             display: block;
             z-index: 1;

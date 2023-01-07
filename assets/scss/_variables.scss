@@ -53,6 +53,23 @@ $font-weights: (
   @return $intercept;
 }
 
+@mixin grid-3-1($w, $n, $m) {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      clamp(
+        #{calc(math.div(100, $n + 1) * 1% + 0.1%)},
+        #{calc(($w * 1rem - 100vw) * 1000)},
+        #{calc((math.div(100, $m + 1) * 1% + 0.1%))}
+      ),
+      1fr
+    )
+  );
+
+  gap: var(--space-m);
+}
+
 // ******** SPACING *********
 $space-steps: (
   4xs: (
