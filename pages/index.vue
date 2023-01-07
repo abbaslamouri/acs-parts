@@ -9,6 +9,51 @@ const pageTitle = 'Home'
 
 const headerRef = ref()
 
+const salesDirectors = ref([
+  {
+    name: 'Elizabeth Arguello',
+    title: 'Sales Director',
+    phoneNumber: '(786) -597-1609',
+    email: 'arguello@acs-parts.com',
+    image: 'new-york.jpg',
+  },
+  {
+    name: 'ERick C. Ray',
+    title: 'Sales Director',
+    phoneNumber: '1.801.446.1040',
+    email: 'Ray@acs-parts.com',
+    image: 'san-francisco.jpg',
+  },
+  {
+    name: 'Elizabeth Arguello',
+    title: 'Sales Director',
+    phoneNumber: '(786) -597-1609',
+    email: 'arguello@acs-parts.com',
+    image: 'rio.jpg',
+  },
+  {
+    name: 'Brandon Detzel',
+    title: 'Sales Director',
+    phoneNumber: '1.440.569.1825',
+    email: 'detzel@acs-parts.com',
+    image: 'barcelona.jpg',
+  },
+  {
+    name: 'Bing Li',
+    title: 'Sales Director',
+    phoneNumber: '86.1381.002.5764',
+    email: 'li@acs-parts.com',
+    image: 'shanghai.jpg',
+  },
+  {
+    name: 'Robyn Frank',
+    title: 'Sales Director',
+    phoneNumber: '1.210.380.9988',
+    email: 'frank.robyn3@gmail.com',
+    image: 'us-army.jpg',
+  },
+])
+
 const currentRoute = computed(() => useRoute().name)
 onMounted(() => {
   // console.log(window.getComputedStyle(document.body).getPropertyValue('--nav-breakpoint'))
@@ -153,23 +198,47 @@ onMounted(() => {
         </div>
       </div>
     </article>
-    <article>
-      <div class="flow container b-green">
-        <h2>Ready to work with us</h2>
-        <blockquote>
-          <p>
-            It was as though the web design community were participating in a shared consensual hallucination. Rather
-            than acknowledge the flexible nature of the browser window, they chose to settle on one set width as the
-            ideal …even if that meant changing the ideal every few years.
-          </p>
-          <p>Jeremy Keith - Resilient Web Design</p>
-        </blockquote>
-        <address>
-          <p>26451 Curtiss Wright Pkwy</p>
-          <p>Cleveland, OH 44143</p>
-          <a href="mailto:abbaslamouri@yrlus.com">Email: info@acs-parts.com</a>
-          <a href="tel:Phone: +14402956590">+1 (440) 295-6590 x 111</a>
-        </address>
+    <article class="globe">
+      <div class="container">
+        <div>
+          <img src="/images/globe-map.png" alt="" />
+        </div>
+        <div>
+          <ul role="list">
+            <li class="flow" v-for="(director, i) in salesDirectors" :index="`sales-director-${i}`">
+              <div class="image">
+                <img :src="`/images/${director.image}`" alt="" />
+              </div>
+              <p>{{ director.name }}</p>
+              <p>{{ director.title }}</p>
+              <p>{{ director.phoneNumber }}</p>
+              <p>{{ director.email }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article class="contact-us">
+      <div class="container">
+        <div>
+          <h2>Can’t find what you are after contact us</h2>
+          <address>
+            <p>Jeneen Anderson</p>
+            <p>Customer Service Representative</p>
+            <p>26451 Curtiss Wright Pkwy</p>
+            <p>Cleveland, OH 44143</p>
+            <a href="mailto:abbaslamouri@yrlus.com">Email: info@acs-parts.com</a><br />
+            <a href="tel:Phone: +14402956590">+1 (440) 295-6590 x 111</a>
+          </address>
+        </div>
+        <div>
+          <form action="">
+            <label for="">
+              <span> Your name</span>
+              <input type="text" />
+            </label>
+          </form>
+        </div>
       </div>
     </article>
   </div>

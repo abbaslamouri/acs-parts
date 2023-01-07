@@ -219,13 +219,13 @@
 
 .grid {
   /* first breakpoint*/
-  --w1: 1200px;
+  --w1: 600px;
   --n: 3;
   /* second breakpoint*/
-  --w2: 800px;
-  --m: 3;
+  --w2: 400px;
+  --m: 2;
   /* third breakpoint*/
-  --w3: 400px;
+  --w3: 200px;
   --p: 1;
 
   display: grid;

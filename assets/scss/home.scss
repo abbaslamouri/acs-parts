@@ -9,6 +9,8 @@
   // padding: var(--space-s) var(--space-l);
   // padding-block: var(--space-xl);
   // --flow-space: 3rem;
+
+  padding-block-end: 6rem;
   &__inner {
     // --flow-space: 3rem;
     // padding-block: var(--space-l);
@@ -47,6 +49,12 @@
 .capabilities {
   --flow-space: 1rem;
 
+  .container {
+    margin-top: -6rem;
+    background-color: white;
+    z-index: 1;
+  }
+
   h2 {
     text-align: center;
     // border: 1px solid red;
@@ -62,7 +70,7 @@
   }
 
   ul {
-    @include grid-3-1(var(--nav-breakpoint), 3, 1);
+    @include grid-3-1(var(--nav-breakpoint));
 
     li {
       //     // border: 1px solid red;
@@ -96,7 +104,7 @@
 .team {
   --flow-space: 2rem;
   // background-image: url(/images/home-page-hero.jpg);
-  background-image: linear-gradient(to bottom, var(--color-primary-30) 0 43%, var(--color-primary-10) 43% 100%);
+  background-image: linear-gradient(to bottom, var(--color-primary-10) 0 43%, var(--color-primary-30) 43% 100%);
   color: var(--color-primary-99);
   h2 {
     // margin-inline-end: var(--space-3xld, 5rem);
@@ -110,7 +118,7 @@
   }
 
   ul {
-    @include grid-3-1(50, 3, 1);
+    @include grid-3-1(40);
 
     li {
       --flow-space: 0.75rem;
@@ -158,6 +166,76 @@
 
       &:nth-of-type(odd) {
         margin-block-start: 1rem;
+      }
+    }
+  }
+}
+
+.globe {
+  background-color: var(--color-primary-10);
+  // margin-inline: auto;
+  // border: 1px solid green;
+  color: var(--color-primary-99);
+
+  .container {
+    img {
+      width: 1200px;
+      object-fit: cover;
+    }
+
+    ul {
+      @include grid-3-steps(34, 3, 20, 2, 20, 1);
+      // border: 1px solid red;
+      li {
+        // border: 1px solid red;
+        --flow-space: 0.3rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .image {
+          width: 8rem;
+          height: 8rem;
+          border-radius: 100%;
+          border-radius: 100%;
+          overflow: hidden;
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        p:nth-of-type(2) {
+          font-style: italic;
+          font-size: var(--font-size--1);
+          margin-block-start: -0.2rem;
+        }
+
+        p:nth-of-type(3),
+        p:nth-of-type(4) {
+          font-size: var(--font-size--1);
+          color: var(--color-secondary-90);
+        }
+      }
+    }
+  }
+}
+
+.contact-us {
+  .container {
+    display: flex;
+    gap: var(--space-l);
+    & > * {
+      flex: 1;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: var(--font-);
+      input {
+        border: 1px solid var(--color-primary-10);
+        border-radius: var(--space-4xs);
       }
     }
   }

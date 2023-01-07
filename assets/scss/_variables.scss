@@ -53,21 +53,44 @@ $font-weights: (
   @return $intercept;
 }
 
-@mixin grid-3-1($w, $n, $m) {
+@mixin grid-3-1($w) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(25.1%, #{calc(($w * 1rem - 100vw) * 1000)}, 50.1%), 1fr));
+  gap: var(--space-m);
+}
+
+@mixin grid-3-steps($w1, $n1, $w2, $n2, $w3, $n3) {
+  /* first breakpoint*/
+  // --w1: 600px;
+  // --n: 3;
+  /* second breakpoint*/
+  // --w2: 400px;
+  // --m: 2;
+  /* third breakpoint*/
+  // --w3: 200px;
+  // --p: 1;
+
   display: grid;
   grid-template-columns: repeat(
-    auto-fit,
+    auto-fill,
     minmax(
       clamp(
-        #{calc(math.div(100, $n + 1) * 1% + 0.1%)},
-        #{calc(($w * 1rem - 100vw) * 1000)},
-        #{calc((math.div(100, $m + 1) * 1% + 0.1%))}
+        clamp(
+          clamp(
+            #{calc(math.div(100, $n1 + 1) * 1% + 0.1%)},
+            #{calc(($w1 * 1rem - 100%) * 1000)},
+            #{calc(math.div(100, $n2 + 1) * 1% + 0.1%)}
+          ),
+          #{calc(($w2 * 1rem - 100%) * 1000)},
+          #{calc(math.div(100, $n3 + 1) * 1% + 0.1%)}
+        ),
+        #{calc(($w3 * 1rem - 100%) * 1000)},
+        100%
       ),
       1fr
     )
   );
-
-  gap: var(--space-m);
+  gap: var(--space-l);
 }
 
 // ******** SPACING *********
