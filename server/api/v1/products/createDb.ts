@@ -25,42 +25,42 @@ export default defineEventHandler(async (event) => {
   // await mongoClient.db().collection('products').deleteMany({})
   await mongoClient.db().createCollection('products', productSchema)
   await mongoClient.db().collection('products').createIndex({ name: 1 }, { unique: true })
-  await mongoClient
-    .db()
-    .collection('products')
-    .createIndex(
-      { name: 'text', oemPartNumber: 'text', description: 'text' },
-      { weights: { name: 3, oemPartNumber: 2, decsription: 1 } }
-    )
+  // await mongoClient
+  //   .db()
+  //   .collection('products')
+  //   .createIndex(
+  //     { name: 'text', oemPartNumber: 'text', description: 'text' },
+  //     { weights: { name: 3, oemPartNumber: 2, decsription: 1 } }
+  //   )
 
   // Create eligibilities colection and indexes
   // const eligibilitiesCollection = collections.find((c) => c.name === 'products')
-  if (collections.find((c) => c.name === 'eligibilities')) await mongoClient.db().collection('eligibilities').drop()
-  // await mongoClient.db().collection('eligibilities').deleteMany({})
-  await mongoClient.db().createCollection('eligibilities', defaultSchema)
-  await mongoClient.db().collection('eligibilities').createIndex({ name: 1 }, { unique: true })
+  // if (collections.find((c) => c.name === 'eligibilities')) await mongoClient.db().collection('eligibilities').drop()
+  // // await mongoClient.db().collection('eligibilities').deleteMany({})
+  // await mongoClient.db().createCollection('eligibilities', defaultSchema)
+  // await mongoClient.db().collection('eligibilities').createIndex({ name: 1 }, { unique: true })
 
-  // Create nexthigherassemblies colection and indexes
-  // const nexthigherassembliesCollection = collections.find((c) => c.name === 'products')
-  if (collections.find((c) => c.name === 'nexthigherassemblies'))
-    await mongoClient.db().collection('nexthigherassemblies').drop()
-  // await mongoClient.db().collection('nexthigherassemblies').deleteMany({})
-  await mongoClient.db().createCollection('nexthigherassemblies', nextHigherAssemblySchema)
-  await mongoClient.db().collection('nexthigherassemblies').createIndex({ name: 1 }, { unique: true })
+  // // Create nexthigherassemblies colection and indexes
+  // // const nexthigherassembliesCollection = collections.find((c) => c.name === 'products')
+  // if (collections.find((c) => c.name === 'nexthigherassemblies'))
+  //   await mongoClient.db().collection('nexthigherassemblies').drop()
+  // // await mongoClient.db().collection('nexthigherassemblies').deleteMany({})
+  // await mongoClient.db().createCollection('nexthigherassemblies', nextHigherAssemblySchema)
+  // await mongoClient.db().collection('nexthigherassemblies').createIndex({ name: 1 }, { unique: true })
 
-  // Create oems colection and indexes
-  // const oemsCollection = collections.find((c) => c.name === 'products')
-  if (collections.find((c) => c.name === 'oems')) await mongoClient.db().collection('oems').drop()
-  // await mongoClient.db().collection('oems').deleteMany({})
-  await mongoClient.db().createCollection('oems', defaultSchema)
-  await mongoClient.db().collection('oems').createIndex({ name: 1 }, { unique: true })
+  // // Create oems colection and indexes
+  // // const oemsCollection = collections.find((c) => c.name === 'products')
+  // if (collections.find((c) => c.name === 'oems')) await mongoClient.db().collection('oems').drop()
+  // // await mongoClient.db().collection('oems').deleteMany({})
+  // await mongoClient.db().createCollection('oems', defaultSchema)
+  // await mongoClient.db().collection('oems').createIndex({ name: 1 }, { unique: true })
 
-  // Create oempartnumbers colection and indexes
-  // const oempartnumbersCollection = collections.find((c) => c.name === 'products')
-  if (collections.find((c) => c.name === 'oempartnumbers')) await mongoClient.db().collection('oempartnumbers').drop()
-  // await mongoClient.db().collection('oempartnumbers').deleteMany({})
-  await mongoClient.db().createCollection('oempartnumbers', defaultSchema)
-  await mongoClient.db().collection('oempartnumbers').createIndex({ name: 1 }, { unique: true })
+  // // Create oempartnumbers colection and indexes
+  // // const oempartnumbersCollection = collections.find((c) => c.name === 'products')
+  // if (collections.find((c) => c.name === 'oempartnumbers')) await mongoClient.db().collection('oempartnumbers').drop()
+  // // await mongoClient.db().collection('oempartnumbers').deleteMany({})
+  // await mongoClient.db().createCollection('oempartnumbers', defaultSchema)
+  // await mongoClient.db().collection('oempartnumbers').createIndex({ name: 1 }, { unique: true })
 
   // await Promise.all(
   //   newCollections.map(async (item: any) => {

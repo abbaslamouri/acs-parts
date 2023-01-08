@@ -198,6 +198,24 @@ onMounted(() => {
         </div>
       </div>
     </article>
+    <article class="capabilities--yy">
+      <div class="flow container">
+        <!-- <div class="flow center"> -->
+        <h2 class="">All ACS parts are FAA-PMA approved</h2>
+        <p class="">
+          We realize there’s more to our customer’s purchasing decision than just price. This is why ACS seeks not only
+          to provide the best pricing in the industry, but to create value using any means available to us. Stocking
+          100% of our inventory for next day delivery, offering eCommerce solutions for online customers, utilizing the
+          latest data management technology, and offering the latest manufacturing / design solutions are some of the
+          many methods we’ve adopted to create value for our customers.
+        </p>
+        <!-- </div> -->
+
+        <div>
+          <a class="btn btn-primary" href="#">Learn More</a>
+        </div>
+      </div>
+    </article>
     <article class="globe">
       <div class="container">
         <div>

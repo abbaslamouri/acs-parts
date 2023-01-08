@@ -7,7 +7,7 @@
         <!-- <div v-if="uploadedProducts.length > n - 1"> -->
         {{ product.name }}
         <div class="image">
-          <img :src="`/products/${product.image}.jpg`" alt="" />
+          <img :src="`/images/products/${product.image}.jpg`" alt="" />
         </div>
         <!-- </div> -->
         <!-- <div v-else>Loading...</div> -->

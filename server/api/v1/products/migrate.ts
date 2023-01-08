@@ -54,6 +54,8 @@ export default defineEventHandler(async (event) => {
     case 'PATCH':
       try {
         const body = await readBody(event)
+        console.log(body)
+        return true
         // let eligibilities = body.eligibility.split(',')
         const eligibilities = body.eligibility.split(',').map((e: string) => e.trim())
         const nextHigherAssemblies = body.nextHigherAssembly.split(',').map((e: string) => e.trim())
