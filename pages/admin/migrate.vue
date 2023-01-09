@@ -1,32 +1,3 @@
-<template>
-  <div>
-    Admin
-    <button @click="migrate">Migrate</button>
-    <div class="products">
-      <div v-for="product in uploadedProducts">
-        <!-- <div v-if="uploadedProducts.length > n - 1"> -->
-        {{ product.name }}
-        <div class="image">
-          <img :src="`/images/products/${product.image}.jpg`" alt="" />
-        </div>
-        <!-- </div> -->
-        <!-- <div v-else>Loading...</div> -->
-      </div>
-    </div>
-
-    <div class="progress-bar-wrapper">
-      <div
-        class="progress-bar"
-        :style="{ width: !totalCount ? 0 : (uploadedProducts.length / totalCount) * 100 + '%' }"
-      >
-        <div v-if="uploadedProducts.length">
-          {{ Math.floor((uploadedProducts.length / totalCount) * 100) + '%' }}
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 // import fs from 'fs'
 // import path from 'path'
@@ -72,6 +43,35 @@ const migrate = async () => {
   //     })
 }
 </script>
+
+<template>
+  <div>
+    Admin
+    <button @click="migrate">Migrate</button>
+    <div class="products">
+      <div v-for="product in uploadedProducts">
+        <!-- <div v-if="uploadedProducts.length > n - 1"> -->
+        {{ product.name }}
+        <div class="image">
+          <img :src="`/images/products/${product.image}.jpg`" alt="" />
+        </div>
+        <!-- </div> -->
+        <!-- <div v-else>Loading...</div> -->
+      </div>
+    </div>
+
+    <div class="progress-bar-wrapper">
+      <div
+        class="progress-bar"
+        :style="{ width: !totalCount ? 0 : (uploadedProducts.length / totalCount) * 100 + '%' }"
+      >
+        <div v-if="uploadedProducts.length">
+          {{ Math.floor((uploadedProducts.length / totalCount) * 100) + '%' }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .products {

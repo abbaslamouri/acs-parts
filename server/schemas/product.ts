@@ -1,5 +1,4 @@
-
-export default  {
+export default {
   validator: {
     $jsonSchema: {
       required: ['name', 'slug', 'acsPartNumber', 'status'],
@@ -32,14 +31,14 @@ export default  {
           maxLength: 20,
         },
         oemPartNumber: {
-          bsonType: 'objectId',
+          bsonType: 'string',
           description: 'OEM part Number',
-          maxLength: 20,
+          maxLength: 100,
         },
         oem: {
-          bsonType: 'objectId',
+          bsonType: 'string',
           description: 'OEM',
-          maxLength: 20,
+          maxLength: 100,
         },
         tbq: {
           bsonType: 'bool',
@@ -48,17 +47,35 @@ export default  {
         eligibilities: {
           bsonType: 'array',
           description: 'Product eligibilities',
-          uniqueItems: true,
+          // uniqueItems: true,
+          // items: {
+          //   bsonType: 'objectId',
+          // },
           items: {
-            bsonType: 'objectId',
+            bsonType: 'object',
+            properties: {
+              name: {
+                bsonType: 'string',
+                description: 'Next Eligibility name',
+              },
+            },
           },
         },
         nextHigherAssemblies: {
           bsonType: 'array',
           description: 'Product nextHigherAssemblies',
-          uniqueItems: true,
+          // uniqueItems: true,
+          // items: {
+          //   bsonType: 'objectId',
+          // },
           items: {
-            bsonType: 'objectId',
+            bsonType: 'object',
+            properties: {
+              name: {
+                bsonType: 'string',
+                description: 'Next Higer Assembly name',
+              },
+            },
           },
         },
         price: {
@@ -99,6 +116,3 @@ export default  {
     },
   },
 }
-
-
-

@@ -316,12 +316,12 @@ const productSchema = {
           maxLength: 20,
         },
         oemPartNumber: {
-          bsonType: 'objectId',
+          bsonType: 'string',
           description: 'OEM part Number',
           maxLength: 20,
         },
         oem: {
-          bsonType: 'objectId',
+          bsonType: 'string',
           description: 'OEM',
           maxLength: 20,
         },
@@ -332,17 +332,43 @@ const productSchema = {
         eligibilities: {
           bsonType: 'array',
           description: 'Product eligibilities',
-          uniqueItems: true,
+          // properties: {
+          //   name: {
+          //     bsonType: 'string',
+          //     description: 'Eligibility name',
+          //     maxLength: 100,
+          //   },
+          // },
+          // uniqueItems: true,
           items: {
-            bsonType: 'objectId',
+            bsonType: 'object',
+            properties: {
+              name: {
+                bsonType: 'string',
+                description: 'Next Eligibility name',
+              },
+            },
           },
         },
         nextHigherAssemblies: {
           bsonType: 'array',
           description: 'Product nextHigherAssemblies',
-          uniqueItems: true,
+          // properties: {
+          //   name: {
+          //     bsonType: 'string',
+          //     description: 'Next Higer Assembly name',
+          //     maxLength: 100,
+          //   },
+          // },
+          // uniqueItems: false,
           items: {
-            bsonType: 'objectId',
+            bsonType: 'object',
+            properties: {
+              name: {
+                bsonType: 'string',
+                description: 'Next Higer Assembly name',
+              },
+            },
           },
         },
         price: {

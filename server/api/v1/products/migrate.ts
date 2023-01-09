@@ -54,11 +54,15 @@ export default defineEventHandler(async (event) => {
     case 'PATCH':
       try {
         const body = await readBody(event)
-        console.log(body)
-        return true
+        // console.log(body)
+        // return true
         // let eligibilities = body.eligibility.split(',')
         const eligibilities = body.eligibility.split(',').map((e: string) => e.trim())
+        console.log('VVVVVV', body.nextHigherAssembly)
         const nextHigherAssemblies = body.nextHigherAssembly.split(',').map((e: string) => e.trim())
+        console.log('NNNNNN', nextHigherAssemblies)
+
+        console.log()
         // console.log('BBBBB', body)
 
         let product: any = {
@@ -67,8 +71,8 @@ export default defineEventHandler(async (event) => {
           slug: slugify(body.title, { lower: true }),
           image: body.image,
           description: body.content,
-          oem: '',
-          oemPartNumber: '',
+          oem: body.oem,
+          oemPartNumber: body.oemPartNumber,
           qtySold: body.qtySold * 1,
           stockQty: 0,
           price: body.price * 1,
@@ -83,83 +87,100 @@ export default defineEventHandler(async (event) => {
         let newObjectId: any
 
         for (const prop in eligibilities) {
-          found = await mongoClient.db().collection('eligibilities').findOne({ name: eligibilities[prop] })
-          if (found) {
-            newObjectId = new ObjectId(found._id)
-          } else {
-            createdAttribute = await mongoClient
-              .db()
-              .collection('eligibilities')
-              .insertOne({
-                name: eligibilities[prop],
-                slug: slugify(eligibilities[prop], { lower: true }),
-                description: '',
-                dateCreated: new Date(Date.now()),
-                sortOrder: 0,
-              })
-            if (createdAttribute && createdAttribute.insertedId) newObjectId = new ObjectId(createdAttribute.insertedId)
-          }
-          product.eligibilities.push(newObjectId)
+          // found = await mongoClient.db().collection('eligibilities').findOne({ name: eligibilities[prop] })
+          // if (found) {
+          //   newObjectId = new ObjectId(found._id)
+          // } else {
+          //   createdAttribute = await mongoClient
+          //     .db()
+          //     .collection('eligibilities')
+          //     .insertOne({
+          //       name: eligibilities[prop],
+          //       slug: slugify(eligibilities[prop], { lower: true }),
+          //       description: '',
+          //       dateCreated: new Date(Date.now()),
+          //       sortOrder: 0,
+          //     })
+          //   if (createdAttribute && createdAttribute.insertedId) newObjectId = new ObjectId(createdAttribute.insertedId)
+          // }
+          // product.eligibilities.push(newObjectId)
+
+          product.eligibilities.push({
+            name: eligibilities[prop],
+            // slug: slugify(eligibilities[prop], { lower: true }),
+            // description: '',
+            // dateCreated: new Date(Date.now()),
+            // sortOrder: 0,
+          })
         }
 
         for (const prop in nextHigherAssemblies) {
-          found = await mongoClient
-            .db()
-            .collection('nexthigherassemblies')
-            .findOne({ name: nextHigherAssemblies[prop] })
-          if (found) {
-            newObjectId = new ObjectId(found._id)
-          } else {
-            createdAttribute = await mongoClient
-              .db()
-              .collection('nexthigherassemblies')
-              .insertOne({
-                name: nextHigherAssemblies[prop],
-                slug: slugify(nextHigherAssemblies[prop], { lower: true }),
-                description: '',
-                dateCreated: new Date(Date.now()),
-                sortOrder: 0,
-              })
-            if (createdAttribute && createdAttribute.insertedId) newObjectId = new ObjectId(createdAttribute.insertedId)
-          }
-          product.nextHigherAssemblies.push(newObjectId)
+          // found = await mongoClient
+          //   .db()
+          //   .collection('nexthigherassemblies')
+          //   .findOne({ name: nextHigherAssemblies[prop] })
+          // if (found) {
+          //   newObjectId = new ObjectId(found._id)
+          // } else {
+          //   createdAttribute = await mongoClient
+          //     .db()
+          //     .collection('nexthigherassemblies')
+          //     .insertOne({
+          //       name: nextHigherAssemblies[prop],
+          //       slug: slugify(nextHigherAssemblies[prop], { lower: true }),
+          //       description: '',
+          //       dateCreated: new Date(Date.now()),
+          //       sortOrder: 0,
+          //     })
+          //   if (createdAttribute && createdAttribute.insertedId) newObjectId = new ObjectId(createdAttribute.insertedId)
+          // }
+          // product.nextHigherAssemblies.push(newObjectId)
+
+          product.nextHigherAssemblies.push({
+            name: nextHigherAssemblies[prop],
+            // slug: slugify(nextHigherAssemblies[prop], { lower: true }),
+            // description: '',
+            // dateCreated: new Date(Date.now()),
+            // sortOrder: 0,
+          })
         }
 
-        found = await mongoClient.db().collection('oems').findOne({ name: body.oem })
-        if (found) {
-          newObjectId = new ObjectId(found._id)
-        } else {
-          createdAttribute = await mongoClient
-            .db()
-            .collection('oems')
-            .insertOne({
-              name: body.oem,
-              slug: slugify(body.oem, { lower: true }),
-              description: '',
-              dateCreated: new Date(Date.now()),
-              sortOrder: 0,
-            })
-          if (createdAttribute && createdAttribute.insertedId) newObjectId = new ObjectId(createdAttribute.insertedId)
-        }
-        product.oem = newObjectId
+        // found = await mongoClient.db().collection('oems').findOne({ name: body.oem })
+        // if (found) {
+        //   newObjectId = new ObjectId(found._id)
+        // } else {
+        //   createdAttribute = await mongoClient
+        //     .db()
+        //     .collection('oems')
+        //     .insertOne({
+        //       name: body.oem,
+        //       slug: slugify(body.oem, { lower: true }),
+        //       description: '',
+        //       dateCreated: new Date(Date.now()),
+        //       sortOrder: 0,
+        //     })
+        //   if (createdAttribute && createdAttribute.insertedId) newObjectId = new ObjectId(createdAttribute.insertedId)
+        // }
+        // product.oem = newObjectId
 
-        found = await mongoClient.db().collection('oempartnumbers').findOne({ name: body.oemPartNumber })
-        if (found) {
-          newObjectId = new ObjectId(found._id)
-        } else {
-          createdAttribute = await mongoClient
-            .db()
-            .collection('oempartnumbers')
-            .insertOne({
-              name: body.oemPartNumber,
-              slug: slugify(body.oemPartNumber, { lower: true }),
-              description: '',
-              dateCreated: new Date(Date.now()),
-              sortOrder: 0,
-            })
-          if (createdAttribute && createdAttribute.insertedId) newObjectId = new ObjectId(createdAttribute.insertedId)
-        }
-        product.oemPartNumber = newObjectId
+        // found = await mongoClient.db().collection('oempartnumbers').findOne({ name: body.oemPartNumber })
+        // if (found) {
+        //   newObjectId = new ObjectId(found._id)
+        // } else {
+        //   createdAttribute = await mongoClient
+        //     .db()
+        //     .collection('oempartnumbers')
+        //     .insertOne({
+        //       name: body.oemPartNumber,
+        //       slug: slugify(body.oemPartNumber, { lower: true }),
+        //       description: '',
+        //       dateCreated: new Date(Date.now()),
+        //       sortOrder: 0,
+        //     })
+        //   if (createdAttribute && createdAttribute.insertedId) newObjectId = new ObjectId(createdAttribute.insertedId)
+        // }
+        // product.oemPartNumber = newObjectId
+        console.log('PPPPPP', product)
 
         const newProduct = await mongoClient.db().collection('products').insertOne(product)
         // console.log('NEW', newProduct)
@@ -168,6 +189,8 @@ export default defineEventHandler(async (event) => {
           .collection('products')
           .findOne({ _id: new ObjectId(newProduct.insertedId) })
         // return newProduct
+
+        console.log('PPPPPPSSSSSS', product)
 
         // if (
         //   item.name === 'products' ||
@@ -213,7 +236,7 @@ export default defineEventHandler(async (event) => {
         // return await createProduct(event)
       } catch (err) {
         //
-
+        // console.log('eeeee', err)
         // console.log('ERR', err)
         return createError(errorHandler(event, err))
       }

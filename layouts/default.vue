@@ -82,7 +82,7 @@ onMounted(() => {
   })
 
   window.addEventListener('scroll', () => {
-    console.log(window.scrollY)
+    // console.log(window.scrollY)
     if (window.scrollY > 0) {
       headerScrollAttr.value = true
     } else {

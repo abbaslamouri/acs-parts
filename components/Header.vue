@@ -28,6 +28,9 @@ const navItems = ref([
 const burgerToggleVisible = ref(false)
 const burgerToggleExpanded = ref(false)
 
+const searchText = ref('vickers')
+const searResults = ref()
+
 const toggleMobileNav = (windowWidth: any, navBreakPoint: any) => {
   burgerToggleExpanded.value = false
   if ((burgerToggleVisible.value = windowWidth < Number(navBreakPoint) * 16)) {
@@ -168,6 +171,23 @@ const toggleNavigation = () => {
 
 // }
 
+const handleSearch = async (event: any) => {
+  // console.log(event)
+  console.log(searchText.value)
+
+  const { data, pending, error } = await useFetch('/api/v1/products/search', {
+    method: 'POST',
+    body: { searchText: searchText.value },
+  })
+  if (error.value) {
+    console.log(error.value)
+    console.log('ERROR', error.value && error.value.data ? error.value.data : '')
+  }
+  console.log(data.value)
+
+  if (data.value && data.value.length) searResults.value = data.value
+}
+
 watch(
   () => useRoute(),
   (currentVal, oldValue) => {
@@ -190,11 +210,11 @@ watch(
           </div>
           <div class="customer">
             <div class="search">
-              <button class="btn btn-header search">
+              <button class="btn btn-header search" @click="handleSearch">
                 <IconsSearch aria-hidden="true" />
                 <span class="" v-if="!burgerToggleVisible">Search Products</span>
               </button>
-              <input type="text" placeholder="Search products" aria-label="Search Products" />
+              <input type="text" placeholder="Search products" aria-label="Search Products" v-model="searchText" />
             </div>
             <button class="customer btn btn-header">
               <IconsPerson aria-hidden="true" />
@@ -208,6 +228,36 @@ watch(
         </div>
       </div>
       <div class="bottom">
+        <div class="search-results">
+          <div v-for="product in searResults">
+            <!-- <div v-if="uploadedProducts.length > n - 1"> -->
+            <p>name:{{ product.name }}</p>
+            <p>Oem:{{ product.oem }}</p>
+            <p>Oem Part Number:{{ product.oemPartNumber }}</p>
+            <div class="flex">
+              <div>
+                <ul>
+                  <li v-for="eligibility in product.eligibilities">
+                    {{ eligibility.name }}
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li v-for="nextHigherAssembly in product.nextHigherAssemblies">
+                    {{ nextHigherAssembly.name }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="image">
+              <img :src="`/images/products/${product.image}.jpg`" alt="" />
+            </div>
+            <!-- </div> -->
+            <!-- <div v-else>Loading...</div> -->
+          </div>
+        </div>
         <div class="">
           <transition name="burger-toggle">
             <button
@@ -244,10 +294,12 @@ watch(
 </template>
 
 <style lang="scss" scoped>
-// .branding {
-//   img {
-//     font-size: var(--font-size-5);
-//     height: 2rem;
-//   }
-// }
+.search-results {
+  background-color: white;
+  color: black;
+  img {
+    font-size: var(--font-size-5);
+    height: 2rem;
+  }
+}
 </style>

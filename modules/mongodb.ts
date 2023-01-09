@@ -30,38 +30,6 @@ export default async (inlineOptions: any, nuxt: any) => {
         console.log(colors.magenta.bold(`Product database creation succesfull`))
       }
 
-      // [
-      //   {
-      //     '$search': {
-      //       'text': {
-      //         'query': 'Arabic',
-      //         'path': [
-      //           'title', 'plot', 'fullplot'
-      //         ],
-      //         'fuzzy': {
-      //           'maxEdits': 2
-      //         }
-      //       },
-      //       'highlight': {
-      //         'path': 'fullplot'
-      //       }
-      //     }
-      //   }, {
-      //     '$limit': 12
-      //   }, {
-      //     '$project': {
-      //       'title': 1,
-      //       'fullplot': 1,
-      //       'score': {
-      //         '$meta': 'searchScore'
-      //       },
-      //       'highlights': {
-      //         '$meta': 'searchHighlights'
-      //       }
-      //     }
-      //   }
-      // ]
-
       // create eligibilities collection
       // if (!collections.find((c) => c.name === 'eligibilities')) {
       //   await mongoClient.db().createCollection('eligibilities', defaultSchema)

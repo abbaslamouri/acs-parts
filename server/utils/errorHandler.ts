@@ -56,7 +56,18 @@ const errorHandler = (event: any, err: any) => {
           // console.log('MMMMM', schemaRulesNotSatisfied[i].operatorName)
           if (schemaRulesNotSatisfied[i].propertiesNotSatisfied) {
             for (const j in schemaRulesNotSatisfied[i].propertiesNotSatisfied) {
-              message = schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].description
+              // console.log('SSSSSS', schemaRulesNotSatisfied[i].propertiesNotSatisfied[j])
+              if (schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].propertyName) {
+                const propertyName = schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].propertyName
+                if (schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].details) {
+                  message = ''
+                  for (const k in schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].details) {
+                    message += `${propertyName}: ${schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].details[k].operatorName}:${schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].details[k].reason}`
+                  }
+                }
+              } else {
+                message = schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].description
+              }
               // for (const k in schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].details) {
               //   message += `${schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].details[k].operatorName}: ${schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].details[k].reason} ${schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].propertyName}=${schemaRulesNotSatisfied[i].propertiesNotSatisfied[j].details[k].consideredValue} <br>`
               //   console.log('KKKKK', message)
