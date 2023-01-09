@@ -68,15 +68,15 @@ export default {
           // items: {
           //   bsonType: 'objectId',
           // },
-          items: {
-            bsonType: 'object',
-            properties: {
-              name: {
-                bsonType: 'string',
-                description: 'Next Higer Assembly name',
-              },
-            },
-          },
+          // items: {
+          //   bsonType: 'object',
+          //   properties: {
+          //     name: {
+          //       bsonType: 'string',
+          //       description: 'Next Higer Assembly name',
+          //     },
+          //   },
+          // },
         },
         price: {
           bsonType: 'number',

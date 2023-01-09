@@ -57,12 +57,14 @@ export default defineEventHandler(async (event) => {
         // console.log(body)
         // return true
         // let eligibilities = body.eligibility.split(',')
-        const eligibilities = body.eligibility.split(',').map((e: string) => e.trim())
-        console.log('VVVVVV', body.nextHigherAssembly)
-        const nextHigherAssemblies = body.nextHigherAssembly.split(',').map((e: string) => e.trim())
-        console.log('NNNNNN', nextHigherAssemblies)
+        const eligibilities = body.eligibility ? body.eligibility.split(',').map((e: string) => e.trim()) : []
+        // console.log('VVVVVV', body.nextHigherAssembly)
+        const nextHigherAssemblies = body.nextHigherAssembly
+          ? body.nextHigherAssembly.split(',').map((e: string) => e.trim())
+          : []
+        // console.log('NNNNNN', nextHigherAssemblies)
 
-        console.log()
+        // console.log()
         // console.log('BBBBB', body)
 
         let product: any = {
@@ -180,7 +182,7 @@ export default defineEventHandler(async (event) => {
         //   if (createdAttribute && createdAttribute.insertedId) newObjectId = new ObjectId(createdAttribute.insertedId)
         // }
         // product.oemPartNumber = newObjectId
-        console.log('PPPPPP', product)
+        // console.log('PPPPPP', product)
 
         const newProduct = await mongoClient.db().collection('products').insertOne(product)
         // console.log('NEW', newProduct)
@@ -190,7 +192,7 @@ export default defineEventHandler(async (event) => {
           .findOne({ _id: new ObjectId(newProduct.insertedId) })
         // return newProduct
 
-        console.log('PPPPPPSSSSSS', product)
+        // console.log('PPPPPPSSSSSS', product)
 
         // if (
         //   item.name === 'products' ||

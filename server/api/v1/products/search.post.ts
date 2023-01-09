@@ -46,6 +46,7 @@ export default defineEventHandler(async (event) => {
         oemPartNumber: 1,
         eligibilities: 1,
         nextHigherAssemblies: 1,
+        score: { $meta: 'searchScore' },
         highlights: {
           $meta: 'searchHighlights',
         },
