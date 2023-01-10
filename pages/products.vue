@@ -216,6 +216,7 @@ await fetchAllProducts()
 .products {
   display: flex;
   flex-wrap: wrap;
+  color: red;
   gap: 1rem;
   .image {
     width: 4rem;
